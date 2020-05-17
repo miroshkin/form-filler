@@ -53,6 +53,9 @@
     <Compile Include="CVForm.Designer.cs">
       <DependentUpon>CVForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\CurriculumVitae.cs" />
+    <Compile Include="Data\Education.cs" />
+    <Compile Include="Data\ICurriculumVitae.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CVForm.resx">

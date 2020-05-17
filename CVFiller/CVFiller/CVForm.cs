@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CVFiller.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace CVFiller
 {
     public partial class CVForm : Form
     {
+        private IDictionary <string, string> _data;
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
@@ -37,6 +39,26 @@ namespace CVFiller
 
             id = 1;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.Escape.GetHashCode());
+
+            
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            _data = new Dictionary<string, string>();
+
+            CurriculumVitae cv = new CurriculumVitae();
+            cv.FirstName = "Anton";
+            cv.LastName = "Miroshkin";
+            cv.PhoneNumber = "+79161631867";
+            cv.Email = "anton.miroshkin@gmail.com";
+
+            _data.Add("FirstName", cv.FirstName);
+            _data.Add("LastName", cv.LastName);
+            _data.Add("PhoneNumber", cv.PhoneNumber);
+            _data.Add("Email", cv.Email);
+        
         }
 
         protected override void WndProc(ref Message m)

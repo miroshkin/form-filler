@@ -42,7 +42,7 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(137, 47);
+            this.textBox.Location = new System.Drawing.Point(12, 12);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(356, 118);
