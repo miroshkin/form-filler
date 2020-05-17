@@ -56,6 +56,7 @@
             this.Controls.Add(this.textBox);
             this.Name = "CVForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CVForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,7 +53,6 @@
     <Compile Include="CVForm.Designer.cs">
       <DependentUpon>CVForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LowLevelKeyboardListener.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CVForm.resx">
@@ -83,10 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cvfiller.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cvfiller.ico" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
