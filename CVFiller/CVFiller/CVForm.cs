@@ -96,6 +96,21 @@ namespace CVFiller
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
         }
 
-        
+        private void comboBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            comboBox1.Items.Clear();
+            var selection = _data.Where(c => c.Key.Contains(comboBox1.Text)).Select(s => $"{s.Key} | {s.Value}").Take(5).ToArray();
+            comboBox1.Items.AddRange(selection);
+            if (selection.Length > 0)
+            {
+                comboBox1.DroppedDown = true;
+            }
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Clipboard.SetText("Test string");
+            this.Hide();
+        }
     }
 }
