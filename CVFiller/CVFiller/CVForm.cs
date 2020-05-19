@@ -112,5 +112,17 @@ namespace CVFiller
             Clipboard.SetText("Test string");
             this.Hide();
         }
+
+        private void richTextBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            Clipboard.SetText(richTextBox2.Text);
+            this.Hide();
+        }
+
+        private void richTextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Clipboard.SetText(richTextBox1.Text);
+            this.Hide();
+        }
     }
 }
