@@ -113,16 +113,26 @@ namespace CVFiller
             this.Hide();
         }
 
-        private void richTextBox2_MouseClick(object sender, MouseEventArgs e)
+        private void FirstName_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(richTextBox2.Text);
-            this.Hide();
+            HandleClick(sender);
         }
 
-        private void richTextBox1_MouseClick(object sender, MouseEventArgs e)
+        private void HandleClick(object sender)
         {
-            Clipboard.SetText(richTextBox1.Text);
+            if (sender is Label)
+            {
+                Clipboard.SetText((sender as Label).Text);
+            }
+
             this.Hide();
+
+            SendKeys.Send("^{v}");
+        }
+
+        private void LastName_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
         }
     }
 }
