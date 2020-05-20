@@ -56,10 +56,21 @@
     <Compile Include="Data\CurriculumVitae.cs" />
     <Compile Include="Data\Education.cs" />
     <Compile Include="Data\ICurriculumVitae.cs" />
+    <Compile Include="Data\ISearchedItem.cs" />
+    <Compile Include="Data\SearchedItem.cs" />
+    <Compile Include="ListItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListItemControl.Designer.cs">
+      <DependentUpon>ListItemControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CVForm.resx">
       <DependentUpon>CVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListItemControl.resx">
+      <DependentUpon>ListItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

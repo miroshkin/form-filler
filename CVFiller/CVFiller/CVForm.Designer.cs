@@ -32,9 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CVForm));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.FirstName = new System.Windows.Forms.Label();
             this.LastName = new System.Windows.Forms.Label();
+            this.rtbProfile = new System.Windows.Forms.RichTextBox();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.txtbxTag = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddTag = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -48,22 +52,15 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(571, 23);
+            this.comboBox1.Size = new System.Drawing.Size(347, 23);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(15, 120);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 1;
-            // 
             // FirstName
             // 
             this.FirstName.AutoSize = true;
-            this.FirstName.Location = new System.Drawing.Point(12, 38);
+            this.FirstName.Location = new System.Drawing.Point(12, 122);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(42, 17);
             this.FirstName.TabIndex = 2;
@@ -73,21 +70,72 @@
             // LastName
             // 
             this.LastName.AutoSize = true;
-            this.LastName.Location = new System.Drawing.Point(62, 38);
+            this.LastName.Location = new System.Drawing.Point(62, 122);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(63, 17);
             this.LastName.TabIndex = 3;
             this.LastName.Text = "Miroshkin";
             this.LastName.Click += new System.EventHandler(this.LastName_Click);
             // 
+            // rtbProfile
+            // 
+            this.rtbProfile.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rtbProfile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbProfile.Font = new System.Drawing.Font("Calibri", 10.15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtbProfile.Location = new System.Drawing.Point(12, 180);
+            this.rtbProfile.Name = "rtbProfile";
+            this.rtbProfile.Size = new System.Drawing.Size(571, 83);
+            this.rtbProfile.TabIndex = 4;
+            this.rtbProfile.Text = resources.GetString("rtbProfile.Text");
+            this.rtbProfile.Click += new System.EventHandler(this.rtbProfile_Click);
+            // 
+            // lblProfile
+            // 
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Location = new System.Drawing.Point(12, 160);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(44, 17);
+            this.lblProfile.TabIndex = 5;
+            this.lblProfile.Text = "Profile";
+            // 
+            // txtbxTag
+            // 
+            this.txtbxTag.Location = new System.Drawing.Point(381, 12);
+            this.txtbxTag.Name = "txtbxTag";
+            this.txtbxTag.Size = new System.Drawing.Size(148, 23);
+            this.txtbxTag.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(365, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "#";
+            // 
+            // btnAddTag
+            // 
+            this.btnAddTag.Location = new System.Drawing.Point(535, 11);
+            this.btnAddTag.Name = "btnAddTag";
+            this.btnAddTag.Size = new System.Drawing.Size(48, 23);
+            this.btnAddTag.TabIndex = 8;
+            this.btnAddTag.Text = "Add";
+            this.btnAddTag.UseVisualStyleBackColor = true;
+            this.btnAddTag.Click += new System.EventHandler(this.btnAddTag_Click);
+            // 
             // CVForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.btnAddTag);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtbxTag);
+            this.Controls.Add(this.lblProfile);
+            this.Controls.Add(this.rtbProfile);
             this.Controls.Add(this.LastName);
             this.Controls.Add(this.FirstName);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -105,9 +153,13 @@
 
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label FirstName;
         private System.Windows.Forms.Label LastName;
+        private System.Windows.Forms.RichTextBox rtbProfile;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.TextBox txtbxTag;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddTag;
     }
 }
 

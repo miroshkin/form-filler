@@ -14,6 +14,7 @@ namespace CVFiller
     public partial class CVForm : Form
     {
         private IDictionary <string, string> _data;
+        private ISearchedItem _searchedItem;
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
@@ -40,7 +41,8 @@ namespace CVFiller
             id = 1;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.Escape.GetHashCode());
 
-            
+            _searchedItem = new SearchedItem() { Tags = new List<string>() };
+
             LoadData();
         }
 
@@ -58,9 +60,12 @@ namespace CVFiller
             _data.Add("LastName", cv.LastName);
             _data.Add("PhoneNumber", cv.PhoneNumber);
             _data.Add("Email", cv.Email);
-        
+            
+            comboBox1.DataSource = _data.Select(d => d.Key).ToArray();
+            comboBox1.AutoCompleteMode = AutoCompleteMode.Append;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
-
+        
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -101,6 +106,9 @@ namespace CVFiller
             comboBox1.Items.Clear();
             var selection = _data.Where(c => c.Key.Contains(comboBox1.Text)).Select(s => $"{s.Key} | {s.Value}").Take(5).ToArray();
             comboBox1.Items.AddRange(selection);
+
+            comboBox1.Items.Add(new ListItemControl());
+
             if (selection.Length > 0)
             {
                 comboBox1.DroppedDown = true;
@@ -118,21 +126,71 @@ namespace CVFiller
             HandleClick(sender);
         }
 
+        /// <summary>
+        /// Handles mouse click on selected control
+        /// </summary>
+        /// <param name="sender"></param>
         private void HandleClick(object sender)
+        {
+            CopyToClipboard(sender);
+            HideForm();
+            PasteData();
+        }
+
+        /// <summary>
+        /// Pastes copied data using programmatically Ctrl + V combination
+        /// </summary>
+        private void PasteData()
+        {
+            SendKeys.Send("^{v}");
+        }
+
+        /// <summary>
+        /// Hides form on Esc button click
+        /// </summary>
+        private void HideForm()
+        {
+            this.Hide();
+        }
+
+        /// <summary>
+        /// Copies data from sender to clipboard
+        /// </summary>
+        /// <param name="sender"></param>
+        private static void CopyToClipboard(object sender)
         {
             if (sender is Label)
             {
                 Clipboard.SetText((sender as Label).Text);
             }
-
-            this.Hide();
-
-            SendKeys.Send("^{v}");
+            else if (sender is RichTextBox)
+            {
+                Clipboard.SetText((sender as RichTextBox).Text);
+            }
         }
 
         private void LastName_Click(object sender, EventArgs e)
         {
             HandleClick(sender);
         }
+
+        private void rtbProfile_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void btnAddTag_Click(object sender, EventArgs e)
+        {
+            LinkLabel linkLabel = new LinkLabel();
+            linkLabel.BackColor = Color.White;
+            linkLabel.Text = $"#{txtbxTag.Text}";
+            linkLabel.Location = new Point(_searchedItem.Tags.Count * 90, _searchedItem.Tags.Count * 25);
+            linkLabel.Size = new Size(50, 25);
+
+            this.Controls.Add(linkLabel);
+           
+        }
+
+        
     }
 }
