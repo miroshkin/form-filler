@@ -173,12 +173,12 @@ namespace CVFiller
         /// <summary>
         /// Copies data from sender to clipboard
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender"></paravm>
         private static void CopyToClipboard(object sender)
         {
             if (sender is Label)
             {
-                Clipboard.SetText((sender as Label).Text);
+            Clipboard.SetText((sender as Label).Text);
             }
             else if (sender is RichTextBox)
             {

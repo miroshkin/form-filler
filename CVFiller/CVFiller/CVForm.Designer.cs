@@ -145,9 +145,9 @@
             this.lblLinkedIn.AutoSize = true;
             this.lblLinkedIn.Location = new System.Drawing.Point(6, 19);
             this.lblLinkedIn.Name = "lblLinkedIn";
-            this.lblLinkedIn.Size = new System.Drawing.Size(270, 17);
+            this.lblLinkedIn.Size = new System.Drawing.Size(195, 17);
             this.lblLinkedIn.TabIndex = 12;
-            this.lblLinkedIn.Text = "https://www.linkedin.com/in/miroshkin-anton/";
+            this.lblLinkedIn.Text = "linkedin.com/in/miroshkin-anton/";
             this.lblLinkedIn.Click += new System.EventHandler(this.lblLinkedIn_Click);
             // 
             // grpbxContacts
@@ -178,11 +178,11 @@
             // lblFacebook
             // 
             this.lblFacebook.AutoSize = true;
-            this.lblFacebook.Location = new System.Drawing.Point(292, 19);
+            this.lblFacebook.Location = new System.Drawing.Point(207, 19);
             this.lblFacebook.Name = "lblFacebook";
-            this.lblFacebook.Size = new System.Drawing.Size(258, 17);
+            this.lblFacebook.Size = new System.Drawing.Size(188, 17);
             this.lblFacebook.TabIndex = 13;
-            this.lblFacebook.Text = "https://web.facebook.com/miroshkin.anton/";
+            this.lblFacebook.Text = "facebook.com/miroshkin.anton/";
             this.lblFacebook.Click += new System.EventHandler(this.lblFacebook_Click);
             // 
             // CVForm
