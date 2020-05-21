@@ -44,8 +44,20 @@
             this.grpbxContacts = new System.Windows.Forms.GroupBox();
             this.grpbxSocialNetworks = new System.Windows.Forms.GroupBox();
             this.lblFacebook = new System.Windows.Forms.Label();
+            this.grpbxAddress = new System.Windows.Forms.GroupBox();
+            this.lblPostCode = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.grpbxEducation = new System.Windows.Forms.GroupBox();
+            this.lblSchoolName = new System.Windows.Forms.Label();
+            this.lblDegree = new System.Windows.Forms.Label();
+            this.lblMajor = new System.Windows.Forms.Label();
+            this.lblEducationStartDate = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
+            this.grpbxAddress.SuspendLayout();
+            this.grpbxEducation.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -168,9 +180,9 @@
             // 
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
-            this.grpbxSocialNetworks.Location = new System.Drawing.Point(15, 131);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(15, 186);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(568, 100);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(568, 60);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks";
@@ -185,11 +197,119 @@
             this.lblFacebook.Text = "facebook.com/miroshkin.anton/";
             this.lblFacebook.Click += new System.EventHandler(this.lblFacebook_Click);
             // 
+            // grpbxAddress
+            // 
+            this.grpbxAddress.Controls.Add(this.lblAddress);
+            this.grpbxAddress.Controls.Add(this.lblCity);
+            this.grpbxAddress.Controls.Add(this.lblPostCode);
+            this.grpbxAddress.Location = new System.Drawing.Point(15, 131);
+            this.grpbxAddress.Name = "grpbxAddress";
+            this.grpbxAddress.Size = new System.Drawing.Size(568, 49);
+            this.grpbxAddress.TabIndex = 15;
+            this.grpbxAddress.TabStop = false;
+            this.grpbxAddress.Text = "Address";
+            // 
+            // lblPostCode
+            // 
+            this.lblPostCode.AutoSize = true;
+            this.lblPostCode.Location = new System.Drawing.Point(6, 19);
+            this.lblPostCode.Name = "lblPostCode";
+            this.lblPostCode.Size = new System.Drawing.Size(50, 17);
+            this.lblPostCode.TabIndex = 12;
+            this.lblPostCode.Text = "140093";
+            this.lblPostCode.Click += new System.EventHandler(this.lblPostCode_Click);
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Location = new System.Drawing.Point(69, 19);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(78, 17);
+            this.lblCity.TabIndex = 13;
+            this.lblCity.Text = "Dzerzhinskiy";
+            this.lblCity.Click += new System.EventHandler(this.lblCity_Click);
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(153, 19);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(114, 17);
+            this.lblAddress.TabIndex = 14;
+            this.lblAddress.Text = "Tomilinskaya 13-21";
+            this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
+            // 
+            // grpbxEducation
+            // 
+            this.grpbxEducation.Controls.Add(this.lblEndDate);
+            this.grpbxEducation.Controls.Add(this.lblEducationStartDate);
+            this.grpbxEducation.Controls.Add(this.lblMajor);
+            this.grpbxEducation.Controls.Add(this.lblDegree);
+            this.grpbxEducation.Controls.Add(this.lblSchoolName);
+            this.grpbxEducation.Location = new System.Drawing.Point(16, 252);
+            this.grpbxEducation.Name = "grpbxEducation";
+            this.grpbxEducation.Size = new System.Drawing.Size(567, 84);
+            this.grpbxEducation.TabIndex = 16;
+            this.grpbxEducation.TabStop = false;
+            this.grpbxEducation.Text = "Education";
+            // 
+            // lblSchoolName
+            // 
+            this.lblSchoolName.AutoSize = true;
+            this.lblSchoolName.Location = new System.Drawing.Point(5, 19);
+            this.lblSchoolName.Name = "lblSchoolName";
+            this.lblSchoolName.Size = new System.Drawing.Size(337, 17);
+            this.lblSchoolName.TabIndex = 14;
+            this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
+            this.lblSchoolName.Click += new System.EventHandler(this.lblSchoolName_Click);
+            // 
+            // lblDegree
+            // 
+            this.lblDegree.AutoSize = true;
+            this.lblDegree.Location = new System.Drawing.Point(6, 50);
+            this.lblDegree.Name = "lblDegree";
+            this.lblDegree.Size = new System.Drawing.Size(194, 17);
+            this.lblDegree.TabIndex = 15;
+            this.lblDegree.Text = "Master Of Science In Engineering";
+            this.lblDegree.Click += new System.EventHandler(this.lblDegree_Click);
+            // 
+            // lblMajor
+            // 
+            this.lblMajor.AutoSize = true;
+            this.lblMajor.Location = new System.Drawing.Point(216, 50);
+            this.lblMajor.Name = "lblMajor";
+            this.lblMajor.Size = new System.Drawing.Size(185, 17);
+            this.lblMajor.TabIndex = 16;
+            this.lblMajor.Text = "Electrical System And Networks";
+            this.lblMajor.Click += new System.EventHandler(this.lblMajor_Click);
+            // 
+            // lblEducationStartDate
+            // 
+            this.lblEducationStartDate.AutoSize = true;
+            this.lblEducationStartDate.Location = new System.Drawing.Point(373, 19);
+            this.lblEducationStartDate.Name = "lblEducationStartDate";
+            this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblEducationStartDate.TabIndex = 17;
+            this.lblEducationStartDate.Text = "2003";
+            this.lblEducationStartDate.Click += new System.EventHandler(this.lblEducationStartDate_Click);
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(431, 19);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(36, 17);
+            this.lblEndDate.TabIndex = 18;
+            this.lblEndDate.Text = "2009";
+            this.lblEndDate.Click += new System.EventHandler(this.lblEndDate_Click);
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.grpbxEducation);
+            this.Controls.Add(this.grpbxAddress);
             this.Controls.Add(this.grpbxSocialNetworks);
             this.Controls.Add(this.grpbxContacts);
             this.Controls.Add(this.btnAddTag);
@@ -207,6 +327,10 @@
             this.grpbxContacts.PerformLayout();
             this.grpbxSocialNetworks.ResumeLayout(false);
             this.grpbxSocialNetworks.PerformLayout();
+            this.grpbxAddress.ResumeLayout(false);
+            this.grpbxAddress.PerformLayout();
+            this.grpbxEducation.ResumeLayout(false);
+            this.grpbxEducation.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +352,16 @@
         private System.Windows.Forms.GroupBox grpbxContacts;
         private System.Windows.Forms.GroupBox grpbxSocialNetworks;
         private System.Windows.Forms.Label lblFacebook;
+        private System.Windows.Forms.GroupBox grpbxAddress;
+        private System.Windows.Forms.Label lblPostCode;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.GroupBox grpbxEducation;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Label lblEducationStartDate;
+        private System.Windows.Forms.Label lblMajor;
+        private System.Windows.Forms.Label lblDegree;
+        private System.Windows.Forms.Label lblSchoolName;
     }
 }
 

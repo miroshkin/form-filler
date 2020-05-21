@@ -178,11 +178,11 @@ namespace CVFiller
         {
             if (sender is Label)
             {
-            Clipboard.SetText((sender as Label).Text);
+                Clipboard.SetText((sender as Label).Text);
             }
             else if (sender is RichTextBox)
             {
-                Clipboard.SetText((sender as RichTextBox).Rtf);
+                Clipboard.SetText((sender as RichTextBox).Text);
             }
         }
 
@@ -227,10 +227,55 @@ namespace CVFiller
         {
             HandleClick(sender);
         }
-
+        
         private void lblFacebook_Click(object sender, EventArgs e)
         {
             HandleClick(sender);
+        }
+
+        private void lblPostCode_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void lblCity_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void lblAddress_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void lblSchoolName_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+
+        }
+
+        private void lblEducationStartDate_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+
+        }
+
+        private void lblEndDate_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+
+        }
+
+        private void lblDegree_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+
+        }
+
+        private void lblMajor_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+
         }
     }
 }
