@@ -46,24 +46,41 @@ namespace CVFiller
             LoadData();
         }
 
+        public static List<Control> GetControl(Control.ControlCollection controlCollection, Predicate<Control> match)
+        {
+            var list = new List<Control>();
+            
+            foreach (Control control in controlCollection)
+            {
+                if (match(control))
+                {
+                    list.Add(control);
+                }
+            }
+
+            return list;
+        }
+
         private void LoadData()
         {
-            _data = new Dictionary<string, string>();
+            //_data = new Dictionary<string, string>();
 
-            CurriculumVitae cv = new CurriculumVitae();
-            cv.FirstName = "Anton";
-            cv.LastName = "Miroshkin";
-            cv.PhoneNumber = "+79161631867";
-            cv.Email = "anton.miroshkin@gmail.com";
+            //CurriculumVitae cv = new CurriculumVitae();
+            //cv.FirstName = "Anton";
+            //cv.LastName = "Miroshkin";
+            //cv.PhoneNumber = "+79161631867";
+            //cv.Email = "anton.miroshkin@gmail.com";
 
-            _data.Add("FirstName", cv.FirstName);
-            _data.Add("LastName", cv.LastName);
-            _data.Add("PhoneNumber", cv.PhoneNumber);
-            _data.Add("Email", cv.Email);
+            //_data.Add("FirstName", cv.FirstName);
+            //_data.Add("LastName", cv.LastName);
+            //_data.Add("PhoneNumber", cv.PhoneNumber);
+            //_data.Add("Email", cv.Email);
             
-            comboBox1.DataSource = _data.Select(d => d.Key).ToArray();
-            comboBox1.AutoCompleteMode = AutoCompleteMode.Append;
-            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            //comboBox1.DataSource = _data.Select(d => d.Key).ToArray();
+            //comboBox1.AutoCompleteMode = AutoCompleteMode.Append;
+            //comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            
         }
         
         protected override void WndProc(ref Message m)
@@ -103,16 +120,16 @@ namespace CVFiller
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            comboBox1.Items.Clear();
-            var selection = _data.Where(c => c.Key.Contains(comboBox1.Text)).Select(s => $"{s.Key} | {s.Value}").Take(5).ToArray();
-            comboBox1.Items.AddRange(selection);
+            //comboBox1.Items.Clear();
+            //var selection = _data.Where(c => c.Key.Contains(comboBox1.Text)).Select(s => $"{s.Key} | {s.Value}").Take(5).ToArray();
+            //comboBox1.Items.AddRange(selection);
 
-            comboBox1.Items.Add(new ListItemControl());
+            //comboBox1.Items.Add(new ListItemControl());
 
-            if (selection.Length > 0)
-            {
-                comboBox1.DroppedDown = true;
-            }
+            //if (selection.Length > 0)
+            //{
+            //    comboBox1.DroppedDown = true;
+            //}
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -165,7 +182,7 @@ namespace CVFiller
             }
             else if (sender is RichTextBox)
             {
-                Clipboard.SetText((sender as RichTextBox).Text);
+                Clipboard.SetText((sender as RichTextBox).Rtf);
             }
         }
 
@@ -191,6 +208,19 @@ namespace CVFiller
            
         }
 
-        
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void lblPhone_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void lblLocation_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
     }
 }

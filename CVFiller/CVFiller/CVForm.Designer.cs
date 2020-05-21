@@ -39,6 +39,9 @@
             this.txtbxTag = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddTag = new System.Windows.Forms.Button();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblLocation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -124,11 +127,44 @@
             this.btnAddTag.UseVisualStyleBackColor = true;
             this.btnAddTag.Click += new System.EventHandler(this.btnAddTag_Click);
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(131, 122);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(171, 17);
+            this.lblEmail.TabIndex = 9;
+            this.lblEmail.Text = "anton.miroshkin@gmail.com";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(308, 122);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(104, 17);
+            this.lblPhone.TabIndex = 10;
+            this.lblPhone.Text = "+7 916 163 18 67";
+            this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
+            // 
+            // lblLocation
+            // 
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Location = new System.Drawing.Point(425, 122);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(104, 17);
+            this.lblLocation.TabIndex = 11;
+            this.lblLocation.Text = "+7 916 163 18 67";
+            this.lblLocation.Click += new System.EventHandler(this.lblLocation_Click);
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.lblLocation);
+            this.Controls.Add(this.lblPhone);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnAddTag);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbxTag);
@@ -160,6 +196,9 @@
         private System.Windows.Forms.TextBox txtbxTag;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddTag;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblLocation;
     }
 }
 
