@@ -222,5 +222,15 @@ namespace CVFiller
         {
             HandleClick(sender);
         }
+
+        private void lblLinkedIn_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void lblFacebook_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
     }
 }

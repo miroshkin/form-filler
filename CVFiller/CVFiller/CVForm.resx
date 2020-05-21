@@ -883,13 +883,6 @@
         AwAAwAMAAMADAADAAwAAwAMAAMAHAADADwAA//8AAA==
 </value>
   </data>
-  <data name="rtbProfile.Text" xml:space="preserve">
-    <value>Web development frameworks – ASP.NET, ASP.NET Core, Node.js
-Front-end technologies experience – JavaScript, CSS, HTML, jQuery, Bootstrap
-Back-end development – web services, windows services, REST API services – WCF , Web API
-
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>46</value>
   </metadata>

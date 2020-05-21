@@ -34,14 +34,18 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.FirstName = new System.Windows.Forms.Label();
             this.LastName = new System.Windows.Forms.Label();
-            this.rtbProfile = new System.Windows.Forms.RichTextBox();
-            this.lblProfile = new System.Windows.Forms.Label();
             this.txtbxTag = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddTag = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
+            this.lblLinkedIn = new System.Windows.Forms.Label();
+            this.grpbxContacts = new System.Windows.Forms.GroupBox();
+            this.grpbxSocialNetworks = new System.Windows.Forms.GroupBox();
+            this.lblFacebook = new System.Windows.Forms.Label();
+            this.grpbxContacts.SuspendLayout();
+            this.grpbxSocialNetworks.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -63,7 +67,7 @@
             // FirstName
             // 
             this.FirstName.AutoSize = true;
-            this.FirstName.Location = new System.Drawing.Point(12, 122);
+            this.FirstName.Location = new System.Drawing.Point(6, 22);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(42, 17);
             this.FirstName.TabIndex = 2;
@@ -73,33 +77,12 @@
             // LastName
             // 
             this.LastName.AutoSize = true;
-            this.LastName.Location = new System.Drawing.Point(62, 122);
+            this.LastName.Location = new System.Drawing.Point(56, 22);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(63, 17);
             this.LastName.TabIndex = 3;
             this.LastName.Text = "Miroshkin";
             this.LastName.Click += new System.EventHandler(this.LastName_Click);
-            // 
-            // rtbProfile
-            // 
-            this.rtbProfile.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rtbProfile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbProfile.Font = new System.Drawing.Font("Calibri", 10.15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbProfile.Location = new System.Drawing.Point(12, 180);
-            this.rtbProfile.Name = "rtbProfile";
-            this.rtbProfile.Size = new System.Drawing.Size(571, 83);
-            this.rtbProfile.TabIndex = 4;
-            this.rtbProfile.Text = resources.GetString("rtbProfile.Text");
-            this.rtbProfile.Click += new System.EventHandler(this.rtbProfile_Click);
-            // 
-            // lblProfile
-            // 
-            this.lblProfile.AutoSize = true;
-            this.lblProfile.Location = new System.Drawing.Point(12, 160);
-            this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(44, 17);
-            this.lblProfile.TabIndex = 5;
-            this.lblProfile.Text = "Profile";
             // 
             // txtbxTag
             // 
@@ -130,7 +113,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(131, 122);
+            this.lblEmail.Location = new System.Drawing.Point(137, 22);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(171, 17);
             this.lblEmail.TabIndex = 9;
@@ -140,7 +123,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(308, 122);
+            this.lblPhone.Location = new System.Drawing.Point(323, 22);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(104, 17);
             this.lblPhone.TabIndex = 10;
@@ -150,28 +133,68 @@
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
-            this.lblLocation.Location = new System.Drawing.Point(425, 122);
+            this.lblLocation.Location = new System.Drawing.Point(433, 22);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(104, 17);
+            this.lblLocation.Size = new System.Drawing.Size(55, 17);
             this.lblLocation.TabIndex = 11;
-            this.lblLocation.Text = "+7 916 163 18 67";
+            this.lblLocation.Text = "Moscow";
             this.lblLocation.Click += new System.EventHandler(this.lblLocation_Click);
+            // 
+            // lblLinkedIn
+            // 
+            this.lblLinkedIn.AutoSize = true;
+            this.lblLinkedIn.Location = new System.Drawing.Point(6, 19);
+            this.lblLinkedIn.Name = "lblLinkedIn";
+            this.lblLinkedIn.Size = new System.Drawing.Size(270, 17);
+            this.lblLinkedIn.TabIndex = 12;
+            this.lblLinkedIn.Text = "https://www.linkedin.com/in/miroshkin-anton/";
+            this.lblLinkedIn.Click += new System.EventHandler(this.lblLinkedIn_Click);
+            // 
+            // grpbxContacts
+            // 
+            this.grpbxContacts.Controls.Add(this.FirstName);
+            this.grpbxContacts.Controls.Add(this.LastName);
+            this.grpbxContacts.Controls.Add(this.lblLocation);
+            this.grpbxContacts.Controls.Add(this.lblEmail);
+            this.grpbxContacts.Controls.Add(this.lblPhone);
+            this.grpbxContacts.Location = new System.Drawing.Point(15, 72);
+            this.grpbxContacts.Name = "grpbxContacts";
+            this.grpbxContacts.Size = new System.Drawing.Size(568, 53);
+            this.grpbxContacts.TabIndex = 13;
+            this.grpbxContacts.TabStop = false;
+            this.grpbxContacts.Text = "Contacts";
+            // 
+            // grpbxSocialNetworks
+            // 
+            this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
+            this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(15, 131);
+            this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(568, 100);
+            this.grpbxSocialNetworks.TabIndex = 14;
+            this.grpbxSocialNetworks.TabStop = false;
+            this.grpbxSocialNetworks.Text = "Social Networks";
+            // 
+            // lblFacebook
+            // 
+            this.lblFacebook.AutoSize = true;
+            this.lblFacebook.Location = new System.Drawing.Point(292, 19);
+            this.lblFacebook.Name = "lblFacebook";
+            this.lblFacebook.Size = new System.Drawing.Size(258, 17);
+            this.lblFacebook.TabIndex = 13;
+            this.lblFacebook.Text = "https://web.facebook.com/miroshkin.anton/";
+            this.lblFacebook.Click += new System.EventHandler(this.lblFacebook_Click);
             // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
-            this.Controls.Add(this.lblLocation);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.grpbxSocialNetworks);
+            this.Controls.Add(this.grpbxContacts);
             this.Controls.Add(this.btnAddTag);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbxTag);
-            this.Controls.Add(this.lblProfile);
-            this.Controls.Add(this.rtbProfile);
-            this.Controls.Add(this.LastName);
-            this.Controls.Add(this.FirstName);
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -180,6 +203,10 @@
             this.Text = "Form1";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CVForm_FormClosing);
+            this.grpbxContacts.ResumeLayout(false);
+            this.grpbxContacts.PerformLayout();
+            this.grpbxSocialNetworks.ResumeLayout(false);
+            this.grpbxSocialNetworks.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,14 +218,16 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label FirstName;
         private System.Windows.Forms.Label LastName;
-        private System.Windows.Forms.RichTextBox rtbProfile;
-        private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.TextBox txtbxTag;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddTag;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblLocation;
+        private System.Windows.Forms.Label lblLinkedIn;
+        private System.Windows.Forms.GroupBox grpbxContacts;
+        private System.Windows.Forms.GroupBox grpbxSocialNetworks;
+        private System.Windows.Forms.Label lblFacebook;
     }
 }
 
