@@ -54,10 +54,17 @@
             this.lblMajor = new System.Windows.Forms.Label();
             this.lblEducationStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.CV = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
             this.grpbxEducation.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.CV.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -169,9 +176,9 @@
             this.grpbxContacts.Controls.Add(this.lblLocation);
             this.grpbxContacts.Controls.Add(this.lblEmail);
             this.grpbxContacts.Controls.Add(this.lblPhone);
-            this.grpbxContacts.Location = new System.Drawing.Point(15, 72);
+            this.grpbxContacts.Location = new System.Drawing.Point(8, 6);
             this.grpbxContacts.Name = "grpbxContacts";
-            this.grpbxContacts.Size = new System.Drawing.Size(568, 53);
+            this.grpbxContacts.Size = new System.Drawing.Size(555, 53);
             this.grpbxContacts.TabIndex = 13;
             this.grpbxContacts.TabStop = false;
             this.grpbxContacts.Text = "Contacts";
@@ -180,9 +187,9 @@
             // 
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
-            this.grpbxSocialNetworks.Location = new System.Drawing.Point(15, 186);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(8, 120);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(568, 60);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(555, 60);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks";
@@ -202,9 +209,9 @@
             this.grpbxAddress.Controls.Add(this.lblAddress);
             this.grpbxAddress.Controls.Add(this.lblCity);
             this.grpbxAddress.Controls.Add(this.lblPostCode);
-            this.grpbxAddress.Location = new System.Drawing.Point(15, 131);
+            this.grpbxAddress.Location = new System.Drawing.Point(8, 65);
             this.grpbxAddress.Name = "grpbxAddress";
-            this.grpbxAddress.Size = new System.Drawing.Size(568, 49);
+            this.grpbxAddress.Size = new System.Drawing.Size(555, 49);
             this.grpbxAddress.TabIndex = 15;
             this.grpbxAddress.TabStop = false;
             this.grpbxAddress.Text = "Address";
@@ -241,14 +248,10 @@
             // 
             // grpbxEducation
             // 
-            this.grpbxEducation.Controls.Add(this.lblEndDate);
-            this.grpbxEducation.Controls.Add(this.lblEducationStartDate);
-            this.grpbxEducation.Controls.Add(this.lblMajor);
-            this.grpbxEducation.Controls.Add(this.lblDegree);
-            this.grpbxEducation.Controls.Add(this.lblSchoolName);
-            this.grpbxEducation.Location = new System.Drawing.Point(16, 252);
+            this.grpbxEducation.Controls.Add(this.tableLayoutPanel1);
+            this.grpbxEducation.Location = new System.Drawing.Point(8, 186);
             this.grpbxEducation.Name = "grpbxEducation";
-            this.grpbxEducation.Size = new System.Drawing.Size(567, 84);
+            this.grpbxEducation.Size = new System.Drawing.Size(555, 151);
             this.grpbxEducation.TabIndex = 16;
             this.grpbxEducation.TabStop = false;
             this.grpbxEducation.Text = "Education";
@@ -256,9 +259,9 @@
             // lblSchoolName
             // 
             this.lblSchoolName.AutoSize = true;
-            this.lblSchoolName.Location = new System.Drawing.Point(5, 19);
+            this.lblSchoolName.Location = new System.Drawing.Point(3, 0);
             this.lblSchoolName.Name = "lblSchoolName";
-            this.lblSchoolName.Size = new System.Drawing.Size(337, 17);
+            this.lblSchoolName.Size = new System.Drawing.Size(127, 50);
             this.lblSchoolName.TabIndex = 14;
             this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
             this.lblSchoolName.Click += new System.EventHandler(this.lblSchoolName_Click);
@@ -266,9 +269,9 @@
             // lblDegree
             // 
             this.lblDegree.AutoSize = true;
-            this.lblDegree.Location = new System.Drawing.Point(6, 50);
+            this.lblDegree.Location = new System.Drawing.Point(136, 0);
             this.lblDegree.Name = "lblDegree";
-            this.lblDegree.Size = new System.Drawing.Size(194, 17);
+            this.lblDegree.Size = new System.Drawing.Size(127, 34);
             this.lblDegree.TabIndex = 15;
             this.lblDegree.Text = "Master Of Science In Engineering";
             this.lblDegree.Click += new System.EventHandler(this.lblDegree_Click);
@@ -276,9 +279,9 @@
             // lblMajor
             // 
             this.lblMajor.AutoSize = true;
-            this.lblMajor.Location = new System.Drawing.Point(216, 50);
+            this.lblMajor.Location = new System.Drawing.Point(269, 0);
             this.lblMajor.Name = "lblMajor";
-            this.lblMajor.Size = new System.Drawing.Size(185, 17);
+            this.lblMajor.Size = new System.Drawing.Size(131, 34);
             this.lblMajor.TabIndex = 16;
             this.lblMajor.Text = "Electrical System And Networks";
             this.lblMajor.Click += new System.EventHandler(this.lblMajor_Click);
@@ -286,7 +289,7 @@
             // lblEducationStartDate
             // 
             this.lblEducationStartDate.AutoSize = true;
-            this.lblEducationStartDate.Location = new System.Drawing.Point(373, 19);
+            this.lblEducationStartDate.Location = new System.Drawing.Point(3, 50);
             this.lblEducationStartDate.Name = "lblEducationStartDate";
             this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
             this.lblEducationStartDate.TabIndex = 17;
@@ -296,22 +299,72 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(431, 19);
+            this.lblEndDate.Location = new System.Drawing.Point(136, 50);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(36, 17);
             this.lblEndDate.TabIndex = 18;
             this.lblEndDate.Text = "2009";
             this.lblEndDate.Click += new System.EventHandler(this.lblEndDate_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel1.Controls.Add(this.lblMajor, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblSchoolName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblEndDate, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblEducationStartDate, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblDegree, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(440, 100);
+            this.tableLayoutPanel1.TabIndex = 17;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.CV);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 42);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(577, 788);
+            this.tabControl1.TabIndex = 18;
+            // 
+            // CV
+            // 
+            this.CV.Controls.Add(this.grpbxContacts);
+            this.CV.Controls.Add(this.grpbxEducation);
+            this.CV.Controls.Add(this.grpbxAddress);
+            this.CV.Controls.Add(this.grpbxSocialNetworks);
+            this.CV.Location = new System.Drawing.Point(4, 24);
+            this.CV.Name = "CV";
+            this.CV.Padding = new System.Windows.Forms.Padding(3);
+            this.CV.Size = new System.Drawing.Size(569, 760);
+            this.CV.TabIndex = 0;
+            this.CV.Text = "CV";
+            this.CV.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(569, 760);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Application";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
-            this.Controls.Add(this.grpbxEducation);
-            this.Controls.Add(this.grpbxAddress);
-            this.Controls.Add(this.grpbxSocialNetworks);
-            this.Controls.Add(this.grpbxContacts);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnAddTag);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbxTag);
@@ -330,7 +383,10 @@
             this.grpbxAddress.ResumeLayout(false);
             this.grpbxAddress.PerformLayout();
             this.grpbxEducation.ResumeLayout(false);
-            this.grpbxEducation.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.CV.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,6 +418,10 @@
         private System.Windows.Forms.Label lblMajor;
         private System.Windows.Forms.Label lblDegree;
         private System.Windows.Forms.Label lblSchoolName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage CV;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
