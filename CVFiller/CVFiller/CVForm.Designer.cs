@@ -45,16 +45,16 @@
             this.grpbxSocialNetworks = new System.Windows.Forms.GroupBox();
             this.lblFacebook = new System.Windows.Forms.Label();
             this.grpbxAddress = new System.Windows.Forms.GroupBox();
-            this.lblPostCode = new System.Windows.Forms.Label();
-            this.lblCity = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblPostCode = new System.Windows.Forms.Label();
             this.grpbxEducation = new System.Windows.Forms.GroupBox();
-            this.lblSchoolName = new System.Windows.Forms.Label();
-            this.lblDegree = new System.Windows.Forms.Label();
-            this.lblMajor = new System.Windows.Forms.Label();
-            this.lblEducationStartDate = new System.Windows.Forms.Label();
-            this.lblEndDate = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblMajor = new System.Windows.Forms.Label();
+            this.lblSchoolName = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblEducationStartDate = new System.Windows.Forms.Label();
+            this.lblDegree = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CV = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -70,7 +70,7 @@
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "FillerDriller(Press Ctrl + ~)";
             this.notifyIcon1.Visible = true;
             // 
             // comboBox1
@@ -216,15 +216,15 @@
             this.grpbxAddress.TabStop = false;
             this.grpbxAddress.Text = "Address";
             // 
-            // lblPostCode
+            // lblAddress
             // 
-            this.lblPostCode.AutoSize = true;
-            this.lblPostCode.Location = new System.Drawing.Point(6, 19);
-            this.lblPostCode.Name = "lblPostCode";
-            this.lblPostCode.Size = new System.Drawing.Size(50, 17);
-            this.lblPostCode.TabIndex = 12;
-            this.lblPostCode.Text = "140093";
-            this.lblPostCode.Click += new System.EventHandler(this.lblPostCode_Click);
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(153, 19);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(114, 17);
+            this.lblAddress.TabIndex = 14;
+            this.lblAddress.Text = "Tomilinskaya 13-21";
+            this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
             // 
             // lblCity
             // 
@@ -236,15 +236,15 @@
             this.lblCity.Text = "Dzerzhinskiy";
             this.lblCity.Click += new System.EventHandler(this.lblCity_Click);
             // 
-            // lblAddress
+            // lblPostCode
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(153, 19);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(114, 17);
-            this.lblAddress.TabIndex = 14;
-            this.lblAddress.Text = "Tomilinskaya 13-21";
-            this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
+            this.lblPostCode.AutoSize = true;
+            this.lblPostCode.Location = new System.Drawing.Point(6, 19);
+            this.lblPostCode.Name = "lblPostCode";
+            this.lblPostCode.Size = new System.Drawing.Size(50, 17);
+            this.lblPostCode.TabIndex = 12;
+            this.lblPostCode.Text = "140093";
+            this.lblPostCode.Click += new System.EventHandler(this.lblPostCode_Click);
             // 
             // grpbxEducation
             // 
@@ -255,56 +255,6 @@
             this.grpbxEducation.TabIndex = 16;
             this.grpbxEducation.TabStop = false;
             this.grpbxEducation.Text = "Education";
-            // 
-            // lblSchoolName
-            // 
-            this.lblSchoolName.AutoSize = true;
-            this.lblSchoolName.Location = new System.Drawing.Point(3, 0);
-            this.lblSchoolName.Name = "lblSchoolName";
-            this.lblSchoolName.Size = new System.Drawing.Size(127, 50);
-            this.lblSchoolName.TabIndex = 14;
-            this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
-            this.lblSchoolName.Click += new System.EventHandler(this.lblSchoolName_Click);
-            // 
-            // lblDegree
-            // 
-            this.lblDegree.AutoSize = true;
-            this.lblDegree.Location = new System.Drawing.Point(136, 0);
-            this.lblDegree.Name = "lblDegree";
-            this.lblDegree.Size = new System.Drawing.Size(127, 34);
-            this.lblDegree.TabIndex = 15;
-            this.lblDegree.Text = "Master Of Science In Engineering";
-            this.lblDegree.Click += new System.EventHandler(this.lblDegree_Click);
-            // 
-            // lblMajor
-            // 
-            this.lblMajor.AutoSize = true;
-            this.lblMajor.Location = new System.Drawing.Point(269, 0);
-            this.lblMajor.Name = "lblMajor";
-            this.lblMajor.Size = new System.Drawing.Size(131, 34);
-            this.lblMajor.TabIndex = 16;
-            this.lblMajor.Text = "Electrical System And Networks";
-            this.lblMajor.Click += new System.EventHandler(this.lblMajor_Click);
-            // 
-            // lblEducationStartDate
-            // 
-            this.lblEducationStartDate.AutoSize = true;
-            this.lblEducationStartDate.Location = new System.Drawing.Point(3, 50);
-            this.lblEducationStartDate.Name = "lblEducationStartDate";
-            this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
-            this.lblEducationStartDate.TabIndex = 17;
-            this.lblEducationStartDate.Text = "2003";
-            this.lblEducationStartDate.Click += new System.EventHandler(this.lblEducationStartDate_Click);
-            // 
-            // lblEndDate
-            // 
-            this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(136, 50);
-            this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(36, 17);
-            this.lblEndDate.TabIndex = 18;
-            this.lblEndDate.Text = "2009";
-            this.lblEndDate.Click += new System.EventHandler(this.lblEndDate_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -324,6 +274,56 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(440, 100);
             this.tableLayoutPanel1.TabIndex = 17;
+            // 
+            // lblMajor
+            // 
+            this.lblMajor.AutoSize = true;
+            this.lblMajor.Location = new System.Drawing.Point(269, 0);
+            this.lblMajor.Name = "lblMajor";
+            this.lblMajor.Size = new System.Drawing.Size(131, 34);
+            this.lblMajor.TabIndex = 16;
+            this.lblMajor.Text = "Electrical System And Networks";
+            this.lblMajor.Click += new System.EventHandler(this.lblMajor_Click);
+            // 
+            // lblSchoolName
+            // 
+            this.lblSchoolName.AutoSize = true;
+            this.lblSchoolName.Location = new System.Drawing.Point(3, 0);
+            this.lblSchoolName.Name = "lblSchoolName";
+            this.lblSchoolName.Size = new System.Drawing.Size(127, 50);
+            this.lblSchoolName.TabIndex = 14;
+            this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
+            this.lblSchoolName.Click += new System.EventHandler(this.lblSchoolName_Click);
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(136, 50);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(36, 17);
+            this.lblEndDate.TabIndex = 18;
+            this.lblEndDate.Text = "2009";
+            this.lblEndDate.Click += new System.EventHandler(this.lblEndDate_Click);
+            // 
+            // lblEducationStartDate
+            // 
+            this.lblEducationStartDate.AutoSize = true;
+            this.lblEducationStartDate.Location = new System.Drawing.Point(3, 50);
+            this.lblEducationStartDate.Name = "lblEducationStartDate";
+            this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblEducationStartDate.TabIndex = 17;
+            this.lblEducationStartDate.Text = "2003";
+            this.lblEducationStartDate.Click += new System.EventHandler(this.lblEducationStartDate_Click);
+            // 
+            // lblDegree
+            // 
+            this.lblDegree.AutoSize = true;
+            this.lblDegree.Location = new System.Drawing.Point(136, 0);
+            this.lblDegree.Name = "lblDegree";
+            this.lblDegree.Size = new System.Drawing.Size(127, 34);
+            this.lblDegree.TabIndex = 15;
+            this.lblDegree.Text = "Master Of Science In Engineering";
+            this.lblDegree.Click += new System.EventHandler(this.lblDegree_Click);
             // 
             // tabControl1
             // 

@@ -34,6 +34,10 @@ namespace CVFiller
         public CVForm()
         {
             InitializeComponent();
+            TrayMenuContext();
+
+
+
 
             int id = 0;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.Oem3.GetHashCode());
@@ -44,6 +48,17 @@ namespace CVFiller
             _searchedItem = new SearchedItem() { Tags = new List<string>() };
 
             LoadData();
+        }
+
+        private void TrayMenuContext()
+        {
+            this.notifyIcon1.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
+            this.notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, this.MenuExit_Click);
+        }
+
+        private void MenuExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public static List<Control> GetControl(Control.ControlCollection controlCollection, Predicate<Control> match)
@@ -116,6 +131,7 @@ namespace CVFiller
         {
             UnregisterHotKey(this.Handle, 0);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
+            notifyIcon1.Visible = false;
         }
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
