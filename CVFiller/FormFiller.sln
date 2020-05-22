@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVFiller", "CVFiller\CVFiller.csproj", "{783F58A3-7716-4CF1-9E3B-C4B67289E53A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormFiller", "CVFiller\FormFiller.csproj", "{783F58A3-7716-4CF1-9E3B-C4B67289E53A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

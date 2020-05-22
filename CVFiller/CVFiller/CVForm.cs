@@ -1,4 +1,4 @@
-﻿using CVFiller.Data;
+﻿using FormFiller.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CVFiller
+namespace FormFiller
 {
     public partial class CVForm : Form
     {
@@ -34,26 +34,46 @@ namespace CVFiller
         public CVForm()
         {
             InitializeComponent();
-            TrayMenuContext();
+            AddNotifyIconMenu();
+            SetShortCuts();
 
+            _searchedItem = new SearchedItem() { Tags = new List<string>() };
 
+            LoadData();
 
+            foreach (Control c in this.Controls)
+            {
+                if(c.GetType() == typeof(Label))
+                    c.Click += Label_Click;
+            }
 
+        }
+
+        private void Label_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void SetShortCuts()
+        {
             int id = 0;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.Oem3.GetHashCode());
 
             id = 1;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.Escape.GetHashCode());
-
-            _searchedItem = new SearchedItem() { Tags = new List<string>() };
-
-            LoadData();
         }
 
-        private void TrayMenuContext()
+        private void AddNotifyIconMenu()
         {
             this.notifyIcon1.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
             this.notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, this.MenuExit_Click);
+            this.notifyIcon1.ContextMenuStrip.Items.Add("Settings", null, this.MenuSettings_Click);
+        }
+
+        private void MenuSettings_Click(object sender, EventArgs e)
+        {
+            this.HideForm();
+            MessageBox.Show("Здесь будут настройки");
         }
 
         private void MenuExit_Click(object sender, EventArgs e)

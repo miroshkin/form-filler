@@ -1,4 +1,4 @@
-﻿namespace CVFiller
+﻿namespace FormFiller
 {
     partial class CVForm
     {
@@ -58,6 +58,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.CV = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -70,7 +71,7 @@
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "FillerDriller(Press Ctrl + ~)";
+            this.notifyIcon1.Text = "FormFiller(Press Ctrl + ~ to activate)";
             this.notifyIcon1.Visible = true;
             // 
             // comboBox1
@@ -359,11 +360,21 @@
             this.tabPage2.Text = "Application";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(546, -9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "eeeha";
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnAddTag);
             this.Controls.Add(this.label1);
@@ -422,6 +433,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage CV;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label2;
     }
 }
 

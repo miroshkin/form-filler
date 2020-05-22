@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CVFiller.Data
+namespace FormFiller.Data
 {
     public class CurriculumVitae : ICurriculumVitae
     {

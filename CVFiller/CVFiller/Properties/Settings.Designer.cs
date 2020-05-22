@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CVFiller.Properties
+namespace FormFiller.Properties
 {
 
 
