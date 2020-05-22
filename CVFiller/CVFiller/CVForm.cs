@@ -57,6 +57,8 @@ namespace FormFiller
             if (control.GetType() == typeof(Label))
             {
                 control.Click += Label_Click;
+                control.MouseEnter += OnMouseEnter;
+                control.MouseLeave += OnMouseLeave;
             }
             else if (control.GetType() == typeof(RichTextBox))
             {
@@ -73,6 +75,34 @@ namespace FormFiller
             {
                 return;
             }
+        }
+
+        private void OnMouseEnter(object sender, EventArgs e)
+        {
+            HandleHover(sender);
+        }
+
+        private void HandleHover(object sender)
+        {
+            if (sender is Label)
+            {
+                var label = sender as Label;
+                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Underline);
+            }
+        }
+
+        private void HandleUnhover(object sender)
+        {
+            if (sender is Label)
+            {
+                var label = sender as Label;
+                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Regular);
+            }
+        }
+
+        private void OnMouseLeave(object sender, EventArgs e)
+        {
+            HandleUnhover(sender);
         }
 
         private void Label_Click(object sender, EventArgs e)
@@ -182,7 +212,8 @@ namespace FormFiller
         {
             UnregisterHotKey(this.Handle, 0);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
-            notifyIcon1.Visible = false;
+            notifyIcon1.Icon.Dispose();
+            notifyIcon1.Dispose();
         }
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
@@ -265,15 +296,5 @@ namespace FormFiller
             this.Controls.Add(linkLabel);
            
         }
-
- 
-
-  
-
-    
-
- 
-
-  
     }
 }
