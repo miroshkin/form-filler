@@ -40,16 +40,47 @@ namespace FormFiller
             _searchedItem = new SearchedItem() { Tags = new List<string>() };
 
             LoadData();
+            SetHandleClickMethodForControls();
+            
+        }
 
-            foreach (Control c in this.Controls)
+        private void SetHandleClickMethodForControls()
+        {
+            foreach (Control control in this.Controls)
             {
-                if(c.GetType() == typeof(Label))
-                    c.Click += Label_Click;
+                SetHandleClickForControl(control);
             }
+        }
 
+        private void SetHandleClickForControl(Control control)
+        {
+            if (control.GetType() == typeof(Label))
+            {
+                control.Click += Label_Click;
+            }
+            else if (control.GetType() == typeof(RichTextBox))
+            {
+                control.Click += RichTextBox_Click;
+            }
+            else if (control.HasChildren)
+            {
+                foreach (Control c in control.Controls)
+                {
+                    SetHandleClickForControl(c);
+                }
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void Label_Click(object sender, EventArgs e)
+        {
+            HandleClick(sender);
+        }
+
+        private void RichTextBox_Click(object sender, EventArgs e)
         {
             HandleClick(sender);
         }
@@ -222,16 +253,7 @@ namespace FormFiller
             }
         }
 
-        private void LastName_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-
-        private void rtbProfile_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-
+     
         private void btnAddTag_Click(object sender, EventArgs e)
         {
             LinkLabel linkLabel = new LinkLabel();
@@ -244,74 +266,14 @@ namespace FormFiller
            
         }
 
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
+ 
 
-        private void lblPhone_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
+  
 
-        private void lblLocation_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
+    
 
-        private void lblLinkedIn_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-        
-        private void lblFacebook_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
+ 
 
-        private void lblPostCode_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-
-        private void lblCity_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-
-        private void lblAddress_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-
-        private void lblSchoolName_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-
-        }
-
-        private void lblEducationStartDate_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-
-        }
-
-        private void lblEndDate_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-
-        }
-
-        private void lblDegree_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-
-        }
-
-        private void lblMajor_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-
-        }
+  
     }
 }

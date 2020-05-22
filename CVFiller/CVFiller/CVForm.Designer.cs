@@ -102,7 +102,6 @@
             this.LastName.Size = new System.Drawing.Size(63, 17);
             this.LastName.TabIndex = 3;
             this.LastName.Text = "Miroshkin";
-            this.LastName.Click += new System.EventHandler(this.LastName_Click);
             // 
             // txtbxTag
             // 
@@ -138,7 +137,6 @@
             this.lblEmail.Size = new System.Drawing.Size(171, 17);
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "anton.miroshkin@gmail.com";
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblPhone
             // 
@@ -148,7 +146,6 @@
             this.lblPhone.Size = new System.Drawing.Size(104, 17);
             this.lblPhone.TabIndex = 10;
             this.lblPhone.Text = "+7 916 163 18 67";
-            this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
             // 
             // lblLocation
             // 
@@ -158,7 +155,6 @@
             this.lblLocation.Size = new System.Drawing.Size(55, 17);
             this.lblLocation.TabIndex = 11;
             this.lblLocation.Text = "Moscow";
-            this.lblLocation.Click += new System.EventHandler(this.lblLocation_Click);
             // 
             // lblLinkedIn
             // 
@@ -168,7 +164,6 @@
             this.lblLinkedIn.Size = new System.Drawing.Size(195, 17);
             this.lblLinkedIn.TabIndex = 12;
             this.lblLinkedIn.Text = "linkedin.com/in/miroshkin-anton/";
-            this.lblLinkedIn.Click += new System.EventHandler(this.lblLinkedIn_Click);
             // 
             // grpbxContacts
             // 
@@ -203,7 +198,6 @@
             this.lblFacebook.Size = new System.Drawing.Size(188, 17);
             this.lblFacebook.TabIndex = 13;
             this.lblFacebook.Text = "facebook.com/miroshkin.anton/";
-            this.lblFacebook.Click += new System.EventHandler(this.lblFacebook_Click);
             // 
             // grpbxAddress
             // 
@@ -225,7 +219,6 @@
             this.lblAddress.Size = new System.Drawing.Size(114, 17);
             this.lblAddress.TabIndex = 14;
             this.lblAddress.Text = "Tomilinskaya 13-21";
-            this.lblAddress.Click += new System.EventHandler(this.lblAddress_Click);
             // 
             // lblCity
             // 
@@ -235,7 +228,6 @@
             this.lblCity.Size = new System.Drawing.Size(78, 17);
             this.lblCity.TabIndex = 13;
             this.lblCity.Text = "Dzerzhinskiy";
-            this.lblCity.Click += new System.EventHandler(this.lblCity_Click);
             // 
             // lblPostCode
             // 
@@ -245,7 +237,6 @@
             this.lblPostCode.Size = new System.Drawing.Size(50, 17);
             this.lblPostCode.TabIndex = 12;
             this.lblPostCode.Text = "140093";
-            this.lblPostCode.Click += new System.EventHandler(this.lblPostCode_Click);
             // 
             // grpbxEducation
             // 
@@ -284,7 +275,6 @@
             this.lblMajor.Size = new System.Drawing.Size(131, 34);
             this.lblMajor.TabIndex = 16;
             this.lblMajor.Text = "Electrical System And Networks";
-            this.lblMajor.Click += new System.EventHandler(this.lblMajor_Click);
             // 
             // lblSchoolName
             // 
@@ -294,7 +284,6 @@
             this.lblSchoolName.Size = new System.Drawing.Size(127, 50);
             this.lblSchoolName.TabIndex = 14;
             this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
-            this.lblSchoolName.Click += new System.EventHandler(this.lblSchoolName_Click);
             // 
             // lblEndDate
             // 
@@ -304,7 +293,6 @@
             this.lblEndDate.Size = new System.Drawing.Size(36, 17);
             this.lblEndDate.TabIndex = 18;
             this.lblEndDate.Text = "2009";
-            this.lblEndDate.Click += new System.EventHandler(this.lblEndDate_Click);
             // 
             // lblEducationStartDate
             // 
@@ -314,7 +302,6 @@
             this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
             this.lblEducationStartDate.TabIndex = 17;
             this.lblEducationStartDate.Text = "2003";
-            this.lblEducationStartDate.Click += new System.EventHandler(this.lblEducationStartDate_Click);
             // 
             // lblDegree
             // 
@@ -324,7 +311,6 @@
             this.lblDegree.Size = new System.Drawing.Size(127, 34);
             this.lblDegree.TabIndex = 15;
             this.lblDegree.Text = "Master Of Science In Engineering";
-            this.lblDegree.Click += new System.EventHandler(this.lblDegree_Click);
             // 
             // tabControl1
             // 
