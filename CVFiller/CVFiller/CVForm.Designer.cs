@@ -31,12 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CVForm));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.FirstName = new System.Windows.Forms.Label();
             this.LastName = new System.Windows.Forms.Label();
-            this.txtbxTag = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAddTag = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
@@ -75,6 +71,11 @@
             this.lblNTCName = new System.Windows.Forms.Label();
             this.lblNTCStartDate = new System.Windows.Forms.Label();
             this.lblNTCPosition = new System.Windows.Forms.Label();
+            this.btnAddTag = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtbxTag = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -89,16 +90,6 @@
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "FormFiller(Press Ctrl + ~ to activate)";
             this.notifyIcon1.Visible = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(347, 23);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
             // FirstName
             // 
@@ -117,32 +108,6 @@
             this.LastName.Size = new System.Drawing.Size(63, 17);
             this.LastName.TabIndex = 3;
             this.LastName.Text = "Miroshkin";
-            // 
-            // txtbxTag
-            // 
-            this.txtbxTag.Location = new System.Drawing.Point(381, 12);
-            this.txtbxTag.Name = "txtbxTag";
-            this.txtbxTag.Size = new System.Drawing.Size(148, 23);
-            this.txtbxTag.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "#";
-            // 
-            // btnAddTag
-            // 
-            this.btnAddTag.Location = new System.Drawing.Point(535, 11);
-            this.btnAddTag.Name = "btnAddTag";
-            this.btnAddTag.Size = new System.Drawing.Size(48, 23);
-            this.btnAddTag.TabIndex = 8;
-            this.btnAddTag.Text = "Add";
-            this.btnAddTag.UseVisualStyleBackColor = true;
-            this.btnAddTag.Click += new System.EventHandler(this.btnAddTag_Click);
             // 
             // lblEmail
             // 
@@ -522,22 +487,67 @@
             this.lblNTCPosition.TabIndex = 15;
             this.lblNTCPosition.Text = "C# Developer/Scientist";
             // 
+            // btnAddTag
+            // 
+            this.btnAddTag.Location = new System.Drawing.Point(535, 574);
+            this.btnAddTag.Name = "btnAddTag";
+            this.btnAddTag.Size = new System.Drawing.Size(48, 23);
+            this.btnAddTag.TabIndex = 25;
+            this.btnAddTag.Text = "Add";
+            this.btnAddTag.UseVisualStyleBackColor = true;
+            this.btnAddTag.Click += new System.EventHandler(this.btnAddTag_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(365, 578);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "#";
+            // 
+            // txtbxTag
+            // 
+            this.txtbxTag.Location = new System.Drawing.Point(381, 575);
+            this.txtbxTag.Name = "txtbxTag";
+            this.txtbxTag.Size = new System.Drawing.Size(148, 23);
+            this.txtbxTag.TabIndex = 23;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 575);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(347, 23);
+            this.comboBox1.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(168, 623);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddTag);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtbxTag);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.grpbxNTCExperience);
             this.Controls.Add(this.grpbxRZDExperience);
             this.Controls.Add(this.grpbxEmexExperience);
             this.Controls.Add(this.grpbxContacts);
             this.Controls.Add(this.grpbxEducation);
-            this.Controls.Add(this.btnAddTag);
             this.Controls.Add(this.grpbxAddress);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.grpbxSocialNetworks);
-            this.Controls.Add(this.txtbxTag);
-            this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CVForm";
@@ -567,12 +577,8 @@
         #endregion
 
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label FirstName;
         private System.Windows.Forms.Label LastName;
-        private System.Windows.Forms.TextBox txtbxTag;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAddTag;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblLocation;
@@ -611,6 +617,11 @@
         private System.Windows.Forms.Label lblNTCName;
         private System.Windows.Forms.Label lblNTCStartDate;
         private System.Windows.Forms.Label lblNTCPosition;
+        private System.Windows.Forms.Button btnAddTag;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtbxTag;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

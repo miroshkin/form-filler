@@ -1,4 +1,5 @@
-﻿using FormFiller.Data;
+﻿using CVFiller.Data;
+using FormFiller.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,8 @@ namespace FormFiller
 {
     public partial class CVForm : Form
     {
-        private IDictionary <string, string> _data;
-        private ISearchedItem _searchedItem;
+        public List<Article> _data;
+        public List<string> _tags;
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
@@ -36,8 +37,6 @@ namespace FormFiller
             InitializeComponent();
             AddNotifyIconMenu();
             SetShortCuts();
-
-            _searchedItem = new SearchedItem() { Tags = new List<string>() };
 
             LoadData();
             SetHandleClickMethodForControls();
@@ -159,26 +158,20 @@ namespace FormFiller
 
         private void LoadData()
         {
-            //_data = new Dictionary<string, string>();
+            _data = new List<Article>();
+            _tags = new List<string>();
 
-            //CurriculumVitae cv = new CurriculumVitae();
-            //cv.FirstName = "Anton";
-            //cv.LastName = "Miroshkin";
-            //cv.PhoneNumber = "+79161631867";
-            //cv.Email = "anton.miroshkin@gmail.com";
+            CurriculumVitae cv = new CurriculumVitae();
+            cv.FirstName = "Anton";
+            cv.LastName = "Miroshkin";
+            cv.PhoneNumber = "+79161631867";
+            cv.Email = "anton.miroshkin@gmail.com";
 
-            //_data.Add("FirstName", cv.FirstName);
-            //_data.Add("LastName", cv.LastName);
-            //_data.Add("PhoneNumber", cv.PhoneNumber);
-            //_data.Add("Email", cv.Email);
-            
-            //comboBox1.DataSource = _data.Select(d => d.Key).ToArray();
-            //comboBox1.AutoCompleteMode = AutoCompleteMode.Append;
-            //comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
-
-            
+            _data.Add(new Article() { Key = "FirstName", Value = cv.FirstName, Tags = new List<string>() { "contacts", "first" } });
+            _data.Add(new Article() { Key = "Email", Value = cv.Email, Tags = new List<string>() { "contacts", "email" } });
+            _data.Add(new Article() { Key = "Phone", Value = cv.PhoneNumber, Tags = new List<string>() { "contacts", "phone" } });
         }
-        
+
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -214,26 +207,6 @@ namespace FormFiller
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             notifyIcon1.Icon.Dispose();
             notifyIcon1.Dispose();
-        }
-
-        private void comboBox1_KeyUp(object sender, KeyEventArgs e)
-        {
-            //comboBox1.Items.Clear();
-            //var selection = _data.Where(c => c.Key.Contains(comboBox1.Text)).Select(s => $"{s.Key} | {s.Value}").Take(5).ToArray();
-            //comboBox1.Items.AddRange(selection);
-
-            //comboBox1.Items.Add(new ListItemControl());
-
-            //if (selection.Length > 0)
-            //{
-            //    comboBox1.DroppedDown = true;
-            //}
-        }
-
-        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
-        {
-            Clipboard.SetText("Test string");
-            this.Hide();
         }
 
         /// <summary>
@@ -278,20 +251,33 @@ namespace FormFiller
                 Clipboard.SetText((sender as RichTextBox).Text);
             }
         }
-
      
         private void btnAddTag_Click(object sender, EventArgs e)
         {
             LinkLabel linkLabel = new LinkLabel();
             linkLabel.BackColor = Color.White;
             linkLabel.Text = $"#{txtbxTag.Text}";
-            linkLabel.Location = new Point(_searchedItem.Tags.Count * 90, _searchedItem.Tags.Count * 25);
             linkLabel.Size = new Size(50, 25);
 
             this.Controls.Add(linkLabel);
-           
         }
 
-        
+        private void btnAddTag_Click_1(object sender, EventArgs e)
+        {
+            _tags.Add(txtbxTag.Text.ToLower());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var result = _data;
+
+            foreach (var tag in _tags)
+            {
+                result = result.Where(t => t.Tags.Contains(tag)).ToList();
+            }
+
+            MessageBox.Show(result.Count().ToString());
+        }
     }
 }
+
