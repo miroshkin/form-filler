@@ -50,20 +50,38 @@
             this.lblPostCode = new System.Windows.Forms.Label();
             this.grpbxEducation = new System.Windows.Forms.GroupBox();
             this.lblMajor = new System.Windows.Forms.Label();
-            this.lblSchoolName = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblSchoolName = new System.Windows.Forms.Label();
             this.lblEducationStartDate = new System.Windows.Forms.Label();
             this.lblDegree = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.CV = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.grpbxEmexExperience = new System.Windows.Forms.GroupBox();
+            this.lblEmExDescription = new System.Windows.Forms.Label();
+            this.lblEmExLocation = new System.Windows.Forms.Label();
+            this.lblEmExEndDate = new System.Windows.Forms.Label();
+            this.lblEmExName = new System.Windows.Forms.Label();
+            this.lblEmExStartDate = new System.Windows.Forms.Label();
+            this.lblEmExPosition = new System.Windows.Forms.Label();
+            this.grpbxRZDExperience = new System.Windows.Forms.GroupBox();
+            this.lblRZDDescription = new System.Windows.Forms.Label();
+            this.lblRZDLocation = new System.Windows.Forms.Label();
+            this.lblRZDEndDate = new System.Windows.Forms.Label();
+            this.lblRZDName = new System.Windows.Forms.Label();
+            this.lblRZDStartDate = new System.Windows.Forms.Label();
+            this.lblRZDPosition = new System.Windows.Forms.Label();
+            this.grpbxNTCExperience = new System.Windows.Forms.GroupBox();
+            this.lblNTCDescription = new System.Windows.Forms.Label();
+            this.lblNTCLocation = new System.Windows.Forms.Label();
+            this.lblNTCEndDate = new System.Windows.Forms.Label();
+            this.lblNTCName = new System.Windows.Forms.Label();
+            this.lblNTCStartDate = new System.Windows.Forms.Label();
+            this.lblNTCPosition = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
             this.grpbxEducation.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.CV.SuspendLayout();
+            this.grpbxEmexExperience.SuspendLayout();
+            this.grpbxRZDExperience.SuspendLayout();
+            this.grpbxNTCExperience.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -90,7 +108,6 @@
             this.FirstName.Size = new System.Drawing.Size(42, 17);
             this.FirstName.TabIndex = 2;
             this.FirstName.Text = "Anton";
-            this.FirstName.Click += new System.EventHandler(this.FirstName_Click);
             // 
             // LastName
             // 
@@ -170,6 +187,7 @@
             this.grpbxContacts.Controls.Add(this.lblLocation);
             this.grpbxContacts.Controls.Add(this.lblEmail);
             this.grpbxContacts.Controls.Add(this.lblPhone);
+            this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxContacts.Location = new System.Drawing.Point(12, 41);
             this.grpbxContacts.Name = "grpbxContacts";
             this.grpbxContacts.Size = new System.Drawing.Size(555, 53);
@@ -259,15 +277,6 @@
             this.lblMajor.TabIndex = 16;
             this.lblMajor.Text = "Electrical System And Networks";
             // 
-            // lblSchoolName
-            // 
-            this.lblSchoolName.AutoSize = true;
-            this.lblSchoolName.Location = new System.Drawing.Point(8, 19);
-            this.lblSchoolName.Name = "lblSchoolName";
-            this.lblSchoolName.Size = new System.Drawing.Size(337, 17);
-            this.lblSchoolName.TabIndex = 14;
-            this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
-            // 
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
@@ -276,6 +285,15 @@
             this.lblEndDate.Size = new System.Drawing.Size(36, 17);
             this.lblEndDate.TabIndex = 18;
             this.lblEndDate.Text = "2009";
+            // 
+            // lblSchoolName
+            // 
+            this.lblSchoolName.AutoSize = true;
+            this.lblSchoolName.Location = new System.Drawing.Point(8, 19);
+            this.lblSchoolName.Name = "lblSchoolName";
+            this.lblSchoolName.Size = new System.Drawing.Size(337, 17);
+            this.lblSchoolName.TabIndex = 14;
+            this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
             // 
             // lblEducationStartDate
             // 
@@ -295,52 +313,223 @@
             this.lblDegree.TabIndex = 15;
             this.lblDegree.Text = "Master Of Science In Engineering";
             // 
-            // tabControl1
+            // grpbxEmexExperience
             // 
-            this.tabControl1.Controls.Add(this.CV);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(6, 395);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(577, 300);
-            this.tabControl1.TabIndex = 18;
+            this.grpbxEmexExperience.Controls.Add(this.lblEmExDescription);
+            this.grpbxEmexExperience.Controls.Add(this.lblEmExLocation);
+            this.grpbxEmexExperience.Controls.Add(this.lblEmExEndDate);
+            this.grpbxEmexExperience.Controls.Add(this.lblEmExName);
+            this.grpbxEmexExperience.Controls.Add(this.lblEmExStartDate);
+            this.grpbxEmexExperience.Controls.Add(this.lblEmExPosition);
+            this.grpbxEmexExperience.Location = new System.Drawing.Point(12, 294);
+            this.grpbxEmexExperience.Name = "grpbxEmexExperience";
+            this.grpbxEmexExperience.Size = new System.Drawing.Size(555, 79);
+            this.grpbxEmexExperience.TabIndex = 19;
+            this.grpbxEmexExperience.TabStop = false;
+            this.grpbxEmexExperience.Text = "EmEx Experience";
             // 
-            // CV
+            // lblEmExDescription
             // 
-            this.CV.Controls.Add(this.label2);
-            this.CV.Location = new System.Drawing.Point(4, 24);
-            this.CV.Name = "CV";
-            this.CV.Padding = new System.Windows.Forms.Padding(3);
-            this.CV.Size = new System.Drawing.Size(569, 272);
-            this.CV.TabIndex = 0;
-            this.CV.Text = "CV";
-            this.CV.UseVisualStyleBackColor = true;
+            this.lblEmExDescription.AutoSize = true;
+            this.lblEmExDescription.Location = new System.Drawing.Point(10, 47);
+            this.lblEmExDescription.Name = "lblEmExDescription";
+            this.lblEmExDescription.Size = new System.Drawing.Size(1991, 17);
+            this.lblEmExDescription.TabIndex = 19;
+            this.lblEmExDescription.Text = resources.GetString("lblEmExDescription.Text");
             // 
-            // label2
+            // lblEmExLocation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 386);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 17);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "0600405200042039";
+            this.lblEmExLocation.AutoSize = true;
+            this.lblEmExLocation.Location = new System.Drawing.Point(449, 19);
+            this.lblEmExLocation.Name = "lblEmExLocation";
+            this.lblEmExLocation.Size = new System.Drawing.Size(55, 17);
+            this.lblEmExLocation.TabIndex = 16;
+            this.lblEmExLocation.Text = "Moscow";
             // 
-            // tabPage2
+            // lblEmExEndDate
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(569, 541);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Application";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lblEmExEndDate.AutoSize = true;
+            this.lblEmExEndDate.Location = new System.Drawing.Point(393, 19);
+            this.lblEmExEndDate.Name = "lblEmExEndDate";
+            this.lblEmExEndDate.Size = new System.Drawing.Size(50, 17);
+            this.lblEmExEndDate.TabIndex = 18;
+            this.lblEmExEndDate.Text = "current";
+            // 
+            // lblEmExName
+            // 
+            this.lblEmExName.AutoSize = true;
+            this.lblEmExName.Location = new System.Drawing.Point(236, 19);
+            this.lblEmExName.Name = "lblEmExName";
+            this.lblEmExName.Size = new System.Drawing.Size(109, 17);
+            this.lblEmExName.TabIndex = 14;
+            this.lblEmExName.Text = "JSC \"Emex Group\"";
+            // 
+            // lblEmExStartDate
+            // 
+            this.lblEmExStartDate.AutoSize = true;
+            this.lblEmExStartDate.Location = new System.Drawing.Point(351, 19);
+            this.lblEmExStartDate.Name = "lblEmExStartDate";
+            this.lblEmExStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblEmExStartDate.TabIndex = 17;
+            this.lblEmExStartDate.Text = "2016";
+            // 
+            // lblEmExPosition
+            // 
+            this.lblEmExPosition.AutoSize = true;
+            this.lblEmExPosition.Location = new System.Drawing.Point(10, 19);
+            this.lblEmExPosition.Name = "lblEmExPosition";
+            this.lblEmExPosition.Size = new System.Drawing.Size(205, 17);
+            this.lblEmExPosition.TabIndex = 15;
+            this.lblEmExPosition.Text = "Full Stack .NET Software Developer";
+            // 
+            // grpbxRZDExperience
+            // 
+            this.grpbxRZDExperience.Controls.Add(this.lblRZDDescription);
+            this.grpbxRZDExperience.Controls.Add(this.lblRZDLocation);
+            this.grpbxRZDExperience.Controls.Add(this.lblRZDEndDate);
+            this.grpbxRZDExperience.Controls.Add(this.lblRZDName);
+            this.grpbxRZDExperience.Controls.Add(this.lblRZDStartDate);
+            this.grpbxRZDExperience.Controls.Add(this.lblRZDPosition);
+            this.grpbxRZDExperience.Location = new System.Drawing.Point(12, 379);
+            this.grpbxRZDExperience.Name = "grpbxRZDExperience";
+            this.grpbxRZDExperience.Size = new System.Drawing.Size(555, 79);
+            this.grpbxRZDExperience.TabIndex = 20;
+            this.grpbxRZDExperience.TabStop = false;
+            this.grpbxRZDExperience.Text = "RZD Experience";
+            // 
+            // lblRZDDescription
+            // 
+            this.lblRZDDescription.AutoSize = true;
+            this.lblRZDDescription.Location = new System.Drawing.Point(10, 47);
+            this.lblRZDDescription.Name = "lblRZDDescription";
+            this.lblRZDDescription.Size = new System.Drawing.Size(892, 17);
+            this.lblRZDDescription.TabIndex = 19;
+            this.lblRZDDescription.Text = "My responsibilities in chief designer department were the support and development" +
+    " of SCADA system modules and electronic documentation web application.";
+            // 
+            // lblRZDLocation
+            // 
+            this.lblRZDLocation.AutoSize = true;
+            this.lblRZDLocation.Location = new System.Drawing.Point(449, 19);
+            this.lblRZDLocation.Name = "lblRZDLocation";
+            this.lblRZDLocation.Size = new System.Drawing.Size(55, 17);
+            this.lblRZDLocation.TabIndex = 16;
+            this.lblRZDLocation.Text = "Moscow";
+            // 
+            // lblRZDEndDate
+            // 
+            this.lblRZDEndDate.AutoSize = true;
+            this.lblRZDEndDate.Location = new System.Drawing.Point(393, 19);
+            this.lblRZDEndDate.Name = "lblRZDEndDate";
+            this.lblRZDEndDate.Size = new System.Drawing.Size(36, 17);
+            this.lblRZDEndDate.TabIndex = 18;
+            this.lblRZDEndDate.Text = "2016";
+            // 
+            // lblRZDName
+            // 
+            this.lblRZDName.AutoSize = true;
+            this.lblRZDName.Location = new System.Drawing.Point(210, 19);
+            this.lblRZDName.Name = "lblRZDName";
+            this.lblRZDName.Size = new System.Drawing.Size(137, 17);
+            this.lblRZDName.TabIndex = 14;
+            this.lblRZDName.Text = "JSC \"Russian Railroads\"";
+            // 
+            // lblRZDStartDate
+            // 
+            this.lblRZDStartDate.AutoSize = true;
+            this.lblRZDStartDate.Location = new System.Drawing.Point(351, 19);
+            this.lblRZDStartDate.Name = "lblRZDStartDate";
+            this.lblRZDStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblRZDStartDate.TabIndex = 17;
+            this.lblRZDStartDate.Text = "2014";
+            // 
+            // lblRZDPosition
+            // 
+            this.lblRZDPosition.AutoSize = true;
+            this.lblRZDPosition.Location = new System.Drawing.Point(10, 19);
+            this.lblRZDPosition.Name = "lblRZDPosition";
+            this.lblRZDPosition.Size = new System.Drawing.Size(192, 17);
+            this.lblRZDPosition.TabIndex = 15;
+            this.lblRZDPosition.Text = "Full Stack C# Software Developer";
+            // 
+            // grpbxNTCExperience
+            // 
+            this.grpbxNTCExperience.Controls.Add(this.lblNTCDescription);
+            this.grpbxNTCExperience.Controls.Add(this.lblNTCLocation);
+            this.grpbxNTCExperience.Controls.Add(this.lblNTCEndDate);
+            this.grpbxNTCExperience.Controls.Add(this.lblNTCName);
+            this.grpbxNTCExperience.Controls.Add(this.lblNTCStartDate);
+            this.grpbxNTCExperience.Controls.Add(this.lblNTCPosition);
+            this.grpbxNTCExperience.Location = new System.Drawing.Point(12, 464);
+            this.grpbxNTCExperience.Name = "grpbxNTCExperience";
+            this.grpbxNTCExperience.Size = new System.Drawing.Size(555, 105);
+            this.grpbxNTCExperience.TabIndex = 21;
+            this.grpbxNTCExperience.TabStop = false;
+            this.grpbxNTCExperience.Text = "NTC Experience";
+            // 
+            // lblNTCDescription
+            // 
+            this.lblNTCDescription.AutoSize = true;
+            this.lblNTCDescription.Location = new System.Drawing.Point(10, 85);
+            this.lblNTCDescription.Name = "lblNTCDescription";
+            this.lblNTCDescription.Size = new System.Drawing.Size(1339, 17);
+            this.lblNTCDescription.TabIndex = 19;
+            this.lblNTCDescription.Text = resources.GetString("lblNTCDescription.Text");
+            // 
+            // lblNTCLocation
+            // 
+            this.lblNTCLocation.AutoSize = true;
+            this.lblNTCLocation.Location = new System.Drawing.Point(98, 53);
+            this.lblNTCLocation.Name = "lblNTCLocation";
+            this.lblNTCLocation.Size = new System.Drawing.Size(55, 17);
+            this.lblNTCLocation.TabIndex = 16;
+            this.lblNTCLocation.Text = "Moscow";
+            // 
+            // lblNTCEndDate
+            // 
+            this.lblNTCEndDate.AutoSize = true;
+            this.lblNTCEndDate.Location = new System.Drawing.Point(56, 53);
+            this.lblNTCEndDate.Name = "lblNTCEndDate";
+            this.lblNTCEndDate.Size = new System.Drawing.Size(36, 17);
+            this.lblNTCEndDate.TabIndex = 18;
+            this.lblNTCEndDate.Text = "2014";
+            // 
+            // lblNTCName
+            // 
+            this.lblNTCName.AutoSize = true;
+            this.lblNTCName.Location = new System.Drawing.Point(8, 36);
+            this.lblNTCName.Name = "lblNTCName";
+            this.lblNTCName.Size = new System.Drawing.Size(524, 17);
+            this.lblNTCName.TabIndex = 14;
+            this.lblNTCName.Text = "JSC \"Research And Development Center At Federal Grid Company Of Unified Energy Sy" +
+    "stem\"";
+            // 
+            // lblNTCStartDate
+            // 
+            this.lblNTCStartDate.AutoSize = true;
+            this.lblNTCStartDate.Location = new System.Drawing.Point(8, 53);
+            this.lblNTCStartDate.Name = "lblNTCStartDate";
+            this.lblNTCStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblNTCStartDate.TabIndex = 17;
+            this.lblNTCStartDate.Text = "2009";
+            // 
+            // lblNTCPosition
+            // 
+            this.lblNTCPosition.AutoSize = true;
+            this.lblNTCPosition.Location = new System.Drawing.Point(10, 19);
+            this.lblNTCPosition.Name = "lblNTCPosition";
+            this.lblNTCPosition.Size = new System.Drawing.Size(135, 17);
+            this.lblNTCPosition.TabIndex = 15;
+            this.lblNTCPosition.Text = "C# Developer/Scientist";
             // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.grpbxNTCExperience);
+            this.Controls.Add(this.grpbxRZDExperience);
+            this.Controls.Add(this.grpbxEmexExperience);
             this.Controls.Add(this.grpbxContacts);
             this.Controls.Add(this.grpbxEducation);
             this.Controls.Add(this.btnAddTag);
@@ -364,9 +553,12 @@
             this.grpbxAddress.PerformLayout();
             this.grpbxEducation.ResumeLayout(false);
             this.grpbxEducation.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.CV.ResumeLayout(false);
-            this.CV.PerformLayout();
+            this.grpbxEmexExperience.ResumeLayout(false);
+            this.grpbxEmexExperience.PerformLayout();
+            this.grpbxRZDExperience.ResumeLayout(false);
+            this.grpbxRZDExperience.PerformLayout();
+            this.grpbxNTCExperience.ResumeLayout(false);
+            this.grpbxNTCExperience.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,10 +590,27 @@
         private System.Windows.Forms.Label lblMajor;
         private System.Windows.Forms.Label lblDegree;
         private System.Windows.Forms.Label lblSchoolName;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage CV;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox grpbxEmexExperience;
+        private System.Windows.Forms.Label lblEmExLocation;
+        private System.Windows.Forms.Label lblEmExEndDate;
+        private System.Windows.Forms.Label lblEmExName;
+        private System.Windows.Forms.Label lblEmExStartDate;
+        private System.Windows.Forms.Label lblEmExPosition;
+        private System.Windows.Forms.GroupBox grpbxRZDExperience;
+        private System.Windows.Forms.Label lblRZDDescription;
+        private System.Windows.Forms.Label lblRZDLocation;
+        private System.Windows.Forms.Label lblRZDEndDate;
+        private System.Windows.Forms.Label lblRZDName;
+        private System.Windows.Forms.Label lblRZDStartDate;
+        private System.Windows.Forms.Label lblRZDPosition;
+        private System.Windows.Forms.Label lblEmExDescription;
+        private System.Windows.Forms.GroupBox grpbxNTCExperience;
+        private System.Windows.Forms.Label lblNTCDescription;
+        private System.Windows.Forms.Label lblNTCLocation;
+        private System.Windows.Forms.Label lblNTCEndDate;
+        private System.Windows.Forms.Label lblNTCName;
+        private System.Windows.Forms.Label lblNTCStartDate;
+        private System.Windows.Forms.Label lblNTCPosition;
     }
 }
 

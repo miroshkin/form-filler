@@ -236,11 +236,6 @@ namespace FormFiller
             this.Hide();
         }
 
-        private void FirstName_Click(object sender, EventArgs e)
-        {
-            HandleClick(sender);
-        }
-
         /// <summary>
         /// Handles mouse click on selected control
         /// </summary>
@@ -296,5 +291,7 @@ namespace FormFiller
             this.Controls.Add(linkLabel);
            
         }
+
+        
     }
 }
