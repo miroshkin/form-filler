@@ -14,6 +14,8 @@ namespace FormFiller
         [STAThread]
         static void Main()
         {
+            //Added as a solution for blurry fonts problem 
+            //Makes fonts sharp and clear
             if (Environment.OSVersion.Version.Major >= 6)
                 SetProcessDPIAware();
 
