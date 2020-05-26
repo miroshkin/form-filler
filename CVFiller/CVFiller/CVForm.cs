@@ -51,6 +51,10 @@ namespace FormFiller
         {
             foreach (Control control in this.Controls)
             {
+                if (control.Name == "lblChangeColorScheme")
+                {
+                    continue;
+                }
                 SetHandleClickForControl(control);
             }
         }
@@ -320,6 +324,11 @@ namespace FormFiller
             CopyFileToClipboard(new List<string>() { Application, CV });
             HideForm();
             PasteData();
+        }
+
+        private void lblChangeColorScheme_Click(object sender, EventArgs e)
+        {
+            this.BackColor = this.BackColor == Color.Black? Color.White : Color.Black;
         }
     }
 }

@@ -79,6 +79,7 @@
             this.btnCV = new System.Windows.Forms.Button();
             this.btnApplication = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblChangeColorScheme = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -150,26 +151,30 @@
             // 
             // grpbxContacts
             // 
+            this.grpbxContacts.BackColor = System.Drawing.Color.Transparent;
             this.grpbxContacts.Controls.Add(this.FirstName);
             this.grpbxContacts.Controls.Add(this.LastName);
             this.grpbxContacts.Controls.Add(this.lblLocation);
             this.grpbxContacts.Controls.Add(this.lblEmail);
             this.grpbxContacts.Controls.Add(this.lblPhone);
             this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.grpbxContacts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxContacts.Location = new System.Drawing.Point(12, 41);
             this.grpbxContacts.Name = "grpbxContacts";
-            this.grpbxContacts.Size = new System.Drawing.Size(555, 53);
+            this.grpbxContacts.Size = new System.Drawing.Size(571, 53);
             this.grpbxContacts.TabIndex = 13;
             this.grpbxContacts.TabStop = false;
             this.grpbxContacts.Text = "Contacts";
             // 
             // grpbxSocialNetworks
             // 
+            this.grpbxSocialNetworks.BackColor = System.Drawing.Color.Transparent;
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
+            this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxSocialNetworks.Location = new System.Drawing.Point(12, 155);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(555, 60);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(571, 60);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks";
@@ -185,12 +190,14 @@
             // 
             // grpbxAddress
             // 
+            this.grpbxAddress.BackColor = System.Drawing.Color.Transparent;
             this.grpbxAddress.Controls.Add(this.lblAddress);
             this.grpbxAddress.Controls.Add(this.lblCity);
             this.grpbxAddress.Controls.Add(this.lblPostCode);
+            this.grpbxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxAddress.Location = new System.Drawing.Point(12, 100);
             this.grpbxAddress.Name = "grpbxAddress";
-            this.grpbxAddress.Size = new System.Drawing.Size(555, 49);
+            this.grpbxAddress.Size = new System.Drawing.Size(571, 49);
             this.grpbxAddress.TabIndex = 15;
             this.grpbxAddress.TabStop = false;
             this.grpbxAddress.Text = "Address";
@@ -224,14 +231,17 @@
             // 
             // grpbxEducation
             // 
+            this.grpbxEducation.BackColor = System.Drawing.Color.Transparent;
             this.grpbxEducation.Controls.Add(this.lblMajor);
             this.grpbxEducation.Controls.Add(this.lblEndDate);
             this.grpbxEducation.Controls.Add(this.lblSchoolName);
             this.grpbxEducation.Controls.Add(this.lblEducationStartDate);
             this.grpbxEducation.Controls.Add(this.lblDegree);
+            this.grpbxEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpbxEducation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxEducation.Location = new System.Drawing.Point(12, 221);
             this.grpbxEducation.Name = "grpbxEducation";
-            this.grpbxEducation.Size = new System.Drawing.Size(555, 67);
+            this.grpbxEducation.Size = new System.Drawing.Size(571, 67);
             this.grpbxEducation.TabIndex = 16;
             this.grpbxEducation.TabStop = false;
             this.grpbxEducation.Text = "Education";
@@ -283,15 +293,18 @@
             // 
             // grpbxEmexExperience
             // 
+            this.grpbxEmexExperience.BackColor = System.Drawing.Color.Transparent;
             this.grpbxEmexExperience.Controls.Add(this.lblEmExDescription);
             this.grpbxEmexExperience.Controls.Add(this.lblEmExLocation);
             this.grpbxEmexExperience.Controls.Add(this.lblEmExEndDate);
             this.grpbxEmexExperience.Controls.Add(this.lblEmExName);
             this.grpbxEmexExperience.Controls.Add(this.lblEmExStartDate);
             this.grpbxEmexExperience.Controls.Add(this.lblEmExPosition);
+            this.grpbxEmexExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpbxEmexExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxEmexExperience.Location = new System.Drawing.Point(12, 294);
             this.grpbxEmexExperience.Name = "grpbxEmexExperience";
-            this.grpbxEmexExperience.Size = new System.Drawing.Size(555, 79);
+            this.grpbxEmexExperience.Size = new System.Drawing.Size(571, 79);
             this.grpbxEmexExperience.TabIndex = 19;
             this.grpbxEmexExperience.TabStop = false;
             this.grpbxEmexExperience.Text = "EmEx Experience";
@@ -358,9 +371,10 @@
             this.grpbxRZDExperience.Controls.Add(this.lblRZDName);
             this.grpbxRZDExperience.Controls.Add(this.lblRZDStartDate);
             this.grpbxRZDExperience.Controls.Add(this.lblRZDPosition);
+            this.grpbxRZDExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxRZDExperience.Location = new System.Drawing.Point(12, 379);
             this.grpbxRZDExperience.Name = "grpbxRZDExperience";
-            this.grpbxRZDExperience.Size = new System.Drawing.Size(555, 79);
+            this.grpbxRZDExperience.Size = new System.Drawing.Size(571, 79);
             this.grpbxRZDExperience.TabIndex = 20;
             this.grpbxRZDExperience.TabStop = false;
             this.grpbxRZDExperience.Text = "RZD Experience";
@@ -428,9 +442,10 @@
             this.grpbxNTCExperience.Controls.Add(this.lblNTCName);
             this.grpbxNTCExperience.Controls.Add(this.lblNTCStartDate);
             this.grpbxNTCExperience.Controls.Add(this.lblNTCPosition);
+            this.grpbxNTCExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxNTCExperience.Location = new System.Drawing.Point(12, 464);
             this.grpbxNTCExperience.Name = "grpbxNTCExperience";
-            this.grpbxNTCExperience.Size = new System.Drawing.Size(555, 105);
+            this.grpbxNTCExperience.Size = new System.Drawing.Size(571, 105);
             this.grpbxNTCExperience.TabIndex = 21;
             this.grpbxNTCExperience.TabStop = false;
             this.grpbxNTCExperience.Text = "NTC Experience";
@@ -492,6 +507,7 @@
             // 
             // btnAddTag
             // 
+            this.btnAddTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.btnAddTag.Location = new System.Drawing.Point(535, 574);
             this.btnAddTag.Name = "btnAddTag";
             this.btnAddTag.Size = new System.Drawing.Size(48, 23);
@@ -503,6 +519,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.label1.Location = new System.Drawing.Point(365, 578);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 17);
@@ -511,6 +528,7 @@
             // 
             // txtbxTag
             // 
+            this.txtbxTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.txtbxTag.Location = new System.Drawing.Point(381, 575);
             this.txtbxTag.Name = "txtbxTag";
             this.txtbxTag.Size = new System.Drawing.Size(148, 23);
@@ -518,6 +536,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 575);
             this.comboBox1.Name = "comboBox1";
@@ -526,19 +545,22 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(168, 623);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.button1.Location = new System.Drawing.Point(12, 604);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(66, 23);
             this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
+            this.button1.Text = "Find";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCV
             // 
-            this.btnCV.Location = new System.Drawing.Point(12, 12);
+            this.btnCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btnCV.Location = new System.Drawing.Point(12, 9);
             this.btnCV.Name = "btnCV";
-            this.btnCV.Size = new System.Drawing.Size(75, 23);
+            this.btnCV.Size = new System.Drawing.Size(75, 26);
             this.btnCV.TabIndex = 27;
             this.btnCV.Text = "CV";
             this.btnCV.UseVisualStyleBackColor = true;
@@ -546,9 +568,11 @@
             // 
             // btnApplication
             // 
-            this.btnApplication.Location = new System.Drawing.Point(93, 12);
+            this.btnApplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.btnApplication.Location = new System.Drawing.Point(93, 9);
             this.btnApplication.Name = "btnApplication";
-            this.btnApplication.Size = new System.Drawing.Size(85, 23);
+            this.btnApplication.Size = new System.Drawing.Size(85, 26);
             this.btnApplication.TabIndex = 28;
             this.btnApplication.Text = "Application";
             this.btnApplication.UseVisualStyleBackColor = true;
@@ -556,19 +580,37 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(338, 10);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.button2.Location = new System.Drawing.Point(338, 9);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 24);
+            this.button2.Size = new System.Drawing.Size(135, 26);
             this.button2.TabIndex = 29;
-            this.button2.Text = "New company folder";
+            this.button2.Text = "Copy all files";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblChangeColorScheme
+            // 
+            this.lblChangeColorScheme.AutoSize = true;
+            this.lblChangeColorScheme.BackColor = System.Drawing.Color.Transparent;
+            this.lblChangeColorScheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblChangeColorScheme.Font = new System.Drawing.Font("Calibri", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblChangeColorScheme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.lblChangeColorScheme.Location = new System.Drawing.Point(266, 820);
+            this.lblChangeColorScheme.Name = "lblChangeColorScheme";
+            this.lblChangeColorScheme.Size = new System.Drawing.Size(91, 13);
+            this.lblChangeColorScheme.TabIndex = 30;
+            this.lblChangeColorScheme.Text = "Change color scheme";
+            this.lblChangeColorScheme.Click += new System.EventHandler(this.lblChangeColorScheme_Click);
             // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.lblChangeColorScheme);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnApplication);
             this.Controls.Add(this.btnCV);
@@ -661,6 +703,7 @@
         private System.Windows.Forms.Button btnCV;
         private System.Windows.Forms.Button btnApplication;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblChangeColorScheme;
     }
 }
 
