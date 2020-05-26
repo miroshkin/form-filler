@@ -8,7 +8,6 @@ namespace CVFiller.Data
 {
     public class Article
     {
-        public string Key { get; set; }
         public string Value { get; set; }
         public List<string> Tags { get; set; }
     }

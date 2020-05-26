@@ -2,6 +2,7 @@
 using FormFiller.Data;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -16,6 +17,9 @@ namespace FormFiller
     {
         public List<Article> _data;
         public List<string> _tags;
+
+        public const string Application = "Application.docx";
+        public const string CV = "CV.docx";
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
@@ -167,9 +171,9 @@ namespace FormFiller
             cv.PhoneNumber = "+79161631867";
             cv.Email = "anton.miroshkin@gmail.com";
 
-            _data.Add(new Article() { Key = "FirstName", Value = cv.FirstName, Tags = new List<string>() { "contacts", "first" } });
-            _data.Add(new Article() { Key = "Email", Value = cv.Email, Tags = new List<string>() { "contacts", "email" } });
-            _data.Add(new Article() { Key = "Phone", Value = cv.PhoneNumber, Tags = new List<string>() { "contacts", "phone" } });
+            _data.Add(new Article() { Value = cv.FirstName, Tags = new List<string>() { "contacts", "first", "name" } });
+            _data.Add(new Article() { Value = cv.Email, Tags = new List<string>() { "contacts", "email" } });
+            _data.Add(new Article() { Value = cv.PhoneNumber, Tags = new List<string>() { "contacts", "phone" } });
         }
 
         protected override void WndProc(ref Message m)
@@ -264,7 +268,11 @@ namespace FormFiller
 
         private void btnAddTag_Click_1(object sender, EventArgs e)
         {
-            _tags.Add(txtbxTag.Text.ToLower());
+            string tag = txtbxTag.Text.ToLower();
+            _tags.Add(tag);
+            var tagControl = new TagControl(tag);
+            tagControl.Width = tag.Count() * 9 + 20;
+            this.Controls.Add(tagControl);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -277,6 +285,41 @@ namespace FormFiller
             }
 
             MessageBox.Show(result.Count().ToString());
+        }
+
+        private void btnCV_Click(object sender, EventArgs e)
+        {
+            CopyFileToClipboard(CV);
+            HideForm();
+            PasteData();
+        }
+
+        private static void CopyFileToClipboard(string fileName)
+        {
+            var paths = new StringCollection();
+            paths.Add(System.AppDomain.CurrentDomain.BaseDirectory + $"\\Resources\\{fileName}");
+            Clipboard.SetFileDropList(paths);
+        }
+
+        private static void CopyFileToClipboard(List<string> fileNames)
+        {
+            var paths = new StringCollection();
+            fileNames.ForEach(fn => paths.Add(System.AppDomain.CurrentDomain.BaseDirectory + $"\\Resources\\{fn}"));
+            Clipboard.SetFileDropList(paths);
+        }
+
+        private void btnApplication_Click(object sender, EventArgs e)
+        {
+            CopyFileToClipboard(Application);
+            HideForm();
+            PasteData();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CopyFileToClipboard(new List<string>() { Application, CV });
+            HideForm();
+            PasteData();
         }
     }
 }

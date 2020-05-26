@@ -76,6 +76,9 @@
             this.txtbxTag = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCV = new System.Windows.Forms.Button();
+            this.btnApplication = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -531,11 +534,44 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnCV
+            // 
+            this.btnCV.Location = new System.Drawing.Point(12, 12);
+            this.btnCV.Name = "btnCV";
+            this.btnCV.Size = new System.Drawing.Size(75, 23);
+            this.btnCV.TabIndex = 27;
+            this.btnCV.Text = "CV";
+            this.btnCV.UseVisualStyleBackColor = true;
+            this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
+            // 
+            // btnApplication
+            // 
+            this.btnApplication.Location = new System.Drawing.Point(93, 12);
+            this.btnApplication.Name = "btnApplication";
+            this.btnApplication.Size = new System.Drawing.Size(85, 23);
+            this.btnApplication.TabIndex = 28;
+            this.btnApplication.Text = "Application";
+            this.btnApplication.UseVisualStyleBackColor = true;
+            this.btnApplication.Click += new System.EventHandler(this.btnApplication_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(338, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 24);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "New company folder";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnApplication);
+            this.Controls.Add(this.btnCV);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddTag);
             this.Controls.Add(this.label1);
@@ -622,6 +658,9 @@
         private System.Windows.Forms.TextBox txtbxTag;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCV;
+        private System.Windows.Forms.Button btnApplication;
+        private System.Windows.Forms.Button button2;
     }
 }
 

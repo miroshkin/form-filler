@@ -57,6 +57,12 @@
     <Compile Include="Data\CurriculumVitae.cs" />
     <Compile Include="Data\Education.cs" />
     <Compile Include="Data\ICurriculumVitae.cs" />
+    <Compile Include="Data\TagControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\TagControl.Designer.cs">
+      <DependentUpon>TagControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs">
@@ -66,6 +72,9 @@
     </Compile>
     <EmbeddedResource Include="CVForm.resx">
       <DependentUpon>CVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\TagControl.resx">
+      <DependentUpon>TagControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +88,7 @@
     </Compile>
     <EmbeddedResource Include="Resources\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -96,6 +106,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Application.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CV.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Resources\FormFiller.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
