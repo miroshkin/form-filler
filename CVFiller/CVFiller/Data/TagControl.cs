@@ -12,15 +12,32 @@ namespace CVFiller.Data
 {
     public partial class TagControl : UserControl
     {
-        public TagControl(string labelText)
+        List<string> _tags;
+
+        public TagControl(string labelText, List<string> tags)
         {
             InitializeComponent();
             this.lblTag.Text = labelText;
+            this.lblClose.Click += LblClose_Click;
+            _tags = tags;
         }
 
-        private void lblClose_Click(object sender, EventArgs e)
+        private void LblClose_Click(object sender, EventArgs e)
         {
+            _tags.RemoveAll(t => t == this.lblTag.Text);
             this.Dispose();
+        }
+
+        
+
+        private void TagControl_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void lblTag_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

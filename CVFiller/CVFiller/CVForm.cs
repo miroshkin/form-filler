@@ -274,9 +274,10 @@ namespace FormFiller
         {
             string tag = txtbxTag.Text.ToLower();
             _tags.Add(tag);
-            var tagControl = new TagControl(tag);
+            var tagControl = new TagControl(tag, _tags);
+            tagControl.Anchor = AnchorStyles.Left;
             tagControl.Width = tag.Count() * 9 + 20;
-            this.Controls.Add(tagControl);
+            this.flowLayoutPanel1.Controls.Add(tagControl);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -288,7 +289,10 @@ namespace FormFiller
                 result = result.Where(t => t.Tags.Contains(tag)).ToList();
             }
 
-            MessageBox.Show(result.Count().ToString());
+            string s = string.Empty;
+            result.ForEach(i => s += "\n" + i.Value);
+
+            MessageBox.Show(s);
         }
 
         private void btnCV_Click(object sender, EventArgs e)

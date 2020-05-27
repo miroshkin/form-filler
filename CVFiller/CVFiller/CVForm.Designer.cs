@@ -80,6 +80,8 @@
             this.btnApplication = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lblChangeColorScheme = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -107,7 +109,7 @@
             // LastName
             // 
             this.LastName.AutoSize = true;
-            this.LastName.Location = new System.Drawing.Point(56, 22);
+            this.LastName.Location = new System.Drawing.Point(47, 22);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(63, 17);
             this.LastName.TabIndex = 3;
@@ -116,7 +118,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(137, 22);
+            this.lblEmail.Location = new System.Drawing.Point(6, 42);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(171, 17);
             this.lblEmail.TabIndex = 9;
@@ -125,7 +127,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(323, 22);
+            this.lblPhone.Location = new System.Drawing.Point(6, 63);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(104, 17);
             this.lblPhone.TabIndex = 10;
@@ -134,7 +136,7 @@
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
-            this.lblLocation.Location = new System.Drawing.Point(433, 22);
+            this.lblLocation.Location = new System.Drawing.Point(8, 84);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(55, 17);
             this.lblLocation.TabIndex = 11;
@@ -152,6 +154,7 @@
             // grpbxContacts
             // 
             this.grpbxContacts.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxContacts.Controls.Add(this.lblDateOfBirth);
             this.grpbxContacts.Controls.Add(this.FirstName);
             this.grpbxContacts.Controls.Add(this.LastName);
             this.grpbxContacts.Controls.Add(this.lblLocation);
@@ -159,9 +162,9 @@
             this.grpbxContacts.Controls.Add(this.lblPhone);
             this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxContacts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxContacts.Location = new System.Drawing.Point(12, 41);
+            this.grpbxContacts.Location = new System.Drawing.Point(12, 81);
             this.grpbxContacts.Name = "grpbxContacts";
-            this.grpbxContacts.Size = new System.Drawing.Size(571, 53);
+            this.grpbxContacts.Size = new System.Drawing.Size(201, 151);
             this.grpbxContacts.TabIndex = 13;
             this.grpbxContacts.TabStop = false;
             this.grpbxContacts.Text = "Contacts";
@@ -172,9 +175,9 @@
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
             this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxSocialNetworks.Location = new System.Drawing.Point(12, 155);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(353, 81);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(571, 60);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(230, 80);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks";
@@ -182,7 +185,7 @@
             // lblFacebook
             // 
             this.lblFacebook.AutoSize = true;
-            this.lblFacebook.Location = new System.Drawing.Point(207, 19);
+            this.lblFacebook.Location = new System.Drawing.Point(6, 36);
             this.lblFacebook.Name = "lblFacebook";
             this.lblFacebook.Size = new System.Drawing.Size(188, 17);
             this.lblFacebook.TabIndex = 13;
@@ -195,9 +198,9 @@
             this.grpbxAddress.Controls.Add(this.lblCity);
             this.grpbxAddress.Controls.Add(this.lblPostCode);
             this.grpbxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxAddress.Location = new System.Drawing.Point(12, 100);
+            this.grpbxAddress.Location = new System.Drawing.Point(219, 81);
             this.grpbxAddress.Name = "grpbxAddress";
-            this.grpbxAddress.Size = new System.Drawing.Size(571, 49);
+            this.grpbxAddress.Size = new System.Drawing.Size(128, 80);
             this.grpbxAddress.TabIndex = 15;
             this.grpbxAddress.TabStop = false;
             this.grpbxAddress.Text = "Address";
@@ -205,7 +208,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(153, 19);
+            this.lblAddress.Location = new System.Drawing.Point(6, 53);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(114, 17);
             this.lblAddress.TabIndex = 14;
@@ -214,7 +217,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(69, 19);
+            this.lblCity.Location = new System.Drawing.Point(6, 36);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(78, 17);
             this.lblCity.TabIndex = 13;
@@ -239,9 +242,9 @@
             this.grpbxEducation.Controls.Add(this.lblDegree);
             this.grpbxEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpbxEducation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxEducation.Location = new System.Drawing.Point(12, 221);
+            this.grpbxEducation.Location = new System.Drawing.Point(219, 167);
             this.grpbxEducation.Name = "grpbxEducation";
-            this.grpbxEducation.Size = new System.Drawing.Size(571, 67);
+            this.grpbxEducation.Size = new System.Drawing.Size(364, 123);
             this.grpbxEducation.TabIndex = 16;
             this.grpbxEducation.TabStop = false;
             this.grpbxEducation.Text = "Education";
@@ -249,7 +252,7 @@
             // lblMajor
             // 
             this.lblMajor.AutoSize = true;
-            this.lblMajor.Location = new System.Drawing.Point(210, 36);
+            this.lblMajor.Location = new System.Drawing.Point(8, 77);
             this.lblMajor.Name = "lblMajor";
             this.lblMajor.Size = new System.Drawing.Size(185, 17);
             this.lblMajor.TabIndex = 16;
@@ -258,7 +261,7 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(393, 19);
+            this.lblEndDate.Location = new System.Drawing.Point(47, 36);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(36, 17);
             this.lblEndDate.TabIndex = 18;
@@ -276,7 +279,7 @@
             // lblEducationStartDate
             // 
             this.lblEducationStartDate.AutoSize = true;
-            this.lblEducationStartDate.Location = new System.Drawing.Point(351, 19);
+            this.lblEducationStartDate.Location = new System.Drawing.Point(8, 36);
             this.lblEducationStartDate.Name = "lblEducationStartDate";
             this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
             this.lblEducationStartDate.TabIndex = 17;
@@ -285,7 +288,7 @@
             // lblDegree
             // 
             this.lblDegree.AutoSize = true;
-            this.lblDegree.Location = new System.Drawing.Point(8, 36);
+            this.lblDegree.Location = new System.Drawing.Point(8, 60);
             this.lblDegree.Name = "lblDegree";
             this.lblDegree.Size = new System.Drawing.Size(194, 17);
             this.lblDegree.TabIndex = 15;
@@ -558,7 +561,7 @@
             // 
             this.btnCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btnCV.Location = new System.Drawing.Point(12, 9);
+            this.btnCV.Location = new System.Drawing.Point(12, 49);
             this.btnCV.Name = "btnCV";
             this.btnCV.Size = new System.Drawing.Size(75, 26);
             this.btnCV.TabIndex = 27;
@@ -570,7 +573,7 @@
             // 
             this.btnApplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btnApplication.Location = new System.Drawing.Point(93, 9);
+            this.btnApplication.Location = new System.Drawing.Point(93, 49);
             this.btnApplication.Name = "btnApplication";
             this.btnApplication.Size = new System.Drawing.Size(85, 26);
             this.btnApplication.TabIndex = 28;
@@ -582,7 +585,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.button2.Location = new System.Drawing.Point(338, 9);
+            this.button2.Location = new System.Drawing.Point(338, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 26);
             this.button2.TabIndex = 29;
@@ -604,18 +607,36 @@
             this.lblChangeColorScheme.Text = "Change color scheme";
             this.lblChangeColorScheme.Click += new System.EventHandler(this.lblChangeColorScheme_Click);
             // 
+            // lblDateOfBirth
+            // 
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(8, 104);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(72, 17);
+            this.lblDateOfBirth.TabIndex = 12;
+            this.lblDateOfBirth.Text = "26.02.1986";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 634);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(570, 81);
+            this.flowLayoutPanel1.TabIndex = 31;
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(595, 842);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblChangeColorScheme);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnApplication);
             this.Controls.Add(this.btnCV);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddTag);
+            this.Controls.Add(this.grpbxEducation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbxTag);
             this.Controls.Add(this.comboBox1);
@@ -623,7 +644,6 @@
             this.Controls.Add(this.grpbxRZDExperience);
             this.Controls.Add(this.grpbxEmexExperience);
             this.Controls.Add(this.grpbxContacts);
-            this.Controls.Add(this.grpbxEducation);
             this.Controls.Add(this.grpbxAddress);
             this.Controls.Add(this.grpbxSocialNetworks);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -704,6 +724,8 @@
         private System.Windows.Forms.Button btnApplication;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblChangeColorScheme;
+        private System.Windows.Forms.Label lblDateOfBirth;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

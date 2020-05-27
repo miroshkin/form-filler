@@ -35,23 +35,25 @@
             // lblTag
             // 
             this.lblTag.AutoSize = true;
+            this.lblTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.lblTag.Location = new System.Drawing.Point(4, 4);
             this.lblTag.Name = "lblTag";
             this.lblTag.Size = new System.Drawing.Size(33, 17);
             this.lblTag.TabIndex = 0;
             this.lblTag.Text = "Tag";
+            this.lblTag.Click += new System.EventHandler(this.lblTag_Click);
             // 
             // lblClose
             // 
             this.lblClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblClose.AutoSize = true;
             this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.lblClose.Location = new System.Drawing.Point(37, 4);
             this.lblClose.Name = "lblClose";
             this.lblClose.Size = new System.Drawing.Size(18, 17);
             this.lblClose.TabIndex = 1;
             this.lblClose.Text = "X";
-            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // TagControl
             // 
