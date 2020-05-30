@@ -213,7 +213,7 @@
             this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxSocialNetworks.Location = new System.Drawing.Point(6, 133);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(570, 54);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(556, 54);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks";
@@ -286,10 +286,11 @@
             this.grpbxEducation.Controls.Add(this.lblEducationStartDate);
             this.grpbxEducation.Controls.Add(this.lblDegree);
             this.grpbxEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpbxEducation.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxEducation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxEducation.Location = new System.Drawing.Point(16, 6);
             this.grpbxEducation.Name = "grpbxEducation";
-            this.grpbxEducation.Size = new System.Drawing.Size(546, 71);
+            this.grpbxEducation.Size = new System.Drawing.Size(546, 85);
             this.grpbxEducation.TabIndex = 16;
             this.grpbxEducation.TabStop = false;
             this.grpbxEducation.Text = "Education";
@@ -297,7 +298,8 @@
             // lblMajor
             // 
             this.lblMajor.AutoSize = true;
-            this.lblMajor.Location = new System.Drawing.Point(244, 40);
+            this.lblMajor.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMajor.Location = new System.Drawing.Point(217, 51);
             this.lblMajor.Name = "lblMajor";
             this.lblMajor.Size = new System.Drawing.Size(185, 17);
             this.lblMajor.TabIndex = 16;
@@ -306,7 +308,8 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(395, 19);
+            this.lblEndDate.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEndDate.Location = new System.Drawing.Point(402, 25);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(36, 17);
             this.lblEndDate.TabIndex = 18;
@@ -315,7 +318,8 @@
             // lblSchoolName
             // 
             this.lblSchoolName.AutoSize = true;
-            this.lblSchoolName.Location = new System.Drawing.Point(17, 19);
+            this.lblSchoolName.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSchoolName.Location = new System.Drawing.Point(17, 25);
             this.lblSchoolName.Name = "lblSchoolName";
             this.lblSchoolName.Size = new System.Drawing.Size(337, 17);
             this.lblSchoolName.TabIndex = 14;
@@ -324,7 +328,8 @@
             // lblEducationStartDate
             // 
             this.lblEducationStartDate.AutoSize = true;
-            this.lblEducationStartDate.Location = new System.Drawing.Point(353, 19);
+            this.lblEducationStartDate.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEducationStartDate.Location = new System.Drawing.Point(360, 25);
             this.lblEducationStartDate.Name = "lblEducationStartDate";
             this.lblEducationStartDate.Size = new System.Drawing.Size(36, 17);
             this.lblEducationStartDate.TabIndex = 17;
@@ -333,7 +338,8 @@
             // lblDegree
             // 
             this.lblDegree.AutoSize = true;
-            this.lblDegree.Location = new System.Drawing.Point(17, 40);
+            this.lblDegree.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDegree.Location = new System.Drawing.Point(17, 51);
             this.lblDegree.Name = "lblDegree";
             this.lblDegree.Size = new System.Drawing.Size(194, 17);
             this.lblDegree.TabIndex = 15;
