@@ -85,9 +85,9 @@
             this.tbctrlCV = new System.Windows.Forms.TabControl();
             this.tabContacts = new System.Windows.Forms.TabPage();
             this.tabEducation = new System.Windows.Forms.TabPage();
-            this.tabSearch = new System.Windows.Forms.TabPage();
             this.tabExperience = new System.Windows.Forms.TabPage();
             this.tabFiles = new System.Windows.Forms.TabPage();
+            this.tabSearch = new System.Windows.Forms.TabPage();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -98,9 +98,9 @@
             this.tbctrlCV.SuspendLayout();
             this.tabContacts.SuspendLayout();
             this.tabEducation.SuspendLayout();
-            this.tabSearch.SuspendLayout();
             this.tabExperience.SuspendLayout();
             this.tabFiles.SuspendLayout();
+            this.tabSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -112,6 +112,8 @@
             // FirstName
             // 
             this.FirstName.AutoSize = true;
+            this.FirstName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstName.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FirstName.Location = new System.Drawing.Point(14, 22);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(42, 17);
@@ -121,6 +123,8 @@
             // LastName
             // 
             this.LastName.AutoSize = true;
+            this.LastName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LastName.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LastName.Location = new System.Drawing.Point(62, 22);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(63, 17);
@@ -130,6 +134,8 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblEmail.Location = new System.Drawing.Point(131, 22);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(171, 17);
@@ -139,6 +145,8 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPhone.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblPhone.Location = new System.Drawing.Point(308, 22);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(104, 17);
@@ -148,6 +156,8 @@
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
+            this.lblLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLocation.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLocation.Location = new System.Drawing.Point(418, 22);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(55, 17);
@@ -157,6 +167,8 @@
             // lblLinkedIn
             // 
             this.lblLinkedIn.AutoSize = true;
+            this.lblLinkedIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLinkedIn.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLinkedIn.Location = new System.Drawing.Point(17, 25);
             this.lblLinkedIn.Name = "lblLinkedIn";
             this.lblLinkedIn.Size = new System.Drawing.Size(195, 17);
@@ -172,7 +184,7 @@
             this.grpbxContacts.Controls.Add(this.lblLocation);
             this.grpbxContacts.Controls.Add(this.lblEmail);
             this.grpbxContacts.Controls.Add(this.lblPhone);
-            this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxContacts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxContacts.Location = new System.Drawing.Point(6, 6);
             this.grpbxContacts.Name = "grpbxContacts";
@@ -184,6 +196,8 @@
             // lblDateOfBirth
             // 
             this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblDateOfBirth.Location = new System.Drawing.Point(479, 22);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(72, 17);
@@ -195,10 +209,11 @@
             this.grpbxSocialNetworks.BackColor = System.Drawing.Color.Transparent;
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
+            this.grpbxSocialNetworks.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxSocialNetworks.Location = new System.Drawing.Point(6, 116);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(6, 133);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(570, 57);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(570, 54);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks";
@@ -206,6 +221,8 @@
             // lblFacebook
             // 
             this.lblFacebook.AutoSize = true;
+            this.lblFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFacebook.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblFacebook.Location = new System.Drawing.Point(222, 25);
             this.lblFacebook.Name = "lblFacebook";
             this.lblFacebook.Size = new System.Drawing.Size(188, 17);
@@ -218,10 +235,11 @@
             this.grpbxAddress.Controls.Add(this.lblAddress);
             this.grpbxAddress.Controls.Add(this.lblCity);
             this.grpbxAddress.Controls.Add(this.lblPostCode);
+            this.grpbxAddress.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxAddress.Location = new System.Drawing.Point(7, 67);
             this.grpbxAddress.Name = "grpbxAddress";
-            this.grpbxAddress.Size = new System.Drawing.Size(555, 43);
+            this.grpbxAddress.Size = new System.Drawing.Size(555, 54);
             this.grpbxAddress.TabIndex = 15;
             this.grpbxAddress.TabStop = false;
             this.grpbxAddress.Text = "Address";
@@ -229,7 +247,9 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(146, 19);
+            this.lblAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAddress.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAddress.Location = new System.Drawing.Point(153, 24);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(114, 17);
             this.lblAddress.TabIndex = 14;
@@ -238,7 +258,9 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(62, 19);
+            this.lblCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCity.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCity.Location = new System.Drawing.Point(69, 24);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(78, 17);
             this.lblCity.TabIndex = 13;
@@ -247,7 +269,9 @@
             // lblPostCode
             // 
             this.lblPostCode.AutoSize = true;
-            this.lblPostCode.Location = new System.Drawing.Point(13, 19);
+            this.lblPostCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPostCode.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPostCode.Location = new System.Drawing.Point(13, 24);
             this.lblPostCode.Name = "lblPostCode";
             this.lblPostCode.Size = new System.Drawing.Size(50, 17);
             this.lblPostCode.TabIndex = 12;
@@ -659,7 +683,7 @@
             this.tabContacts.Location = new System.Drawing.Point(4, 24);
             this.tabContacts.Name = "tabContacts";
             this.tabContacts.Padding = new System.Windows.Forms.Padding(3);
-            this.tabContacts.Size = new System.Drawing.Size(568, 722);
+            this.tabContacts.Size = new System.Drawing.Size(568, 762);
             this.tabContacts.TabIndex = 0;
             this.tabContacts.Text = "Contacts";
             this.tabContacts.UseVisualStyleBackColor = true;
@@ -670,26 +694,10 @@
             this.tabEducation.Location = new System.Drawing.Point(4, 24);
             this.tabEducation.Name = "tabEducation";
             this.tabEducation.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEducation.Size = new System.Drawing.Size(568, 722);
+            this.tabEducation.Size = new System.Drawing.Size(568, 762);
             this.tabEducation.TabIndex = 1;
             this.tabEducation.Text = "Education";
             this.tabEducation.UseVisualStyleBackColor = true;
-            // 
-            // tabSearch
-            // 
-            this.tabSearch.Controls.Add(this.flowLayoutPanel1);
-            this.tabSearch.Controls.Add(this.comboBox1);
-            this.tabSearch.Controls.Add(this.txtbxTag);
-            this.tabSearch.Controls.Add(this.label1);
-            this.tabSearch.Controls.Add(this.button1);
-            this.tabSearch.Controls.Add(this.btnAddTag);
-            this.tabSearch.Location = new System.Drawing.Point(4, 24);
-            this.tabSearch.Name = "tabSearch";
-            this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(568, 722);
-            this.tabSearch.TabIndex = 2;
-            this.tabSearch.Text = "Search";
-            this.tabSearch.UseVisualStyleBackColor = true;
             // 
             // tabExperience
             // 
@@ -699,7 +707,7 @@
             this.tabExperience.Location = new System.Drawing.Point(4, 24);
             this.tabExperience.Name = "tabExperience";
             this.tabExperience.Padding = new System.Windows.Forms.Padding(3);
-            this.tabExperience.Size = new System.Drawing.Size(568, 722);
+            this.tabExperience.Size = new System.Drawing.Size(568, 762);
             this.tabExperience.TabIndex = 3;
             this.tabExperience.Text = "Experience";
             this.tabExperience.UseVisualStyleBackColor = true;
@@ -716,6 +724,22 @@
             this.tabFiles.TabIndex = 4;
             this.tabFiles.Text = "Files";
             this.tabFiles.UseVisualStyleBackColor = true;
+            // 
+            // tabSearch
+            // 
+            this.tabSearch.Controls.Add(this.flowLayoutPanel1);
+            this.tabSearch.Controls.Add(this.comboBox1);
+            this.tabSearch.Controls.Add(this.txtbxTag);
+            this.tabSearch.Controls.Add(this.label1);
+            this.tabSearch.Controls.Add(this.button1);
+            this.tabSearch.Controls.Add(this.btnAddTag);
+            this.tabSearch.Location = new System.Drawing.Point(4, 24);
+            this.tabSearch.Name = "tabSearch";
+            this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSearch.Size = new System.Drawing.Size(568, 762);
+            this.tabSearch.TabIndex = 2;
+            this.tabSearch.Text = "Search";
+            this.tabSearch.UseVisualStyleBackColor = true;
             // 
             // CVForm
             // 
@@ -749,10 +773,10 @@
             this.tbctrlCV.ResumeLayout(false);
             this.tabContacts.ResumeLayout(false);
             this.tabEducation.ResumeLayout(false);
-            this.tabSearch.ResumeLayout(false);
-            this.tabSearch.PerformLayout();
             this.tabExperience.ResumeLayout(false);
             this.tabFiles.ResumeLayout(false);
+            this.tabSearch.ResumeLayout(false);
+            this.tabSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
