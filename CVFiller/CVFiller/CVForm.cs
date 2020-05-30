@@ -129,6 +129,20 @@ namespace FormFiller
 
             id = 1;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.Escape.GetHashCode());
+
+            id = 2;
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D1.GetHashCode());
+
+            id = 3;
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D2.GetHashCode());
+
+            id = 4;
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D3.GetHashCode());
+
+            id = 5;
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D4.GetHashCode());
+
+
         }
 
         private void AddNotifyIconMenu()
@@ -205,7 +219,22 @@ namespace FormFiller
                 {
                     this.Hide();
                 }
-
+                else if (id == 2)
+                {
+                    tbctrlCV.SelectedIndex = 0;
+                }
+                else if (id == 3)
+                {
+                    tbctrlCV.SelectedIndex = 1;
+                }
+                else if (id == 4)
+                {
+                    tbctrlCV.SelectedIndex = 2;
+                }
+                else if (id == 5)
+                {
+                    tbctrlCV.SelectedIndex = 3;
+                }
             }
         }
 

@@ -82,6 +82,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblChangeColorScheme = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tbctrlCV = new System.Windows.Forms.TabControl();
+            this.tabContacts = new System.Windows.Forms.TabPage();
+            this.tabEducation = new System.Windows.Forms.TabPage();
+            this.tabSearch = new System.Windows.Forms.TabPage();
+            this.tabExperience = new System.Windows.Forms.TabPage();
+            this.tabFiles = new System.Windows.Forms.TabPage();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -89,6 +95,12 @@
             this.grpbxEmexExperience.SuspendLayout();
             this.grpbxRZDExperience.SuspendLayout();
             this.grpbxNTCExperience.SuspendLayout();
+            this.tbctrlCV.SuspendLayout();
+            this.tabContacts.SuspendLayout();
+            this.tabEducation.SuspendLayout();
+            this.tabSearch.SuspendLayout();
+            this.tabExperience.SuspendLayout();
+            this.tabFiles.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -162,9 +174,9 @@
             this.grpbxContacts.Controls.Add(this.lblPhone);
             this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxContacts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxContacts.Location = new System.Drawing.Point(12, 44);
+            this.grpbxContacts.Location = new System.Drawing.Point(6, 6);
             this.grpbxContacts.Name = "grpbxContacts";
-            this.grpbxContacts.Size = new System.Drawing.Size(571, 54);
+            this.grpbxContacts.Size = new System.Drawing.Size(556, 54);
             this.grpbxContacts.TabIndex = 13;
             this.grpbxContacts.TabStop = false;
             this.grpbxContacts.Text = "Contacts";
@@ -184,7 +196,7 @@
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
             this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxSocialNetworks.Location = new System.Drawing.Point(12, 154);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(6, 116);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
             this.grpbxSocialNetworks.Size = new System.Drawing.Size(570, 57);
             this.grpbxSocialNetworks.TabIndex = 14;
@@ -207,9 +219,9 @@
             this.grpbxAddress.Controls.Add(this.lblCity);
             this.grpbxAddress.Controls.Add(this.lblPostCode);
             this.grpbxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxAddress.Location = new System.Drawing.Point(13, 105);
+            this.grpbxAddress.Location = new System.Drawing.Point(7, 67);
             this.grpbxAddress.Name = "grpbxAddress";
-            this.grpbxAddress.Size = new System.Drawing.Size(570, 43);
+            this.grpbxAddress.Size = new System.Drawing.Size(555, 43);
             this.grpbxAddress.TabIndex = 15;
             this.grpbxAddress.TabStop = false;
             this.grpbxAddress.Text = "Address";
@@ -251,9 +263,9 @@
             this.grpbxEducation.Controls.Add(this.lblDegree);
             this.grpbxEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpbxEducation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxEducation.Location = new System.Drawing.Point(12, 217);
+            this.grpbxEducation.Location = new System.Drawing.Point(16, 6);
             this.grpbxEducation.Name = "grpbxEducation";
-            this.grpbxEducation.Size = new System.Drawing.Size(570, 71);
+            this.grpbxEducation.Size = new System.Drawing.Size(546, 71);
             this.grpbxEducation.TabIndex = 16;
             this.grpbxEducation.TabStop = false;
             this.grpbxEducation.Text = "Education";
@@ -314,9 +326,9 @@
             this.grpbxEmexExperience.Controls.Add(this.lblEmExPosition);
             this.grpbxEmexExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpbxEmexExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxEmexExperience.Location = new System.Drawing.Point(12, 294);
+            this.grpbxEmexExperience.Location = new System.Drawing.Point(6, 6);
             this.grpbxEmexExperience.Name = "grpbxEmexExperience";
-            this.grpbxEmexExperience.Size = new System.Drawing.Size(571, 124);
+            this.grpbxEmexExperience.Size = new System.Drawing.Size(556, 124);
             this.grpbxEmexExperience.TabIndex = 19;
             this.grpbxEmexExperience.TabStop = false;
             this.grpbxEmexExperience.Text = "EmEx Experience";
@@ -385,9 +397,9 @@
             this.grpbxRZDExperience.Controls.Add(this.lblRZDStartDate);
             this.grpbxRZDExperience.Controls.Add(this.lblRZDPosition);
             this.grpbxRZDExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxRZDExperience.Location = new System.Drawing.Point(13, 424);
+            this.grpbxRZDExperience.Location = new System.Drawing.Point(7, 136);
             this.grpbxRZDExperience.Name = "grpbxRZDExperience";
-            this.grpbxRZDExperience.Size = new System.Drawing.Size(569, 79);
+            this.grpbxRZDExperience.Size = new System.Drawing.Size(555, 79);
             this.grpbxRZDExperience.TabIndex = 20;
             this.grpbxRZDExperience.TabStop = false;
             this.grpbxRZDExperience.Text = "RZD Experience";
@@ -457,9 +469,9 @@
             this.grpbxNTCExperience.Controls.Add(this.lblNTCStartDate);
             this.grpbxNTCExperience.Controls.Add(this.lblNTCPosition);
             this.grpbxNTCExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxNTCExperience.Location = new System.Drawing.Point(14, 509);
+            this.grpbxNTCExperience.Location = new System.Drawing.Point(8, 221);
             this.grpbxNTCExperience.Name = "grpbxNTCExperience";
-            this.grpbxNTCExperience.Size = new System.Drawing.Size(568, 126);
+            this.grpbxNTCExperience.Size = new System.Drawing.Size(554, 126);
             this.grpbxNTCExperience.TabIndex = 21;
             this.grpbxNTCExperience.TabStop = false;
             this.grpbxNTCExperience.Text = "NTC Experience";
@@ -523,7 +535,7 @@
             // btnAddTag
             // 
             this.btnAddTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btnAddTag.Location = new System.Drawing.Point(536, 665);
+            this.btnAddTag.Location = new System.Drawing.Point(484, 11);
             this.btnAddTag.Name = "btnAddTag";
             this.btnAddTag.Size = new System.Drawing.Size(48, 23);
             this.btnAddTag.TabIndex = 25;
@@ -535,7 +547,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.label1.Location = new System.Drawing.Point(366, 669);
+            this.label1.Location = new System.Drawing.Point(314, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 17);
             this.label1.TabIndex = 24;
@@ -544,7 +556,7 @@
             // txtbxTag
             // 
             this.txtbxTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.txtbxTag.Location = new System.Drawing.Point(382, 666);
+            this.txtbxTag.Location = new System.Drawing.Point(330, 12);
             this.txtbxTag.Name = "txtbxTag";
             this.txtbxTag.Size = new System.Drawing.Size(148, 23);
             this.txtbxTag.TabIndex = 23;
@@ -553,15 +565,15 @@
             // 
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 666);
+            this.comboBox1.Location = new System.Drawing.Point(10, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(347, 23);
+            this.comboBox1.Size = new System.Drawing.Size(293, 23);
             this.comboBox1.TabIndex = 22;
             // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.button1.Location = new System.Drawing.Point(13, 695);
+            this.button1.Location = new System.Drawing.Point(10, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 23);
             this.button1.TabIndex = 26;
@@ -573,7 +585,7 @@
             // 
             this.btnCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btnCV.Location = new System.Drawing.Point(13, 12);
+            this.btnCV.Location = new System.Drawing.Point(6, 6);
             this.btnCV.Name = "btnCV";
             this.btnCV.Size = new System.Drawing.Size(75, 26);
             this.btnCV.TabIndex = 27;
@@ -585,7 +597,7 @@
             // 
             this.btnApplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.btnApplication.Location = new System.Drawing.Point(94, 12);
+            this.btnApplication.Location = new System.Drawing.Point(87, 6);
             this.btnApplication.Name = "btnApplication";
             this.btnApplication.Size = new System.Drawing.Size(85, 26);
             this.btnApplication.TabIndex = 28;
@@ -597,7 +609,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.button2.Location = new System.Drawing.Point(448, 12);
+            this.button2.Location = new System.Drawing.Point(427, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 26);
             this.button2.TabIndex = 29;
@@ -621,10 +633,89 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 725);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 71);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(570, 81);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(551, 81);
             this.flowLayoutPanel1.TabIndex = 31;
+            // 
+            // tbctrlCV
+            // 
+            this.tbctrlCV.Controls.Add(this.tabContacts);
+            this.tbctrlCV.Controls.Add(this.tabEducation);
+            this.tbctrlCV.Controls.Add(this.tabExperience);
+            this.tbctrlCV.Controls.Add(this.tabFiles);
+            this.tbctrlCV.Controls.Add(this.tabSearch);
+            this.tbctrlCV.Location = new System.Drawing.Point(7, 12);
+            this.tbctrlCV.Name = "tbctrlCV";
+            this.tbctrlCV.SelectedIndex = 0;
+            this.tbctrlCV.Size = new System.Drawing.Size(576, 790);
+            this.tbctrlCV.TabIndex = 32;
+            // 
+            // tabContacts
+            // 
+            this.tabContacts.Controls.Add(this.grpbxContacts);
+            this.tabContacts.Controls.Add(this.grpbxAddress);
+            this.tabContacts.Controls.Add(this.grpbxSocialNetworks);
+            this.tabContacts.Location = new System.Drawing.Point(4, 24);
+            this.tabContacts.Name = "tabContacts";
+            this.tabContacts.Padding = new System.Windows.Forms.Padding(3);
+            this.tabContacts.Size = new System.Drawing.Size(568, 722);
+            this.tabContacts.TabIndex = 0;
+            this.tabContacts.Text = "Contacts";
+            this.tabContacts.UseVisualStyleBackColor = true;
+            // 
+            // tabEducation
+            // 
+            this.tabEducation.Controls.Add(this.grpbxEducation);
+            this.tabEducation.Location = new System.Drawing.Point(4, 24);
+            this.tabEducation.Name = "tabEducation";
+            this.tabEducation.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEducation.Size = new System.Drawing.Size(568, 722);
+            this.tabEducation.TabIndex = 1;
+            this.tabEducation.Text = "Education";
+            this.tabEducation.UseVisualStyleBackColor = true;
+            // 
+            // tabSearch
+            // 
+            this.tabSearch.Controls.Add(this.flowLayoutPanel1);
+            this.tabSearch.Controls.Add(this.comboBox1);
+            this.tabSearch.Controls.Add(this.txtbxTag);
+            this.tabSearch.Controls.Add(this.label1);
+            this.tabSearch.Controls.Add(this.button1);
+            this.tabSearch.Controls.Add(this.btnAddTag);
+            this.tabSearch.Location = new System.Drawing.Point(4, 24);
+            this.tabSearch.Name = "tabSearch";
+            this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSearch.Size = new System.Drawing.Size(568, 722);
+            this.tabSearch.TabIndex = 2;
+            this.tabSearch.Text = "Search";
+            this.tabSearch.UseVisualStyleBackColor = true;
+            // 
+            // tabExperience
+            // 
+            this.tabExperience.Controls.Add(this.grpbxNTCExperience);
+            this.tabExperience.Controls.Add(this.grpbxEmexExperience);
+            this.tabExperience.Controls.Add(this.grpbxRZDExperience);
+            this.tabExperience.Location = new System.Drawing.Point(4, 24);
+            this.tabExperience.Name = "tabExperience";
+            this.tabExperience.Padding = new System.Windows.Forms.Padding(3);
+            this.tabExperience.Size = new System.Drawing.Size(568, 722);
+            this.tabExperience.TabIndex = 3;
+            this.tabExperience.Text = "Experience";
+            this.tabExperience.UseVisualStyleBackColor = true;
+            // 
+            // tabFiles
+            // 
+            this.tabFiles.Controls.Add(this.btnCV);
+            this.tabFiles.Controls.Add(this.btnApplication);
+            this.tabFiles.Controls.Add(this.button2);
+            this.tabFiles.Location = new System.Drawing.Point(4, 24);
+            this.tabFiles.Name = "tabFiles";
+            this.tabFiles.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFiles.Size = new System.Drawing.Size(568, 762);
+            this.tabFiles.TabIndex = 4;
+            this.tabFiles.Text = "Files";
+            this.tabFiles.UseVisualStyleBackColor = true;
             // 
             // CVForm
             // 
@@ -632,23 +723,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(595, 842);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.tbctrlCV);
             this.Controls.Add(this.lblChangeColorScheme);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnApplication);
-            this.Controls.Add(this.btnCV);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAddTag);
-            this.Controls.Add(this.grpbxEducation);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtbxTag);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.grpbxNTCExperience);
-            this.Controls.Add(this.grpbxRZDExperience);
-            this.Controls.Add(this.grpbxEmexExperience);
-            this.Controls.Add(this.grpbxContacts);
-            this.Controls.Add(this.grpbxAddress);
-            this.Controls.Add(this.grpbxSocialNetworks);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CVForm";
@@ -670,6 +746,13 @@
             this.grpbxRZDExperience.PerformLayout();
             this.grpbxNTCExperience.ResumeLayout(false);
             this.grpbxNTCExperience.PerformLayout();
+            this.tbctrlCV.ResumeLayout(false);
+            this.tabContacts.ResumeLayout(false);
+            this.tabEducation.ResumeLayout(false);
+            this.tabSearch.ResumeLayout(false);
+            this.tabSearch.PerformLayout();
+            this.tabExperience.ResumeLayout(false);
+            this.tabFiles.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -729,6 +812,12 @@
         private System.Windows.Forms.Label lblChangeColorScheme;
         private System.Windows.Forms.Label lblDateOfBirth;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TabControl tbctrlCV;
+        private System.Windows.Forms.TabPage tabContacts;
+        private System.Windows.Forms.TabPage tabEducation;
+        private System.Windows.Forms.TabPage tabSearch;
+        private System.Windows.Forms.TabPage tabExperience;
+        private System.Windows.Forms.TabPage tabFiles;
     }
 }
 
