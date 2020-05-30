@@ -19,9 +19,13 @@ namespace FormFiller
             if (Environment.OSVersion.Version.Major >= 6)
                 SetProcessDPIAware();
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CVForm());
+            if (ProcessChecker.IsOnlyProcess("CVForm"))
+            {
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new CVForm());
+            }
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
