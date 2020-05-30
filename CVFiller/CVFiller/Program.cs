@@ -19,7 +19,7 @@ namespace FormFiller
             if (Environment.OSVersion.Version.Major >= 6)
                 SetProcessDPIAware();
 
-            if (ProcessChecker.IsOnlyProcess("CVForm"))
+            if (ProcessChecker.IsOnlyProcess(Application.ProductName))
             {
 
                 Application.EnableVisualStyles();
