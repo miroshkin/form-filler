@@ -44,7 +44,17 @@ namespace FormFiller
 
             LoadData();
             SetHandleClickMethodForControls();
+
+            SetFormTransparency(this);
+
             
+
+        }
+
+        private void SetFormTransparency(Form form)
+        {
+            form.BackColor = Color.LimeGreen;
+            form.TransparencyKey = Color.LimeGreen;
         }
 
         private void SetHandleClickMethodForControls()
@@ -125,22 +135,22 @@ namespace FormFiller
         private void SetShortCuts()
         {
             int id = 0;     // The id of the hotkey. 
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.Oem3.GetHashCode());
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.Oem3.GetHashCode());
 
             id = 1;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.Escape.GetHashCode());
 
             id = 2;
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D1.GetHashCode());
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.D1.GetHashCode());
 
             id = 3;
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D2.GetHashCode());
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.D2.GetHashCode());
 
             id = 4;
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D3.GetHashCode());
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.D3.GetHashCode());
 
             id = 5;
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.D4.GetHashCode());
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.D4.GetHashCode());
 
 
         }
@@ -242,6 +252,10 @@ namespace FormFiller
         {
             UnregisterHotKey(this.Handle, 0);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
+            UnregisterHotKey(this.Handle, 2);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
+            UnregisterHotKey(this.Handle, 3);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
+            UnregisterHotKey(this.Handle, 4);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
+            UnregisterHotKey(this.Handle, 5);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             notifyIcon1.Icon.Dispose();
             notifyIcon1.Dispose();
         }
