@@ -157,9 +157,9 @@ namespace FormFiller
 
         private void AddNotifyIconMenu()
         {
-            this.notifyIcon1.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
-            this.notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, this.MenuExit_Click);
-            this.notifyIcon1.ContextMenuStrip.Items.Add("Settings", null, this.MenuSettings_Click);
+            this.notifyIcon.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
+            this.notifyIcon.ContextMenuStrip.Items.Add("Settings", null, this.MenuSettings_Click);
+            this.notifyIcon.ContextMenuStrip.Items.Add("Exit", null, this.MenuExit_Click);
         }
 
         private void MenuSettings_Click(object sender, EventArgs e)
@@ -223,11 +223,11 @@ namespace FormFiller
 
                 if (id == 0)
                 {
-                    this.Show();
+                    ShowForm();
                 }
                 else if(id == 1)
                 {
-                    this.Hide();
+                    HideForm();
                 }
                 else if (id == 2)
                 {
@@ -256,8 +256,8 @@ namespace FormFiller
             UnregisterHotKey(this.Handle, 3);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 4);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 5);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
-            notifyIcon1.Icon.Dispose();
-            notifyIcon1.Dispose();
+            notifyIcon.Icon.Dispose();
+            notifyIcon.Dispose();
         }
 
         /// <summary>
@@ -376,6 +376,19 @@ namespace FormFiller
         private void lblChangeColorScheme_Click(object sender, EventArgs e)
         {
             this.BackColor = this.BackColor == Color.Black? Color.White : Color.Black;
+        }
+
+        private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (this.Visible == false)
+            {
+                ShowForm();
+            }
+        }
+
+        private void ShowForm()
+        {
+            this.Show();
         }
     }
 }
