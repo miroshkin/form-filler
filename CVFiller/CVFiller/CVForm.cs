@@ -223,7 +223,14 @@ namespace FormFiller
 
                 if (id == 0)
                 {
-                    ShowForm();
+                    if (this.Visible)
+                    {
+                        HideForm();
+                    }
+                    else
+                    {
+                        ShowForm();
+                    }
                 }
                 else if(id == 1)
                 {
@@ -276,7 +283,7 @@ namespace FormFiller
         /// </summary>
         private void PasteData()
         {
-            SendKeys.Send("^{v}");
+            SendKeys.Send("^v");
         }
 
         /// <summary>
