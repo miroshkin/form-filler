@@ -40,6 +40,7 @@
             this.grpbxContacts = new System.Windows.Forms.GroupBox();
             this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.grpbxSocialNetworks = new System.Windows.Forms.GroupBox();
+            this.lblGithub = new System.Windows.Forms.Label();
             this.lblFacebook = new System.Windows.Forms.Label();
             this.grpbxAddress = new System.Windows.Forms.GroupBox();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -208,16 +209,28 @@
             // grpbxSocialNetworks
             // 
             this.grpbxSocialNetworks.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxSocialNetworks.Controls.Add(this.lblGithub);
             this.grpbxSocialNetworks.Controls.Add(this.lblFacebook);
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
             this.grpbxSocialNetworks.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.grpbxSocialNetworks.Location = new System.Drawing.Point(6, 133);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
-            this.grpbxSocialNetworks.Size = new System.Drawing.Size(556, 54);
+            this.grpbxSocialNetworks.Size = new System.Drawing.Size(556, 92);
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
-            this.grpbxSocialNetworks.Text = "Social Networks";
+            this.grpbxSocialNetworks.Text = "Social Networks And Links";
+            // 
+            // lblGithub
+            // 
+            this.lblGithub.AutoSize = true;
+            this.lblGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblGithub.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGithub.Location = new System.Drawing.Point(17, 51);
+            this.lblGithub.Name = "lblGithub";
+            this.lblGithub.Size = new System.Drawing.Size(163, 17);
+            this.lblGithub.TabIndex = 14;
+            this.lblGithub.Text = "https://miroshkin.github.io/";
             // 
             // lblFacebook
             // 
@@ -849,6 +862,7 @@
         private System.Windows.Forms.TabPage tabSearch;
         private System.Windows.Forms.TabPage tabExperience;
         private System.Windows.Forms.TabPage tabFiles;
+        private System.Windows.Forms.Label lblGithub;
     }
 }
 
