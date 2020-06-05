@@ -137,7 +137,7 @@ namespace FormFiller
             int id = 0;     // The id of the hotkey. 
             RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.Oem3.GetHashCode());
 
-            id = 1;     // The id of the hotkey. 
+            id = 1;     
             RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.Escape.GetHashCode());
 
             id = 2;
