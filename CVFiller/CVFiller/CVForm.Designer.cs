@@ -40,6 +40,7 @@
             this.grpbxContacts = new System.Windows.Forms.GroupBox();
             this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.grpbxSocialNetworks = new System.Windows.Forms.GroupBox();
+            this.lblGithub = new System.Windows.Forms.Label();
             this.lblPersonalWebsite = new System.Windows.Forms.Label();
             this.lblFacebook = new System.Windows.Forms.Label();
             this.grpbxAddress = new System.Windows.Forms.GroupBox();
@@ -89,7 +90,6 @@
             this.tabExperience = new System.Windows.Forms.TabPage();
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.lblGithub = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -222,6 +222,17 @@
             this.grpbxSocialNetworks.TabIndex = 14;
             this.grpbxSocialNetworks.TabStop = false;
             this.grpbxSocialNetworks.Text = "Social Networks And Links";
+            // 
+            // lblGithub
+            // 
+            this.lblGithub.AutoSize = true;
+            this.lblGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblGithub.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGithub.Location = new System.Drawing.Point(222, 51);
+            this.lblGithub.Name = "lblGithub";
+            this.lblGithub.Size = new System.Drawing.Size(173, 17);
+            this.lblGithub.TabIndex = 15;
+            this.lblGithub.Text = "https://github.com/miroshkin";
             // 
             // lblPersonalWebsite
             // 
@@ -670,7 +681,7 @@
             this.lblChangeColorScheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblChangeColorScheme.Font = new System.Drawing.Font("Calibri", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblChangeColorScheme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.lblChangeColorScheme.Location = new System.Drawing.Point(266, 820);
+            this.lblChangeColorScheme.Location = new System.Drawing.Point(228, 591);
             this.lblChangeColorScheme.Name = "lblChangeColorScheme";
             this.lblChangeColorScheme.Size = new System.Drawing.Size(91, 13);
             this.lblChangeColorScheme.TabIndex = 30;
@@ -694,7 +705,7 @@
             this.tbctrlCV.Location = new System.Drawing.Point(7, 12);
             this.tbctrlCV.Name = "tbctrlCV";
             this.tbctrlCV.SelectedIndex = 0;
-            this.tbctrlCV.Size = new System.Drawing.Size(576, 790);
+            this.tbctrlCV.Size = new System.Drawing.Size(576, 576);
             this.tbctrlCV.TabIndex = 32;
             // 
             // tabContacts
@@ -705,7 +716,7 @@
             this.tabContacts.Location = new System.Drawing.Point(4, 24);
             this.tabContacts.Name = "tabContacts";
             this.tabContacts.Padding = new System.Windows.Forms.Padding(3);
-            this.tabContacts.Size = new System.Drawing.Size(568, 762);
+            this.tabContacts.Size = new System.Drawing.Size(568, 548);
             this.tabContacts.TabIndex = 0;
             this.tabContacts.Text = "Contacts";
             this.tabContacts.UseVisualStyleBackColor = true;
@@ -763,23 +774,12 @@
             this.tabSearch.Text = "Search";
             this.tabSearch.UseVisualStyleBackColor = true;
             // 
-            // lblGithub
-            // 
-            this.lblGithub.AutoSize = true;
-            this.lblGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblGithub.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGithub.Location = new System.Drawing.Point(222, 51);
-            this.lblGithub.Name = "lblGithub";
-            this.lblGithub.Size = new System.Drawing.Size(173, 17);
-            this.lblGithub.TabIndex = 15;
-            this.lblGithub.Text = "https://github.com/miroshkin";
-            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(595, 842);
+            this.ClientSize = new System.Drawing.Size(595, 609);
             this.Controls.Add(this.tbctrlCV);
             this.Controls.Add(this.lblChangeColorScheme);
             this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
