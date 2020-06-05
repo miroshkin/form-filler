@@ -46,9 +46,6 @@ namespace FormFiller
             SetHandleClickMethodForControls();
 
             SetFormTransparency(this);
-
-            
-
         }
 
         private void SetFormTransparency(Form form)
