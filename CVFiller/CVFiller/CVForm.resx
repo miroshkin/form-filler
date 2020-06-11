@@ -6972,9 +6972,6 @@
   <data name="lblEmExDescription.Text" xml:space="preserve">
     <value>I am a .NET software engineer  in a .NET team that is responsible for the development of web services and  apps for customer relationship management. At the same time I work on counterfeit detection and processing functionality for the warehouse management system. Other important parts of my daily activities are codebase support and refactoring.</value>
   </data>
-  <data name="lblNTCDescription.Text" xml:space="preserve">
-    <value>The main part of my work in the power networks department was investigation and searching for new ways for artificial intelligence and natural language processing implementation for decision support systems in high voltage substations.</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>46</value>
   </metadata>

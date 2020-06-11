@@ -90,6 +90,13 @@
             this.tabExperience = new System.Windows.Forms.TabPage();
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -103,12 +110,13 @@
             this.tabExperience.SuspendLayout();
             this.tabFiles.SuspendLayout();
             this.tabSearch.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
             // 
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "FormFiller(Press Ctrl + ~ to activate)";
+            this.notifyIcon.Text = "FormFiller(Press Alt + ~ to activate)";
             this.notifyIcon.Visible = true;
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
@@ -537,11 +545,12 @@
             // 
             this.lblNTCDescription.AutoSize = true;
             this.lblNTCDescription.Location = new System.Drawing.Point(15, 64);
-            this.lblNTCDescription.MaximumSize = new System.Drawing.Size(550, 0);
+            this.lblNTCDescription.MaximumSize = new System.Drawing.Size(536, 0);
             this.lblNTCDescription.Name = "lblNTCDescription";
-            this.lblNTCDescription.Size = new System.Drawing.Size(536, 51);
+            this.lblNTCDescription.Size = new System.Drawing.Size(503, 34);
             this.lblNTCDescription.TabIndex = 19;
-            this.lblNTCDescription.Text = resources.GetString("lblNTCDescription.Text");
+            this.lblNTCDescription.Text = "The main part of my work in the power networks department was the development and" +
+    " support expert system prototypes for industrial use.";
             // 
             // lblNTCLocation
             // 
@@ -578,16 +587,16 @@
             this.lblNTCStartDate.Name = "lblNTCStartDate";
             this.lblNTCStartDate.Size = new System.Drawing.Size(36, 17);
             this.lblNTCStartDate.TabIndex = 17;
-            this.lblNTCStartDate.Text = "2009";
+            this.lblNTCStartDate.Text = "2013";
             // 
             // lblNTCPosition
             // 
             this.lblNTCPosition.AutoSize = true;
             this.lblNTCPosition.Location = new System.Drawing.Point(15, 19);
             this.lblNTCPosition.Name = "lblNTCPosition";
-            this.lblNTCPosition.Size = new System.Drawing.Size(135, 17);
+            this.lblNTCPosition.Size = new System.Drawing.Size(83, 17);
             this.lblNTCPosition.TabIndex = 15;
-            this.lblNTCPosition.Text = "C# Developer/Scientist";
+            this.lblNTCPosition.Text = "C# Developer";
             // 
             // btnAddTag
             // 
@@ -727,20 +736,21 @@
             this.tabEducation.Location = new System.Drawing.Point(4, 24);
             this.tabEducation.Name = "tabEducation";
             this.tabEducation.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEducation.Size = new System.Drawing.Size(568, 762);
+            this.tabEducation.Size = new System.Drawing.Size(568, 548);
             this.tabEducation.TabIndex = 1;
             this.tabEducation.Text = "Education";
             this.tabEducation.UseVisualStyleBackColor = true;
             // 
             // tabExperience
             // 
+            this.tabExperience.Controls.Add(this.groupBox1);
             this.tabExperience.Controls.Add(this.grpbxNTCExperience);
             this.tabExperience.Controls.Add(this.grpbxEmexExperience);
             this.tabExperience.Controls.Add(this.grpbxRZDExperience);
             this.tabExperience.Location = new System.Drawing.Point(4, 24);
             this.tabExperience.Name = "tabExperience";
             this.tabExperience.Padding = new System.Windows.Forms.Padding(3);
-            this.tabExperience.Size = new System.Drawing.Size(568, 762);
+            this.tabExperience.Size = new System.Drawing.Size(568, 548);
             this.tabExperience.TabIndex = 3;
             this.tabExperience.Text = "Experience";
             this.tabExperience.UseVisualStyleBackColor = true;
@@ -753,7 +763,7 @@
             this.tabFiles.Location = new System.Drawing.Point(4, 24);
             this.tabFiles.Name = "tabFiles";
             this.tabFiles.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFiles.Size = new System.Drawing.Size(568, 762);
+            this.tabFiles.Size = new System.Drawing.Size(568, 548);
             this.tabFiles.TabIndex = 4;
             this.tabFiles.Text = "Files";
             this.tabFiles.UseVisualStyleBackColor = true;
@@ -769,10 +779,84 @@
             this.tabSearch.Location = new System.Drawing.Point(4, 24);
             this.tabSearch.Name = "tabSearch";
             this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(568, 762);
+            this.tabSearch.Size = new System.Drawing.Size(568, 548);
             this.tabSearch.TabIndex = 2;
             this.tabSearch.Text = "Search";
             this.tabSearch.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.groupBox1.Location = new System.Drawing.Point(11, 353);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(554, 126);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "NTC Experience";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 64);
+            this.label2.MaximumSize = new System.Drawing.Size(536, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(530, 34);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "As a researcher, I investigated and founded new ways for artificial intelligence " +
+    "and natural language processing implementation for decision support systems in h" +
+    "igh voltage substations.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(241, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Moscow";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(199, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 17);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "2013";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(524, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "JSC \"Research And Development Center At Federal Grid Company Of Unified Energy Sy" +
+    "stem\"";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(151, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 17);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "2009";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 17);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Researcher";
             // 
             // CVForm
             // 
@@ -810,6 +894,8 @@
             this.tabFiles.ResumeLayout(false);
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -877,6 +963,13 @@
         private System.Windows.Forms.TabPage tabFiles;
         private System.Windows.Forms.Label lblPersonalWebsite;
         private System.Windows.Forms.Label lblGithub;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 
