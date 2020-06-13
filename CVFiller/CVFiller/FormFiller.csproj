@@ -85,10 +85,10 @@
     <Compile Include="Data\CurriculumVitae.cs" />
     <Compile Include="Data\Education.cs" />
     <Compile Include="Data\ICurriculumVitae.cs" />
-    <Compile Include="Data\TagControl.cs">
+    <Compile Include="Controls\TagControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Data\TagControl.Designer.cs">
+    <Compile Include="Controls\TagControl.Designer.cs">
       <DependentUpon>TagControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ProcessChecker.cs" />
@@ -102,7 +102,7 @@
     <EmbeddedResource Include="CVForm.resx">
       <DependentUpon>CVForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\TagControl.resx">
+    <EmbeddedResource Include="Controls\TagControl.resx">
       <DependentUpon>TagControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
