@@ -6972,6 +6972,9 @@
   <data name="lblEmExDescription.Text" xml:space="preserve">
     <value>I am a .NET software engineer  in a .NET team that is responsible for the development of web services and  apps for customer relationship management. At the same time I work on counterfeit detection and processing functionality for the warehouse management system. Other important parts of my daily activities are codebase support and refactoring.</value>
   </data>
+  <data name="lblPitch.Text" xml:space="preserve">
+    <value>Professional .NET Full Stack Software Developer with more than 7 years of experience in software development and sound knowledge of SOLID principles and OOP paradigm. Skilled programmer that is interested in high quality code development and best DevOps practices creating innovative software solutions. The background includes work with scrum and other agile frameworks, complex systems development, hosting and deployment automation.</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>46</value>
   </metadata>

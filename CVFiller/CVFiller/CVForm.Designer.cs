@@ -88,8 +88,6 @@
             this.tabContacts = new System.Windows.Forms.TabPage();
             this.tabEducation = new System.Windows.Forms.TabPage();
             this.tabExperience = new System.Windows.Forms.TabPage();
-            this.tabFiles = new System.Windows.Forms.TabPage();
-            this.tabSearch = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,6 +95,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.tabFiles = new System.Windows.Forms.TabPage();
+            this.tabSearch = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblPitch = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -108,9 +110,10 @@
             this.tabContacts.SuspendLayout();
             this.tabEducation.SuspendLayout();
             this.tabExperience.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabFiles.SuspendLayout();
             this.tabSearch.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -197,7 +200,7 @@
             this.grpbxContacts.Controls.Add(this.lblPhone);
             this.grpbxContacts.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxContacts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxContacts.Location = new System.Drawing.Point(6, 6);
+            this.grpbxContacts.Location = new System.Drawing.Point(9, 138);
             this.grpbxContacts.Name = "grpbxContacts";
             this.grpbxContacts.Size = new System.Drawing.Size(556, 54);
             this.grpbxContacts.TabIndex = 13;
@@ -224,7 +227,7 @@
             this.grpbxSocialNetworks.Controls.Add(this.lblLinkedIn);
             this.grpbxSocialNetworks.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxSocialNetworks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxSocialNetworks.Location = new System.Drawing.Point(6, 133);
+            this.grpbxSocialNetworks.Location = new System.Drawing.Point(9, 258);
             this.grpbxSocialNetworks.Name = "grpbxSocialNetworks";
             this.grpbxSocialNetworks.Size = new System.Drawing.Size(556, 92);
             this.grpbxSocialNetworks.TabIndex = 14;
@@ -272,7 +275,7 @@
             this.grpbxAddress.Controls.Add(this.lblPostCode);
             this.grpbxAddress.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpbxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.grpbxAddress.Location = new System.Drawing.Point(7, 67);
+            this.grpbxAddress.Location = new System.Drawing.Point(10, 198);
             this.grpbxAddress.Name = "grpbxAddress";
             this.grpbxAddress.Size = new System.Drawing.Size(555, 54);
             this.grpbxAddress.TabIndex = 15;
@@ -719,6 +722,7 @@
             // 
             // tabContacts
             // 
+            this.tabContacts.Controls.Add(this.groupBox2);
             this.tabContacts.Controls.Add(this.grpbxContacts);
             this.tabContacts.Controls.Add(this.grpbxAddress);
             this.tabContacts.Controls.Add(this.grpbxSocialNetworks);
@@ -754,35 +758,6 @@
             this.tabExperience.TabIndex = 3;
             this.tabExperience.Text = "Experience";
             this.tabExperience.UseVisualStyleBackColor = true;
-            // 
-            // tabFiles
-            // 
-            this.tabFiles.Controls.Add(this.btnCV);
-            this.tabFiles.Controls.Add(this.btnApplication);
-            this.tabFiles.Controls.Add(this.button2);
-            this.tabFiles.Location = new System.Drawing.Point(4, 24);
-            this.tabFiles.Name = "tabFiles";
-            this.tabFiles.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFiles.Size = new System.Drawing.Size(568, 548);
-            this.tabFiles.TabIndex = 4;
-            this.tabFiles.Text = "Files";
-            this.tabFiles.UseVisualStyleBackColor = true;
-            // 
-            // tabSearch
-            // 
-            this.tabSearch.Controls.Add(this.flowLayoutPanel1);
-            this.tabSearch.Controls.Add(this.comboBox1);
-            this.tabSearch.Controls.Add(this.txtbxTag);
-            this.tabSearch.Controls.Add(this.label1);
-            this.tabSearch.Controls.Add(this.button1);
-            this.tabSearch.Controls.Add(this.btnAddTag);
-            this.tabSearch.Location = new System.Drawing.Point(4, 24);
-            this.tabSearch.Name = "tabSearch";
-            this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(568, 548);
-            this.tabSearch.TabIndex = 2;
-            this.tabSearch.Text = "Search";
-            this.tabSearch.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -858,6 +833,59 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Researcher";
             // 
+            // tabFiles
+            // 
+            this.tabFiles.Controls.Add(this.btnCV);
+            this.tabFiles.Controls.Add(this.btnApplication);
+            this.tabFiles.Controls.Add(this.button2);
+            this.tabFiles.Location = new System.Drawing.Point(4, 24);
+            this.tabFiles.Name = "tabFiles";
+            this.tabFiles.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFiles.Size = new System.Drawing.Size(568, 548);
+            this.tabFiles.TabIndex = 4;
+            this.tabFiles.Text = "Files";
+            this.tabFiles.UseVisualStyleBackColor = true;
+            // 
+            // tabSearch
+            // 
+            this.tabSearch.Controls.Add(this.flowLayoutPanel1);
+            this.tabSearch.Controls.Add(this.comboBox1);
+            this.tabSearch.Controls.Add(this.txtbxTag);
+            this.tabSearch.Controls.Add(this.label1);
+            this.tabSearch.Controls.Add(this.button1);
+            this.tabSearch.Controls.Add(this.btnAddTag);
+            this.tabSearch.Location = new System.Drawing.Point(4, 24);
+            this.tabSearch.Name = "tabSearch";
+            this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSearch.Size = new System.Drawing.Size(568, 548);
+            this.tabSearch.TabIndex = 2;
+            this.tabSearch.Text = "Search";
+            this.tabSearch.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.lblPitch);
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.groupBox2.Location = new System.Drawing.Point(10, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(556, 126);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Summary";
+            // 
+            // lblPitch
+            // 
+            this.lblPitch.AutoSize = true;
+            this.lblPitch.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPitch.Location = new System.Drawing.Point(6, 19);
+            this.lblPitch.MaximumSize = new System.Drawing.Size(550, 0);
+            this.lblPitch.Name = "lblPitch";
+            this.lblPitch.Size = new System.Drawing.Size(550, 85);
+            this.lblPitch.TabIndex = 20;
+            this.lblPitch.Text = resources.GetString("lblPitch.Text");
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -891,11 +919,13 @@
             this.tabContacts.ResumeLayout(false);
             this.tabEducation.ResumeLayout(false);
             this.tabExperience.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabFiles.ResumeLayout(false);
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -970,6 +1000,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblPitch;
     }
 }
 
