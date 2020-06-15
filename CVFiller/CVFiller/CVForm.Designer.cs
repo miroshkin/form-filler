@@ -86,6 +86,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tbctrlCV = new System.Windows.Forms.TabControl();
             this.tabContacts = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblPitch = new System.Windows.Forms.Label();
             this.tabEducation = new System.Windows.Forms.TabPage();
             this.tabExperience = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -97,8 +99,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblPitch = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -108,12 +108,12 @@
             this.grpbxNTCExperience.SuspendLayout();
             this.tbctrlCV.SuspendLayout();
             this.tabContacts.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabEducation.SuspendLayout();
             this.tabExperience.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabFiles.SuspendLayout();
             this.tabSearch.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -734,6 +734,30 @@
             this.tabContacts.Text = "Contacts";
             this.tabContacts.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.lblPitch);
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.groupBox2.Location = new System.Drawing.Point(10, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(556, 126);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Summary";
+            // 
+            // lblPitch
+            // 
+            this.lblPitch.AutoSize = true;
+            this.lblPitch.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPitch.Location = new System.Drawing.Point(6, 19);
+            this.lblPitch.MaximumSize = new System.Drawing.Size(550, 0);
+            this.lblPitch.Name = "lblPitch";
+            this.lblPitch.Size = new System.Drawing.Size(550, 85);
+            this.lblPitch.TabIndex = 20;
+            this.lblPitch.Text = resources.GetString("lblPitch.Text");
+            // 
             // tabEducation
             // 
             this.tabEducation.Controls.Add(this.grpbxEducation);
@@ -862,30 +886,6 @@
             this.tabSearch.Text = "Search";
             this.tabSearch.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.lblPitch);
-            this.groupBox2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.groupBox2.Location = new System.Drawing.Point(10, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(556, 126);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Summary";
-            // 
-            // lblPitch
-            // 
-            this.lblPitch.AutoSize = true;
-            this.lblPitch.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPitch.Location = new System.Drawing.Point(6, 19);
-            this.lblPitch.MaximumSize = new System.Drawing.Size(550, 0);
-            this.lblPitch.Name = "lblPitch";
-            this.lblPitch.Size = new System.Drawing.Size(550, 85);
-            this.lblPitch.TabIndex = 20;
-            this.lblPitch.Text = resources.GetString("lblPitch.Text");
-            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -899,8 +899,8 @@
             this.Name = "CVForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CVForm_FormClosing);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
             this.grpbxContacts.ResumeLayout(false);
             this.grpbxContacts.PerformLayout();
             this.grpbxSocialNetworks.ResumeLayout(false);
@@ -917,6 +917,8 @@
             this.grpbxNTCExperience.PerformLayout();
             this.tbctrlCV.ResumeLayout(false);
             this.tabContacts.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tabEducation.ResumeLayout(false);
             this.tabExperience.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -924,8 +926,6 @@
             this.tabFiles.ResumeLayout(false);
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
