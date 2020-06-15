@@ -899,6 +899,7 @@
             this.Name = "CVForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CVForm_FormClosing);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
             this.grpbxContacts.ResumeLayout(false);
