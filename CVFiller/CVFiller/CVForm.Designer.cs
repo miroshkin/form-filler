@@ -99,6 +99,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.lblCountryCode = new System.Windows.Forms.Label();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -161,11 +162,11 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPhone.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPhone.Location = new System.Drawing.Point(308, 22);
+            this.lblPhone.Location = new System.Drawing.Point(334, 22);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(104, 17);
+            this.lblPhone.Size = new System.Drawing.Size(78, 17);
             this.lblPhone.TabIndex = 10;
-            this.lblPhone.Text = "+7 916 163 18 67";
+            this.lblPhone.Text = "9161631867";
             // 
             // lblLocation
             // 
@@ -192,6 +193,7 @@
             // grpbxContacts
             // 
             this.grpbxContacts.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxContacts.Controls.Add(this.lblCountryCode);
             this.grpbxContacts.Controls.Add(this.lblDateOfBirth);
             this.grpbxContacts.Controls.Add(this.FirstName);
             this.grpbxContacts.Controls.Add(this.LastName);
@@ -886,6 +888,17 @@
             this.tabSearch.Text = "Search";
             this.tabSearch.UseVisualStyleBackColor = true;
             // 
+            // lblCountryCode
+            // 
+            this.lblCountryCode.AutoSize = true;
+            this.lblCountryCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCountryCode.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCountryCode.Location = new System.Drawing.Point(308, 22);
+            this.lblCountryCode.Name = "lblCountryCode";
+            this.lblCountryCode.Size = new System.Drawing.Size(22, 17);
+            this.lblCountryCode.TabIndex = 13;
+            this.lblCountryCode.Text = "+7";
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1003,6 +1016,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblPitch;
+        private System.Windows.Forms.Label lblCountryCode;
     }
 }
 
