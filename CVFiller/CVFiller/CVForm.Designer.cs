@@ -38,6 +38,7 @@
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblLinkedIn = new System.Windows.Forms.Label();
             this.grpbxContacts = new System.Windows.Forms.GroupBox();
+            this.lblCountryCode = new System.Windows.Forms.Label();
             this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.grpbxSocialNetworks = new System.Windows.Forms.GroupBox();
             this.lblGithub = new System.Windows.Forms.Label();
@@ -99,7 +100,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.lblCountryCode = new System.Windows.Forms.Label();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -208,6 +209,17 @@
             this.grpbxContacts.TabIndex = 13;
             this.grpbxContacts.TabStop = false;
             this.grpbxContacts.Text = "Contacts";
+            // 
+            // lblCountryCode
+            // 
+            this.lblCountryCode.AutoSize = true;
+            this.lblCountryCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCountryCode.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblCountryCode.Location = new System.Drawing.Point(308, 22);
+            this.lblCountryCode.Name = "lblCountryCode";
+            this.lblCountryCode.Size = new System.Drawing.Size(22, 17);
+            this.lblCountryCode.TabIndex = 13;
+            this.lblCountryCode.Text = "+7";
             // 
             // lblDateOfBirth
             // 
@@ -752,6 +764,7 @@
             // lblPitch
             // 
             this.lblPitch.AutoSize = true;
+            this.lblPitch.BackColor = System.Drawing.Color.Transparent;
             this.lblPitch.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblPitch.Location = new System.Drawing.Point(6, 19);
             this.lblPitch.MaximumSize = new System.Drawing.Size(550, 0);
@@ -888,16 +901,11 @@
             this.tabSearch.Text = "Search";
             this.tabSearch.UseVisualStyleBackColor = true;
             // 
-            // lblCountryCode
+            // directorySearcher1
             // 
-            this.lblCountryCode.AutoSize = true;
-            this.lblCountryCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCountryCode.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCountryCode.Location = new System.Drawing.Point(308, 22);
-            this.lblCountryCode.Name = "lblCountryCode";
-            this.lblCountryCode.Size = new System.Drawing.Size(22, 17);
-            this.lblCountryCode.TabIndex = 13;
-            this.lblCountryCode.Text = "+7";
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // CVForm
             // 
@@ -1017,6 +1025,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblPitch;
         private System.Windows.Forms.Label lblCountryCode;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
     }
 }
 

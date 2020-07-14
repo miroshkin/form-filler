@@ -107,7 +107,8 @@ namespace FormFiller
             if (sender is Label)
             {
                 var label = sender as Label;
-                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Underline | FontStyle.Bold);
+                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Underline);
+                label.BackColor = Color.PaleTurquoise;
             }
         }
 
@@ -117,6 +118,8 @@ namespace FormFiller
             {
                 var label = sender as Label;
                 label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Regular);
+                label.BackColor = Color.Transparent;
+
             }
         }
 
