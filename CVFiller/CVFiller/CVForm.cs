@@ -421,6 +421,11 @@ namespace FormFiller
         {
             this.Show();
         }
+
+        private void btnContacts_Click(object sender, EventArgs e)
+        {
+            panelContacts.Visible = !panelContacts.Visible;
+        }
     }
 }
 

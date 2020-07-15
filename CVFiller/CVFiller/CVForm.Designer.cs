@@ -102,6 +102,13 @@
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnContacts = new System.Windows.Forms.Button();
+            this.panelContacts = new System.Windows.Forms.Panel();
+            this.btnSummary = new System.Windows.Forms.Button();
+            this.btnSocialContacts = new System.Windows.Forms.Button();
+            this.btnAddress = new System.Windows.Forms.Button();
+            this.btnSocialLinks = new System.Windows.Forms.Button();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -117,6 +124,8 @@
             this.groupBox1.SuspendLayout();
             this.tabFiles.SuspendLayout();
             this.tabSearch.SuspendLayout();
+            this.panelSideMenu.SuspendLayout();
+            this.panelContacts.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -729,7 +738,7 @@
             this.tbctrlCV.Controls.Add(this.tabExperience);
             this.tbctrlCV.Controls.Add(this.tabFiles);
             this.tbctrlCV.Controls.Add(this.tabSearch);
-            this.tbctrlCV.Location = new System.Drawing.Point(204, 21);
+            this.tbctrlCV.Location = new System.Drawing.Point(256, 12);
             this.tbctrlCV.Name = "tbctrlCV";
             this.tbctrlCV.SelectedIndex = 0;
             this.tbctrlCV.Size = new System.Drawing.Size(571, 576);
@@ -911,11 +920,111 @@
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panelSideMenu.Controls.Add(this.panelContacts);
+            this.panelSideMenu.Controls.Add(this.btnContacts);
+            this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(202, 609);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 609);
             this.panelSideMenu.TabIndex = 33;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // btnContacts
+            // 
+            this.btnContacts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContacts.FlatAppearance.BorderSize = 0;
+            this.btnContacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContacts.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnContacts.Location = new System.Drawing.Point(0, 100);
+            this.btnContacts.Name = "btnContacts";
+            this.btnContacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnContacts.Size = new System.Drawing.Size(250, 45);
+            this.btnContacts.TabIndex = 1;
+            this.btnContacts.Text = "Contacts";
+            this.btnContacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContacts.UseVisualStyleBackColor = true;
+            this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
+            // 
+            // panelContacts
+            // 
+            this.panelContacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelContacts.Controls.Add(this.btnSocialLinks);
+            this.panelContacts.Controls.Add(this.btnAddress);
+            this.panelContacts.Controls.Add(this.btnSocialContacts);
+            this.panelContacts.Controls.Add(this.btnSummary);
+            this.panelContacts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContacts.Location = new System.Drawing.Point(0, 145);
+            this.panelContacts.Name = "panelContacts";
+            this.panelContacts.Size = new System.Drawing.Size(250, 185);
+            this.panelContacts.TabIndex = 2;
+            // 
+            // btnSummary
+            // 
+            this.btnSummary.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSummary.FlatAppearance.BorderSize = 0;
+            this.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSummary.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSummary.Location = new System.Drawing.Point(0, 0);
+            this.btnSummary.Name = "btnSummary";
+            this.btnSummary.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSummary.Size = new System.Drawing.Size(250, 40);
+            this.btnSummary.TabIndex = 0;
+            this.btnSummary.Text = "Summary";
+            this.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSummary.UseVisualStyleBackColor = true;
+            // 
+            // btnSocialContacts
+            // 
+            this.btnSocialContacts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSocialContacts.FlatAppearance.BorderSize = 0;
+            this.btnSocialContacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSocialContacts.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSocialContacts.Location = new System.Drawing.Point(0, 40);
+            this.btnSocialContacts.Name = "btnSocialContacts";
+            this.btnSocialContacts.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSocialContacts.Size = new System.Drawing.Size(250, 40);
+            this.btnSocialContacts.TabIndex = 1;
+            this.btnSocialContacts.Text = "Personal data";
+            this.btnSocialContacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSocialContacts.UseVisualStyleBackColor = true;
+            // 
+            // btnAddress
+            // 
+            this.btnAddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddress.FlatAppearance.BorderSize = 0;
+            this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddress.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddress.Location = new System.Drawing.Point(0, 80);
+            this.btnAddress.Name = "btnAddress";
+            this.btnAddress.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddress.Size = new System.Drawing.Size(250, 40);
+            this.btnAddress.TabIndex = 2;
+            this.btnAddress.Text = "Address";
+            this.btnAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddress.UseVisualStyleBackColor = true;
+            // 
+            // btnSocialLinks
+            // 
+            this.btnSocialLinks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSocialLinks.FlatAppearance.BorderSize = 0;
+            this.btnSocialLinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSocialLinks.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSocialLinks.Location = new System.Drawing.Point(0, 120);
+            this.btnSocialLinks.Name = "btnSocialLinks";
+            this.btnSocialLinks.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSocialLinks.Size = new System.Drawing.Size(250, 40);
+            this.btnSocialLinks.TabIndex = 3;
+            this.btnSocialLinks.Text = "Social links";
+            this.btnSocialLinks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSocialLinks.UseVisualStyleBackColor = true;
             // 
             // CVForm
             // 
@@ -959,6 +1068,8 @@
             this.tabFiles.ResumeLayout(false);
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
+            this.panelSideMenu.ResumeLayout(false);
+            this.panelContacts.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1038,6 +1149,13 @@
         private System.Windows.Forms.Label lblCountryCode;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Panel panelSideMenu;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelContacts;
+        private System.Windows.Forms.Button btnSocialLinks;
+        private System.Windows.Forms.Button btnAddress;
+        private System.Windows.Forms.Button btnSocialContacts;
+        private System.Windows.Forms.Button btnSummary;
+        private System.Windows.Forms.Button btnContacts;
     }
 }
 
