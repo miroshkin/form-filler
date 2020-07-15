@@ -15,8 +15,7 @@ namespace FormFiller
 {
     public partial class CVForm : Form
     {
-        public List<Article> _data;
-        public List<string> _tags;
+        
 
         public const string Application = "Application.docx";
         public const string CV = "CV.docx";
@@ -45,13 +44,22 @@ namespace FormFiller
         public CVForm()
         {
             InitializeComponent();
+            SetControlsVisibility();
             AddNotifyIconMenu();
             SetShortCuts();
 
-            LoadData();
             SetHandleClickMethodForControls();
 
             SetFormTransparency(this);
+        }
+
+        private void SetControlsVisibility()
+        {
+            panelContacts.Visible = false;
+            panelEducation.Visible = false;
+            panelExperience.Visible = false;
+            panelFiles.Visible = false;
+            panelSearch.Visible = false;
         }
 
         private void SetFormTransparency(Form form)
@@ -194,21 +202,7 @@ namespace FormFiller
             return list;
         }
 
-        private void LoadData()
-        {
-            _data = new List<Article>();
-            _tags = new List<string>();
-
-            CurriculumVitae cv = new CurriculumVitae();
-            cv.FirstName = "Anton";
-            cv.LastName = "Miroshkin";
-            cv.PhoneNumber = "+79161631867";
-            cv.Email = "anton.miroshkin@gmail.com";
-
-            _data.Add(new Article() { Value = cv.FirstName, Tags = new List<string>() { "contacts", "first", "name" } });
-            _data.Add(new Article() { Value = cv.Email, Tags = new List<string>() { "contacts", "email" } });
-            _data.Add(new Article() { Value = cv.PhoneNumber, Tags = new List<string>() { "contacts", "phone" } });
-        }
+        
 
         protected override void WndProc(ref Message m)
         {
@@ -244,19 +238,19 @@ namespace FormFiller
                 }
                 else if (id == 2)
                 {
-                    tbctrlCV.SelectedIndex = 0;
+                    //tbctrlCV.SelectedIndex = 0;
                 }
                 else if (id == 3)
                 {
-                    tbctrlCV.SelectedIndex = 1;
+                    //tbctrlCV.SelectedIndex = 1;
                 }
                 else if (id == 4)
                 {
-                    tbctrlCV.SelectedIndex = 2;
+                    //tbctrlCV.SelectedIndex = 2;
                 }
                 else if (id == 5)
                 {
-                    tbctrlCV.SelectedIndex = 3;
+                    //tbctrlCV.SelectedIndex = 3;
                 }
             }
         }
@@ -316,40 +310,9 @@ namespace FormFiller
             }
         }
      
-        private void btnAddTag_Click(object sender, EventArgs e)
-        {
-            LinkLabel linkLabel = new LinkLabel();
-            linkLabel.BackColor = Color.White;
-            linkLabel.Text = $"#{txtbxTag.Text}";
-            linkLabel.Size = new Size(50, 25);
+       
 
-            this.Controls.Add(linkLabel);
-        }
-
-        private void btnAddTag_Click_1(object sender, EventArgs e)
-        {
-            string tag = txtbxTag.Text.ToLower();
-            _tags.Add(tag);
-            var tagControl = new TagControl(tag, _tags);
-            tagControl.Anchor = AnchorStyles.Left;
-            tagControl.Width = tag.Count() * 9 + 20;
-            this.flowLayoutPanel1.Controls.Add(tagControl);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var result = _data;
-
-            foreach (var tag in _tags)
-            {
-                result = result.Where(t => t.Tags.Contains(tag)).ToList();
-            }
-
-            string s = string.Empty;
-            result.ForEach(i => s += "\n" + i.Value);
-
-            MessageBox.Show(s);
-        }
+        
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -425,6 +388,21 @@ namespace FormFiller
         private void btnContacts_Click(object sender, EventArgs e)
         {
             panelContacts.Visible = !panelContacts.Visible;
+        }
+
+        private void btnEducation_Click(object sender, EventArgs e)
+        {
+            panelEducation.Visible = !panelEducation.Visible;
+        }
+
+        private void btnExperience_Click(object sender, EventArgs e)
+        {
+            panelExperience.Visible = !panelExperience.Visible;
+        }
+
+        private void btnFiles_Click(object sender, EventArgs e)
+        {
+            panelFiles.Visible = !panelFiles.Visible;
         }
     }
 }

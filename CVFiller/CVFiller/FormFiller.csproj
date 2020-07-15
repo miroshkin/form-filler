@@ -76,6 +76,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildFormTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFormTab.Designer.cs">
+      <DependentUpon>ChildFormTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="CVForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChildFormTab.resx">
+      <DependentUpon>ChildFormTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CVForm.resx">
       <DependentUpon>CVForm.cs</DependentUpon>
     </EmbeddedResource>
