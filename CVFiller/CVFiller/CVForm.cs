@@ -387,22 +387,94 @@ namespace FormFiller
 
         private void btnContacts_Click(object sender, EventArgs e)
         {
-            panelContacts.Visible = !panelContacts.Visible;
+            ShowSubMenu(panelContacts);
         }
 
         private void btnEducation_Click(object sender, EventArgs e)
         {
-            panelEducation.Visible = !panelEducation.Visible;
+            ShowSubMenu(panelEducation);
         }
 
         private void btnExperience_Click(object sender, EventArgs e)
         {
-            panelExperience.Visible = !panelExperience.Visible;
+            ShowSubMenu(panelExperience);
         }
 
         private void btnFiles_Click(object sender, EventArgs e)
         {
-            panelFiles.Visible = !panelFiles.Visible;
+            ShowSubMenu(panelFiles);
+        }
+
+        private void ShowSubMenu (Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                HideSubMenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
+        private void HideSubMenu()
+        {
+            if (panelContacts.Visible) panelContacts.Visible = false;
+            if (panelEducation.Visible) panelEducation.Visible = false;
+            if (panelExperience.Visible) panelExperience.Visible = false;
+            if (panelFiles.Visible) panelFiles.Visible = false;
+            if (panelSearch.Visible) panelSearch.Visible = false;
+        }
+
+        private void btnSummary_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnPersonalData_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnAddress_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnSocialLinks_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnUniversity_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnAdditionalCourses_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnJobs_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnResumes_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnCoverLetters_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+        }
+
+        private void btnTags_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
         }
     }
 }

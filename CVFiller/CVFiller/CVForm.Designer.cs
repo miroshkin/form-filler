@@ -34,33 +34,34 @@
             this.lblChangeColorScheme = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnContacts = new System.Windows.Forms.Button();
-            this.panelContacts = new System.Windows.Forms.Panel();
-            this.btnSummary = new System.Windows.Forms.Button();
-            this.btnPersonalData = new System.Windows.Forms.Button();
-            this.btnAddress = new System.Windows.Forms.Button();
-            this.btnSocialLinks = new System.Windows.Forms.Button();
-            this.btnEducation = new System.Windows.Forms.Button();
-            this.panelEducation = new System.Windows.Forms.Panel();
-            this.btnAdditionalCourses = new System.Windows.Forms.Button();
-            this.btnUniversity = new System.Windows.Forms.Button();
-            this.btnExperience = new System.Windows.Forms.Button();
-            this.panelExperience = new System.Windows.Forms.Panel();
-            this.btnJobs = new System.Windows.Forms.Button();
-            this.btnFiles = new System.Windows.Forms.Button();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.btnTags = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panelFiles = new System.Windows.Forms.Panel();
             this.btnCoverLetters = new System.Windows.Forms.Button();
             this.btnResumes = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.panelSearch = new System.Windows.Forms.Panel();
-            this.btnTags = new System.Windows.Forms.Button();
+            this.btnFiles = new System.Windows.Forms.Button();
+            this.panelExperience = new System.Windows.Forms.Panel();
+            this.btnJobs = new System.Windows.Forms.Button();
+            this.btnExperience = new System.Windows.Forms.Button();
+            this.panelEducation = new System.Windows.Forms.Panel();
+            this.btnAdditionalCourses = new System.Windows.Forms.Button();
+            this.btnUniversity = new System.Windows.Forms.Button();
+            this.btnEducation = new System.Windows.Forms.Button();
+            this.panelContacts = new System.Windows.Forms.Panel();
+            this.btnSocialLinks = new System.Windows.Forms.Button();
+            this.btnAddress = new System.Windows.Forms.Button();
+            this.btnPersonalData = new System.Windows.Forms.Button();
+            this.btnSummary = new System.Windows.Forms.Button();
+            this.btnContacts = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
-            this.panelContacts.SuspendLayout();
-            this.panelEducation.SuspendLayout();
-            this.panelExperience.SuspendLayout();
-            this.panelFiles.SuspendLayout();
             this.panelSearch.SuspendLayout();
+            this.panelFiles.SuspendLayout();
+            this.panelExperience.SuspendLayout();
+            this.panelEducation.SuspendLayout();
+            this.panelContacts.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -111,216 +112,46 @@
             this.panelSideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSideMenu.TabIndex = 33;
             // 
-            // panelLogo
+            // panelSearch
             // 
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(229, 100);
-            this.panelLogo.TabIndex = 0;
+            this.panelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelSearch.Controls.Add(this.btnTags);
+            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSearch.Location = new System.Drawing.Point(0, 764);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(229, 49);
+            this.panelSearch.TabIndex = 10;
             // 
-            // btnContacts
+            // btnTags
             // 
-            this.btnContacts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContacts.FlatAppearance.BorderSize = 0;
-            this.btnContacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContacts.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnContacts.Location = new System.Drawing.Point(0, 100);
-            this.btnContacts.Name = "btnContacts";
-            this.btnContacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnContacts.Size = new System.Drawing.Size(229, 45);
-            this.btnContacts.TabIndex = 1;
-            this.btnContacts.Text = "Contacts";
-            this.btnContacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContacts.UseVisualStyleBackColor = true;
-            this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
+            this.btnTags.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTags.FlatAppearance.BorderSize = 0;
+            this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTags.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTags.Location = new System.Drawing.Point(0, 0);
+            this.btnTags.Name = "btnTags";
+            this.btnTags.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnTags.Size = new System.Drawing.Size(229, 40);
+            this.btnTags.TabIndex = 0;
+            this.btnTags.Text = "Tags";
+            this.btnTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTags.UseVisualStyleBackColor = true;
+            this.btnTags.Click += new System.EventHandler(this.btnTags_Click);
             // 
-            // panelContacts
+            // btnSearch
             // 
-            this.panelContacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panelContacts.Controls.Add(this.btnSocialLinks);
-            this.panelContacts.Controls.Add(this.btnAddress);
-            this.panelContacts.Controls.Add(this.btnPersonalData);
-            this.panelContacts.Controls.Add(this.btnSummary);
-            this.panelContacts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelContacts.Location = new System.Drawing.Point(0, 145);
-            this.panelContacts.Name = "panelContacts";
-            this.panelContacts.Size = new System.Drawing.Size(229, 185);
-            this.panelContacts.TabIndex = 2;
-            // 
-            // btnSummary
-            // 
-            this.btnSummary.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSummary.FlatAppearance.BorderSize = 0;
-            this.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSummary.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSummary.Location = new System.Drawing.Point(0, 0);
-            this.btnSummary.Name = "btnSummary";
-            this.btnSummary.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSummary.Size = new System.Drawing.Size(229, 40);
-            this.btnSummary.TabIndex = 0;
-            this.btnSummary.Text = "Summary";
-            this.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSummary.UseVisualStyleBackColor = true;
-            // 
-            // btnPersonalData
-            // 
-            this.btnPersonalData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPersonalData.FlatAppearance.BorderSize = 0;
-            this.btnPersonalData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonalData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPersonalData.Location = new System.Drawing.Point(0, 40);
-            this.btnPersonalData.Name = "btnPersonalData";
-            this.btnPersonalData.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPersonalData.Size = new System.Drawing.Size(229, 40);
-            this.btnPersonalData.TabIndex = 1;
-            this.btnPersonalData.Text = "Personal data";
-            this.btnPersonalData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalData.UseVisualStyleBackColor = true;
-            // 
-            // btnAddress
-            // 
-            this.btnAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddress.FlatAppearance.BorderSize = 0;
-            this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddress.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAddress.Location = new System.Drawing.Point(0, 80);
-            this.btnAddress.Name = "btnAddress";
-            this.btnAddress.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddress.Size = new System.Drawing.Size(229, 40);
-            this.btnAddress.TabIndex = 2;
-            this.btnAddress.Text = "Address";
-            this.btnAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddress.UseVisualStyleBackColor = true;
-            // 
-            // btnSocialLinks
-            // 
-            this.btnSocialLinks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSocialLinks.FlatAppearance.BorderSize = 0;
-            this.btnSocialLinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSocialLinks.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSocialLinks.Location = new System.Drawing.Point(0, 120);
-            this.btnSocialLinks.Name = "btnSocialLinks";
-            this.btnSocialLinks.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSocialLinks.Size = new System.Drawing.Size(229, 40);
-            this.btnSocialLinks.TabIndex = 3;
-            this.btnSocialLinks.Text = "Social links";
-            this.btnSocialLinks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSocialLinks.UseVisualStyleBackColor = true;
-            // 
-            // btnEducation
-            // 
-            this.btnEducation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEducation.FlatAppearance.BorderSize = 0;
-            this.btnEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEducation.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEducation.Location = new System.Drawing.Point(0, 330);
-            this.btnEducation.Name = "btnEducation";
-            this.btnEducation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEducation.Size = new System.Drawing.Size(229, 45);
-            this.btnEducation.TabIndex = 3;
-            this.btnEducation.Text = "Education";
-            this.btnEducation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEducation.UseVisualStyleBackColor = true;
-            this.btnEducation.Click += new System.EventHandler(this.btnEducation_Click);
-            // 
-            // panelEducation
-            // 
-            this.panelEducation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panelEducation.Controls.Add(this.btnAdditionalCourses);
-            this.panelEducation.Controls.Add(this.btnUniversity);
-            this.panelEducation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEducation.Location = new System.Drawing.Point(0, 375);
-            this.panelEducation.Name = "panelEducation";
-            this.panelEducation.Size = new System.Drawing.Size(229, 99);
-            this.panelEducation.TabIndex = 4;
-            // 
-            // btnAdditionalCourses
-            // 
-            this.btnAdditionalCourses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdditionalCourses.FlatAppearance.BorderSize = 0;
-            this.btnAdditionalCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdditionalCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAdditionalCourses.Location = new System.Drawing.Point(0, 40);
-            this.btnAdditionalCourses.Name = "btnAdditionalCourses";
-            this.btnAdditionalCourses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAdditionalCourses.Size = new System.Drawing.Size(229, 40);
-            this.btnAdditionalCourses.TabIndex = 1;
-            this.btnAdditionalCourses.Text = "Additional courses";
-            this.btnAdditionalCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdditionalCourses.UseVisualStyleBackColor = true;
-            // 
-            // btnUniversity
-            // 
-            this.btnUniversity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUniversity.FlatAppearance.BorderSize = 0;
-            this.btnUniversity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUniversity.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUniversity.Location = new System.Drawing.Point(0, 0);
-            this.btnUniversity.Name = "btnUniversity";
-            this.btnUniversity.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUniversity.Size = new System.Drawing.Size(229, 40);
-            this.btnUniversity.TabIndex = 0;
-            this.btnUniversity.Text = "University";
-            this.btnUniversity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUniversity.UseVisualStyleBackColor = true;
-            // 
-            // btnExperience
-            // 
-            this.btnExperience.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExperience.FlatAppearance.BorderSize = 0;
-            this.btnExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExperience.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExperience.Location = new System.Drawing.Point(0, 474);
-            this.btnExperience.Name = "btnExperience";
-            this.btnExperience.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnExperience.Size = new System.Drawing.Size(229, 45);
-            this.btnExperience.TabIndex = 5;
-            this.btnExperience.Text = "Experience";
-            this.btnExperience.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExperience.UseVisualStyleBackColor = true;
-            this.btnExperience.Click += new System.EventHandler(this.btnExperience_Click);
-            // 
-            // panelExperience
-            // 
-            this.panelExperience.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panelExperience.Controls.Add(this.btnJobs);
-            this.panelExperience.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelExperience.Location = new System.Drawing.Point(0, 519);
-            this.panelExperience.Name = "panelExperience";
-            this.panelExperience.Size = new System.Drawing.Size(229, 56);
-            this.panelExperience.TabIndex = 6;
-            // 
-            // btnJobs
-            // 
-            this.btnJobs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJobs.FlatAppearance.BorderSize = 0;
-            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJobs.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnJobs.Location = new System.Drawing.Point(0, 0);
-            this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnJobs.Size = new System.Drawing.Size(229, 40);
-            this.btnJobs.TabIndex = 0;
-            this.btnJobs.Text = "Jobs";
-            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJobs.UseVisualStyleBackColor = true;
-            // 
-            // btnFiles
-            // 
-            this.btnFiles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFiles.FlatAppearance.BorderSize = 0;
-            this.btnFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiles.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFiles.Location = new System.Drawing.Point(0, 575);
-            this.btnFiles.Name = "btnFiles";
-            this.btnFiles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnFiles.Size = new System.Drawing.Size(229, 45);
-            this.btnFiles.TabIndex = 7;
-            this.btnFiles.Text = "Files";
-            this.btnFiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiles.UseVisualStyleBackColor = true;
-            this.btnFiles.Click += new System.EventHandler(this.btnFiles_Click);
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.Location = new System.Drawing.Point(0, 719);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSearch.Size = new System.Drawing.Size(229, 45);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // panelFiles
             // 
@@ -347,6 +178,7 @@
             this.btnCoverLetters.Text = "Cover letters";
             this.btnCoverLetters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCoverLetters.UseVisualStyleBackColor = true;
+            this.btnCoverLetters.Click += new System.EventHandler(this.btnCoverLetters_Click);
             // 
             // btnResumes
             // 
@@ -362,46 +194,234 @@
             this.btnResumes.Text = "Resumes";
             this.btnResumes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResumes.UseVisualStyleBackColor = true;
+            this.btnResumes.Click += new System.EventHandler(this.btnResumes_Click);
             // 
-            // btnSearch
+            // btnFiles
             // 
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSearch.Location = new System.Drawing.Point(0, 719);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(229, 45);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnFiles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFiles.FlatAppearance.BorderSize = 0;
+            this.btnFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiles.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFiles.Location = new System.Drawing.Point(0, 575);
+            this.btnFiles.Name = "btnFiles";
+            this.btnFiles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFiles.Size = new System.Drawing.Size(229, 45);
+            this.btnFiles.TabIndex = 7;
+            this.btnFiles.Text = "Files";
+            this.btnFiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiles.UseVisualStyleBackColor = true;
+            this.btnFiles.Click += new System.EventHandler(this.btnFiles_Click);
             // 
-            // panelSearch
+            // panelExperience
             // 
-            this.panelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panelSearch.Controls.Add(this.btnTags);
-            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSearch.Location = new System.Drawing.Point(0, 764);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(229, 49);
-            this.panelSearch.TabIndex = 10;
+            this.panelExperience.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelExperience.Controls.Add(this.btnJobs);
+            this.panelExperience.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelExperience.Location = new System.Drawing.Point(0, 519);
+            this.panelExperience.Name = "panelExperience";
+            this.panelExperience.Size = new System.Drawing.Size(229, 56);
+            this.panelExperience.TabIndex = 6;
             // 
-            // btnTags
+            // btnJobs
             // 
-            this.btnTags.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTags.FlatAppearance.BorderSize = 0;
-            this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTags.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnTags.Location = new System.Drawing.Point(0, 0);
-            this.btnTags.Name = "btnTags";
-            this.btnTags.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTags.Size = new System.Drawing.Size(229, 40);
-            this.btnTags.TabIndex = 0;
-            this.btnTags.Text = "Tags";
-            this.btnTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTags.UseVisualStyleBackColor = true;
+            this.btnJobs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJobs.FlatAppearance.BorderSize = 0;
+            this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobs.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnJobs.Location = new System.Drawing.Point(0, 0);
+            this.btnJobs.Name = "btnJobs";
+            this.btnJobs.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnJobs.Size = new System.Drawing.Size(229, 40);
+            this.btnJobs.TabIndex = 0;
+            this.btnJobs.Text = "Jobs";
+            this.btnJobs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJobs.UseVisualStyleBackColor = true;
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
+            // 
+            // btnExperience
+            // 
+            this.btnExperience.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExperience.FlatAppearance.BorderSize = 0;
+            this.btnExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExperience.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnExperience.Location = new System.Drawing.Point(0, 474);
+            this.btnExperience.Name = "btnExperience";
+            this.btnExperience.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnExperience.Size = new System.Drawing.Size(229, 45);
+            this.btnExperience.TabIndex = 5;
+            this.btnExperience.Text = "Experience";
+            this.btnExperience.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExperience.UseVisualStyleBackColor = true;
+            this.btnExperience.Click += new System.EventHandler(this.btnExperience_Click);
+            // 
+            // panelEducation
+            // 
+            this.panelEducation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelEducation.Controls.Add(this.btnAdditionalCourses);
+            this.panelEducation.Controls.Add(this.btnUniversity);
+            this.panelEducation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEducation.Location = new System.Drawing.Point(0, 375);
+            this.panelEducation.Name = "panelEducation";
+            this.panelEducation.Size = new System.Drawing.Size(229, 99);
+            this.panelEducation.TabIndex = 4;
+            // 
+            // btnAdditionalCourses
+            // 
+            this.btnAdditionalCourses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdditionalCourses.FlatAppearance.BorderSize = 0;
+            this.btnAdditionalCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdditionalCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAdditionalCourses.Location = new System.Drawing.Point(0, 40);
+            this.btnAdditionalCourses.Name = "btnAdditionalCourses";
+            this.btnAdditionalCourses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAdditionalCourses.Size = new System.Drawing.Size(229, 40);
+            this.btnAdditionalCourses.TabIndex = 1;
+            this.btnAdditionalCourses.Text = "Additional courses";
+            this.btnAdditionalCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdditionalCourses.UseVisualStyleBackColor = true;
+            this.btnAdditionalCourses.Click += new System.EventHandler(this.btnAdditionalCourses_Click);
+            // 
+            // btnUniversity
+            // 
+            this.btnUniversity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUniversity.FlatAppearance.BorderSize = 0;
+            this.btnUniversity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUniversity.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUniversity.Location = new System.Drawing.Point(0, 0);
+            this.btnUniversity.Name = "btnUniversity";
+            this.btnUniversity.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnUniversity.Size = new System.Drawing.Size(229, 40);
+            this.btnUniversity.TabIndex = 0;
+            this.btnUniversity.Text = "University";
+            this.btnUniversity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUniversity.UseVisualStyleBackColor = true;
+            this.btnUniversity.Click += new System.EventHandler(this.btnUniversity_Click);
+            // 
+            // btnEducation
+            // 
+            this.btnEducation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEducation.FlatAppearance.BorderSize = 0;
+            this.btnEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEducation.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEducation.Location = new System.Drawing.Point(0, 330);
+            this.btnEducation.Name = "btnEducation";
+            this.btnEducation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEducation.Size = new System.Drawing.Size(229, 45);
+            this.btnEducation.TabIndex = 3;
+            this.btnEducation.Text = "Education";
+            this.btnEducation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEducation.UseVisualStyleBackColor = true;
+            this.btnEducation.Click += new System.EventHandler(this.btnEducation_Click);
+            // 
+            // panelContacts
+            // 
+            this.panelContacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelContacts.Controls.Add(this.btnSocialLinks);
+            this.panelContacts.Controls.Add(this.btnAddress);
+            this.panelContacts.Controls.Add(this.btnPersonalData);
+            this.panelContacts.Controls.Add(this.btnSummary);
+            this.panelContacts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContacts.Location = new System.Drawing.Point(0, 145);
+            this.panelContacts.Name = "panelContacts";
+            this.panelContacts.Size = new System.Drawing.Size(229, 185);
+            this.panelContacts.TabIndex = 2;
+            // 
+            // btnSocialLinks
+            // 
+            this.btnSocialLinks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSocialLinks.FlatAppearance.BorderSize = 0;
+            this.btnSocialLinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSocialLinks.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSocialLinks.Location = new System.Drawing.Point(0, 120);
+            this.btnSocialLinks.Name = "btnSocialLinks";
+            this.btnSocialLinks.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSocialLinks.Size = new System.Drawing.Size(229, 40);
+            this.btnSocialLinks.TabIndex = 3;
+            this.btnSocialLinks.Text = "Social links";
+            this.btnSocialLinks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSocialLinks.UseVisualStyleBackColor = true;
+            this.btnSocialLinks.Click += new System.EventHandler(this.btnSocialLinks_Click);
+            // 
+            // btnAddress
+            // 
+            this.btnAddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddress.FlatAppearance.BorderSize = 0;
+            this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddress.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddress.Location = new System.Drawing.Point(0, 80);
+            this.btnAddress.Name = "btnAddress";
+            this.btnAddress.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddress.Size = new System.Drawing.Size(229, 40);
+            this.btnAddress.TabIndex = 2;
+            this.btnAddress.Text = "Address";
+            this.btnAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddress.UseVisualStyleBackColor = true;
+            this.btnAddress.Click += new System.EventHandler(this.btnAddress_Click);
+            // 
+            // btnPersonalData
+            // 
+            this.btnPersonalData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPersonalData.FlatAppearance.BorderSize = 0;
+            this.btnPersonalData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPersonalData.Location = new System.Drawing.Point(0, 40);
+            this.btnPersonalData.Name = "btnPersonalData";
+            this.btnPersonalData.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPersonalData.Size = new System.Drawing.Size(229, 40);
+            this.btnPersonalData.TabIndex = 1;
+            this.btnPersonalData.Text = "Personal data";
+            this.btnPersonalData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonalData.UseVisualStyleBackColor = true;
+            this.btnPersonalData.Click += new System.EventHandler(this.btnPersonalData_Click);
+            // 
+            // btnSummary
+            // 
+            this.btnSummary.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSummary.FlatAppearance.BorderSize = 0;
+            this.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSummary.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSummary.Location = new System.Drawing.Point(0, 0);
+            this.btnSummary.Name = "btnSummary";
+            this.btnSummary.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSummary.Size = new System.Drawing.Size(229, 40);
+            this.btnSummary.TabIndex = 0;
+            this.btnSummary.Text = "Summary";
+            this.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
+            // 
+            // btnContacts
+            // 
+            this.btnContacts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContacts.FlatAppearance.BorderSize = 0;
+            this.btnContacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContacts.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnContacts.Location = new System.Drawing.Point(0, 100);
+            this.btnContacts.Name = "btnContacts";
+            this.btnContacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnContacts.Size = new System.Drawing.Size(229, 45);
+            this.btnContacts.TabIndex = 1;
+            this.btnContacts.Text = "Contacts";
+            this.btnContacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContacts.UseVisualStyleBackColor = true;
+            this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(229, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(250, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(700, 600);
+            this.panelContainer.TabIndex = 34;
             // 
             // CVForm
             // 
@@ -409,6 +429,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.lblChangeColorScheme);
             this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -421,11 +442,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CVForm_FormClosing);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
             this.panelSideMenu.ResumeLayout(false);
-            this.panelContacts.ResumeLayout(false);
-            this.panelEducation.ResumeLayout(false);
-            this.panelExperience.ResumeLayout(false);
-            this.panelFiles.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
+            this.panelFiles.ResumeLayout(false);
+            this.panelExperience.ResumeLayout(false);
+            this.panelEducation.ResumeLayout(false);
+            this.panelContacts.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,6 +479,7 @@
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Button btnTags;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }
 
