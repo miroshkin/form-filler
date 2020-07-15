@@ -127,8 +127,10 @@ namespace FormFiller
             if (sender is Label)
             {
                 var label = sender as Label;
-                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Underline);
-                label.BackColor = Color.FromArgb(88,88,88);
+                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints);
+                label.ForeColor = Color.Black;
+                //label.BackColor = Color.FromArgb(88,88,88);
+                label.BackColor = Color.FromArgb(255, 215, 0);
             }
         }
 
@@ -138,6 +140,7 @@ namespace FormFiller
             {
                 var label = sender as Label;
                 label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Regular);
+                label.ForeColor = Color.Gainsboro;
                 label.BackColor = Color.Transparent;
 
             }
@@ -459,6 +462,7 @@ namespace FormFiller
 
         private void btnSocialLinks_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new SocialLinksForm());
             HideSubMenu();
         }
 
