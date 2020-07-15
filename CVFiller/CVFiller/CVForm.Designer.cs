@@ -101,6 +101,7 @@
             this.tabFiles = new System.Windows.Forms.TabPage();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.panelSideMenu = new System.Windows.Forms.Panel();
             this.grpbxContacts.SuspendLayout();
             this.grpbxSocialNetworks.SuspendLayout();
             this.grpbxAddress.SuspendLayout();
@@ -421,7 +422,7 @@
             this.lblEmExDescription.Location = new System.Drawing.Point(17, 45);
             this.lblEmExDescription.MaximumSize = new System.Drawing.Size(550, 0);
             this.lblEmExDescription.Name = "lblEmExDescription";
-            this.lblEmExDescription.Size = new System.Drawing.Size(534, 68);
+            this.lblEmExDescription.Size = new System.Drawing.Size(534, 105);
             this.lblEmExDescription.TabIndex = 19;
             this.lblEmExDescription.Text = resources.GetString("lblEmExDescription.Text");
             // 
@@ -430,7 +431,7 @@
             this.lblEmExLocation.AutoSize = true;
             this.lblEmExLocation.Location = new System.Drawing.Point(449, 19);
             this.lblEmExLocation.Name = "lblEmExLocation";
-            this.lblEmExLocation.Size = new System.Drawing.Size(55, 17);
+            this.lblEmExLocation.Size = new System.Drawing.Size(69, 21);
             this.lblEmExLocation.TabIndex = 16;
             this.lblEmExLocation.Text = "Moscow";
             // 
@@ -439,7 +440,7 @@
             this.lblEmExEndDate.AutoSize = true;
             this.lblEmExEndDate.Location = new System.Drawing.Point(393, 19);
             this.lblEmExEndDate.Name = "lblEmExEndDate";
-            this.lblEmExEndDate.Size = new System.Drawing.Size(50, 17);
+            this.lblEmExEndDate.Size = new System.Drawing.Size(61, 21);
             this.lblEmExEndDate.TabIndex = 18;
             this.lblEmExEndDate.Text = "current";
             // 
@@ -448,7 +449,7 @@
             this.lblEmExName.AutoSize = true;
             this.lblEmExName.Location = new System.Drawing.Point(236, 19);
             this.lblEmExName.Name = "lblEmExName";
-            this.lblEmExName.Size = new System.Drawing.Size(109, 17);
+            this.lblEmExName.Size = new System.Drawing.Size(135, 21);
             this.lblEmExName.TabIndex = 14;
             this.lblEmExName.Text = "JSC \"Emex Group\"";
             // 
@@ -457,7 +458,7 @@
             this.lblEmExStartDate.AutoSize = true;
             this.lblEmExStartDate.Location = new System.Drawing.Point(351, 19);
             this.lblEmExStartDate.Name = "lblEmExStartDate";
-            this.lblEmExStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblEmExStartDate.Size = new System.Drawing.Size(46, 21);
             this.lblEmExStartDate.TabIndex = 17;
             this.lblEmExStartDate.Text = "2016";
             // 
@@ -466,7 +467,7 @@
             this.lblEmExPosition.AutoSize = true;
             this.lblEmExPosition.Location = new System.Drawing.Point(17, 19);
             this.lblEmExPosition.Name = "lblEmExPosition";
-            this.lblEmExPosition.Size = new System.Drawing.Size(205, 17);
+            this.lblEmExPosition.Size = new System.Drawing.Size(250, 21);
             this.lblEmExPosition.TabIndex = 15;
             this.lblEmExPosition.Text = "Full Stack .NET Software Developer";
             // 
@@ -492,7 +493,7 @@
             this.lblRZDDescription.Location = new System.Drawing.Point(16, 42);
             this.lblRZDDescription.MaximumSize = new System.Drawing.Size(550, 0);
             this.lblRZDDescription.Name = "lblRZDDescription";
-            this.lblRZDDescription.Size = new System.Drawing.Size(535, 34);
+            this.lblRZDDescription.Size = new System.Drawing.Size(538, 63);
             this.lblRZDDescription.TabIndex = 19;
             this.lblRZDDescription.Text = "My responsibilities in chief designer department were the support and development" +
     " of SCADA system modules and electronic documentation web application.";
@@ -502,7 +503,7 @@
             this.lblRZDLocation.AutoSize = true;
             this.lblRZDLocation.Location = new System.Drawing.Point(449, 19);
             this.lblRZDLocation.Name = "lblRZDLocation";
-            this.lblRZDLocation.Size = new System.Drawing.Size(55, 17);
+            this.lblRZDLocation.Size = new System.Drawing.Size(69, 21);
             this.lblRZDLocation.TabIndex = 16;
             this.lblRZDLocation.Text = "Moscow";
             // 
@@ -511,7 +512,7 @@
             this.lblRZDEndDate.AutoSize = true;
             this.lblRZDEndDate.Location = new System.Drawing.Point(393, 19);
             this.lblRZDEndDate.Name = "lblRZDEndDate";
-            this.lblRZDEndDate.Size = new System.Drawing.Size(36, 17);
+            this.lblRZDEndDate.Size = new System.Drawing.Size(46, 21);
             this.lblRZDEndDate.TabIndex = 18;
             this.lblRZDEndDate.Text = "2016";
             // 
@@ -520,7 +521,7 @@
             this.lblRZDName.AutoSize = true;
             this.lblRZDName.Location = new System.Drawing.Point(210, 19);
             this.lblRZDName.Name = "lblRZDName";
-            this.lblRZDName.Size = new System.Drawing.Size(137, 17);
+            this.lblRZDName.Size = new System.Drawing.Size(171, 21);
             this.lblRZDName.TabIndex = 14;
             this.lblRZDName.Text = "JSC \"Russian Railroads\"";
             // 
@@ -529,7 +530,7 @@
             this.lblRZDStartDate.AutoSize = true;
             this.lblRZDStartDate.Location = new System.Drawing.Point(351, 19);
             this.lblRZDStartDate.Name = "lblRZDStartDate";
-            this.lblRZDStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblRZDStartDate.Size = new System.Drawing.Size(46, 21);
             this.lblRZDStartDate.TabIndex = 17;
             this.lblRZDStartDate.Text = "2014";
             // 
@@ -538,7 +539,7 @@
             this.lblRZDPosition.AutoSize = true;
             this.lblRZDPosition.Location = new System.Drawing.Point(16, 19);
             this.lblRZDPosition.Name = "lblRZDPosition";
-            this.lblRZDPosition.Size = new System.Drawing.Size(192, 17);
+            this.lblRZDPosition.Size = new System.Drawing.Size(236, 21);
             this.lblRZDPosition.TabIndex = 15;
             this.lblRZDPosition.Text = "Full Stack C# Software Developer";
             // 
@@ -564,7 +565,7 @@
             this.lblNTCDescription.Location = new System.Drawing.Point(15, 64);
             this.lblNTCDescription.MaximumSize = new System.Drawing.Size(536, 0);
             this.lblNTCDescription.Name = "lblNTCDescription";
-            this.lblNTCDescription.Size = new System.Drawing.Size(503, 34);
+            this.lblNTCDescription.Size = new System.Drawing.Size(500, 42);
             this.lblNTCDescription.TabIndex = 19;
             this.lblNTCDescription.Text = "The main part of my work in the power networks department was the development and" +
     " support expert system prototypes for industrial use.";
@@ -574,7 +575,7 @@
             this.lblNTCLocation.AutoSize = true;
             this.lblNTCLocation.Location = new System.Drawing.Point(241, 19);
             this.lblNTCLocation.Name = "lblNTCLocation";
-            this.lblNTCLocation.Size = new System.Drawing.Size(55, 17);
+            this.lblNTCLocation.Size = new System.Drawing.Size(69, 21);
             this.lblNTCLocation.TabIndex = 16;
             this.lblNTCLocation.Text = "Moscow";
             // 
@@ -583,7 +584,7 @@
             this.lblNTCEndDate.AutoSize = true;
             this.lblNTCEndDate.Location = new System.Drawing.Point(199, 19);
             this.lblNTCEndDate.Name = "lblNTCEndDate";
-            this.lblNTCEndDate.Size = new System.Drawing.Size(36, 17);
+            this.lblNTCEndDate.Size = new System.Drawing.Size(46, 21);
             this.lblNTCEndDate.TabIndex = 18;
             this.lblNTCEndDate.Text = "2014";
             // 
@@ -592,7 +593,7 @@
             this.lblNTCName.AutoSize = true;
             this.lblNTCName.Location = new System.Drawing.Point(15, 36);
             this.lblNTCName.Name = "lblNTCName";
-            this.lblNTCName.Size = new System.Drawing.Size(524, 17);
+            this.lblNTCName.Size = new System.Drawing.Size(650, 21);
             this.lblNTCName.TabIndex = 14;
             this.lblNTCName.Text = "JSC \"Research And Development Center At Federal Grid Company Of Unified Energy Sy" +
     "stem\"";
@@ -602,7 +603,7 @@
             this.lblNTCStartDate.AutoSize = true;
             this.lblNTCStartDate.Location = new System.Drawing.Point(151, 19);
             this.lblNTCStartDate.Name = "lblNTCStartDate";
-            this.lblNTCStartDate.Size = new System.Drawing.Size(36, 17);
+            this.lblNTCStartDate.Size = new System.Drawing.Size(46, 21);
             this.lblNTCStartDate.TabIndex = 17;
             this.lblNTCStartDate.Text = "2013";
             // 
@@ -611,7 +612,7 @@
             this.lblNTCPosition.AutoSize = true;
             this.lblNTCPosition.Location = new System.Drawing.Point(15, 19);
             this.lblNTCPosition.Name = "lblNTCPosition";
-            this.lblNTCPosition.Size = new System.Drawing.Size(83, 17);
+            this.lblNTCPosition.Size = new System.Drawing.Size(101, 21);
             this.lblNTCPosition.TabIndex = 15;
             this.lblNTCPosition.Text = "C# Developer";
             // 
@@ -632,7 +633,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.label1.Location = new System.Drawing.Point(314, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.Size = new System.Drawing.Size(18, 21);
             this.label1.TabIndex = 24;
             this.label1.Text = "#";
             // 
@@ -641,7 +642,7 @@
             this.txtbxTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.txtbxTag.Location = new System.Drawing.Point(330, 12);
             this.txtbxTag.Name = "txtbxTag";
-            this.txtbxTag.Size = new System.Drawing.Size(148, 23);
+            this.txtbxTag.Size = new System.Drawing.Size(148, 28);
             this.txtbxTag.TabIndex = 23;
             // 
             // comboBox1
@@ -650,7 +651,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(10, 12);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(293, 23);
+            this.comboBox1.Size = new System.Drawing.Size(293, 29);
             this.comboBox1.TabIndex = 22;
             // 
             // button1
@@ -728,10 +729,10 @@
             this.tbctrlCV.Controls.Add(this.tabExperience);
             this.tbctrlCV.Controls.Add(this.tabFiles);
             this.tbctrlCV.Controls.Add(this.tabSearch);
-            this.tbctrlCV.Location = new System.Drawing.Point(7, 12);
+            this.tbctrlCV.Location = new System.Drawing.Point(204, 21);
             this.tbctrlCV.Name = "tbctrlCV";
             this.tbctrlCV.SelectedIndex = 0;
-            this.tbctrlCV.Size = new System.Drawing.Size(576, 576);
+            this.tbctrlCV.Size = new System.Drawing.Size(571, 576);
             this.tbctrlCV.TabIndex = 32;
             // 
             // tabContacts
@@ -740,10 +741,10 @@
             this.tabContacts.Controls.Add(this.grpbxContacts);
             this.tabContacts.Controls.Add(this.grpbxAddress);
             this.tabContacts.Controls.Add(this.grpbxSocialNetworks);
-            this.tabContacts.Location = new System.Drawing.Point(4, 24);
+            this.tabContacts.Location = new System.Drawing.Point(4, 30);
             this.tabContacts.Name = "tabContacts";
             this.tabContacts.Padding = new System.Windows.Forms.Padding(3);
-            this.tabContacts.Size = new System.Drawing.Size(568, 548);
+            this.tabContacts.Size = new System.Drawing.Size(563, 542);
             this.tabContacts.TabIndex = 0;
             this.tabContacts.Text = "Contacts";
             this.tabContacts.UseVisualStyleBackColor = true;
@@ -820,7 +821,7 @@
             this.label2.Location = new System.Drawing.Point(15, 64);
             this.label2.MaximumSize = new System.Drawing.Size(536, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(530, 34);
+            this.label2.Size = new System.Drawing.Size(521, 63);
             this.label2.TabIndex = 19;
             this.label2.Text = "As a researcher, I investigated and founded new ways for artificial intelligence " +
     "and natural language processing implementation for decision support systems in h" +
@@ -831,7 +832,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(241, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 16;
             this.label3.Text = "Moscow";
             // 
@@ -840,7 +841,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(199, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 17);
+            this.label4.Size = new System.Drawing.Size(46, 21);
             this.label4.TabIndex = 18;
             this.label4.Text = "2013";
             // 
@@ -849,7 +850,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(15, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(524, 17);
+            this.label5.Size = new System.Drawing.Size(650, 21);
             this.label5.TabIndex = 14;
             this.label5.Text = "JSC \"Research And Development Center At Federal Grid Company Of Unified Energy Sy" +
     "stem\"";
@@ -859,7 +860,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(151, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 17);
+            this.label6.Size = new System.Drawing.Size(46, 21);
             this.label6.TabIndex = 17;
             this.label6.Text = "2009";
             // 
@@ -868,7 +869,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(15, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 17);
+            this.label7.Size = new System.Drawing.Size(86, 21);
             this.label7.TabIndex = 15;
             this.label7.Text = "Researcher";
             // 
@@ -907,15 +908,25 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // panelSideMenu
+            // 
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Name = "panelSideMenu";
+            this.panelSideMenu.Size = new System.Drawing.Size(202, 609);
+            this.panelSideMenu.TabIndex = 33;
+            // 
             // CVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(595, 609);
+            this.ClientSize = new System.Drawing.Size(870, 609);
+            this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.tbctrlCV);
             this.Controls.Add(this.lblChangeColorScheme);
-            this.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CVForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1026,6 +1037,7 @@
         private System.Windows.Forms.Label lblPitch;
         private System.Windows.Forms.Label lblCountryCode;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.Panel panelSideMenu;
     }
 }
 
