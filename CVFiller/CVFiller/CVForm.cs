@@ -1,4 +1,6 @@
-﻿using CVFiller.Data;
+﻿using CVFiller;
+using CVFiller.Data;
+using CVFiller.Forms;
 using FormFiller.Data;
 using System;
 using System.Collections.Generic;
@@ -80,6 +82,16 @@ namespace FormFiller
             }
         }
 
+        private void SetHandleClickMethodForControls(Form form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                SetHandleClickForControl(control);
+            }
+        }
+
+
+
         private void SetHandleClickForControl(Control control)
         {
             if (control.GetType() == typeof(Label))
@@ -116,7 +128,7 @@ namespace FormFiller
             {
                 var label = sender as Label;
                 label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Underline);
-                label.BackColor = Color.PaleTurquoise;
+                label.BackColor = Color.FromArgb(88,88,88);
             }
         }
 
@@ -429,16 +441,19 @@ namespace FormFiller
 
         private void btnSummary_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new SummaryForm());
             HideSubMenu();
         }
 
         private void btnPersonalData_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new PersonalDataForm());
             HideSubMenu();
         }
 
         private void btnAddress_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new AddressForm());
             HideSubMenu();
         }
 
@@ -475,6 +490,26 @@ namespace FormFiller
         private void btnTags_Click(object sender, EventArgs e)
         {
             HideSubMenu();
+        }
+
+        private Form _activeForm = null;
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (_activeForm != null)
+            {
+                _activeForm.Close();
+            }
+            _activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(childForm);
+            panelContainer.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            SetHandleClickMethodForControls(childForm);
+
         }
     }
 }
