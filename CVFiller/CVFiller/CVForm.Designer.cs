@@ -111,6 +111,7 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSideMenu.TabIndex = 33;
+            this.panelSideMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
             // 
             // panelSearch
             // 
@@ -127,6 +128,7 @@
             this.btnTags.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTags.FlatAppearance.BorderSize = 0;
             this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTags.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnTags.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnTags.Location = new System.Drawing.Point(0, 0);
             this.btnTags.Name = "btnTags";
@@ -143,6 +145,7 @@
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSearch.Location = new System.Drawing.Point(0, 719);
             this.btnSearch.Name = "btnSearch";
@@ -169,6 +172,7 @@
             this.btnCoverLetters.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCoverLetters.FlatAppearance.BorderSize = 0;
             this.btnCoverLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCoverLetters.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCoverLetters.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCoverLetters.Location = new System.Drawing.Point(0, 40);
             this.btnCoverLetters.Name = "btnCoverLetters";
@@ -185,6 +189,7 @@
             this.btnResumes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnResumes.FlatAppearance.BorderSize = 0;
             this.btnResumes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnResumes.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnResumes.Location = new System.Drawing.Point(0, 0);
             this.btnResumes.Name = "btnResumes";
@@ -201,6 +206,7 @@
             this.btnFiles.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFiles.FlatAppearance.BorderSize = 0;
             this.btnFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiles.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnFiles.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnFiles.Location = new System.Drawing.Point(0, 575);
             this.btnFiles.Name = "btnFiles";
@@ -227,6 +233,7 @@
             this.btnJobs.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnJobs.FlatAppearance.BorderSize = 0;
             this.btnJobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobs.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnJobs.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnJobs.Location = new System.Drawing.Point(0, 0);
             this.btnJobs.Name = "btnJobs";
@@ -243,6 +250,7 @@
             this.btnExperience.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExperience.FlatAppearance.BorderSize = 0;
             this.btnExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExperience.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnExperience.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExperience.Location = new System.Drawing.Point(0, 474);
             this.btnExperience.Name = "btnExperience";
@@ -270,6 +278,7 @@
             this.btnAdditionalCourses.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdditionalCourses.FlatAppearance.BorderSize = 0;
             this.btnAdditionalCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdditionalCourses.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdditionalCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAdditionalCourses.Location = new System.Drawing.Point(0, 40);
             this.btnAdditionalCourses.Name = "btnAdditionalCourses";
@@ -286,6 +295,7 @@
             this.btnUniversity.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUniversity.FlatAppearance.BorderSize = 0;
             this.btnUniversity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUniversity.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnUniversity.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUniversity.Location = new System.Drawing.Point(0, 0);
             this.btnUniversity.Name = "btnUniversity";
@@ -302,6 +312,7 @@
             this.btnEducation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEducation.FlatAppearance.BorderSize = 0;
             this.btnEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEducation.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnEducation.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEducation.Location = new System.Drawing.Point(0, 330);
             this.btnEducation.Name = "btnEducation";
@@ -331,6 +342,7 @@
             this.btnSocialLinks.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSocialLinks.FlatAppearance.BorderSize = 0;
             this.btnSocialLinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSocialLinks.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSocialLinks.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSocialLinks.Location = new System.Drawing.Point(0, 120);
             this.btnSocialLinks.Name = "btnSocialLinks";
@@ -347,6 +359,7 @@
             this.btnAddress.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddress.FlatAppearance.BorderSize = 0;
             this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddress.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAddress.Location = new System.Drawing.Point(0, 80);
             this.btnAddress.Name = "btnAddress";
@@ -363,6 +376,7 @@
             this.btnPersonalData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPersonalData.FlatAppearance.BorderSize = 0;
             this.btnPersonalData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalData.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPersonalData.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPersonalData.Location = new System.Drawing.Point(0, 40);
             this.btnPersonalData.Name = "btnPersonalData";
@@ -379,6 +393,7 @@
             this.btnSummary.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSummary.FlatAppearance.BorderSize = 0;
             this.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSummary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSummary.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSummary.Location = new System.Drawing.Point(0, 0);
             this.btnSummary.Name = "btnSummary";
@@ -395,6 +410,7 @@
             this.btnContacts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnContacts.FlatAppearance.BorderSize = 0;
             this.btnContacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContacts.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnContacts.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnContacts.Location = new System.Drawing.Point(0, 100);
             this.btnContacts.Name = "btnContacts";
@@ -413,6 +429,7 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(229, 100);
             this.panelLogo.TabIndex = 0;
+            this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
             // 
             // panelContainer
             // 

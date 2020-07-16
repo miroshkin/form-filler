@@ -468,6 +468,7 @@ namespace FormFiller
 
         private void btnUniversity_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new UniversityForm());
             HideSubMenu();
         }
 
@@ -478,6 +479,7 @@ namespace FormFiller
 
         private void btnJobs_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new JobsForm());
             HideSubMenu();
         }
 
