@@ -778,6 +778,7 @@
             this.btnCV.TabIndex = 27;
             this.btnCV.Text = "CV";
             this.btnCV.UseVisualStyleBackColor = true;
+            this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
             // 
             // btnApplication
             // 
@@ -789,6 +790,7 @@
             this.btnApplication.TabIndex = 28;
             this.btnApplication.Text = "Application";
             this.btnApplication.UseVisualStyleBackColor = true;
+            this.btnApplication.Click += new System.EventHandler(this.btnApplication_Click);
             // 
             // button2
             // 

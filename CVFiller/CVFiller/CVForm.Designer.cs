@@ -45,13 +45,9 @@
             this.btnJobs = new System.Windows.Forms.Button();
             this.btnExperience = new System.Windows.Forms.Button();
             this.panelEducation = new System.Windows.Forms.Panel();
-            this.btnAdditionalCourses = new System.Windows.Forms.Button();
             this.btnUniversity = new System.Windows.Forms.Button();
             this.btnEducation = new System.Windows.Forms.Button();
             this.panelContacts = new System.Windows.Forms.Panel();
-            this.btnSocialLinks = new System.Windows.Forms.Button();
-            this.btnAddress = new System.Windows.Forms.Button();
-            this.btnPersonalData = new System.Windows.Forms.Button();
             this.btnSummary = new System.Windows.Forms.Button();
             this.btnContacts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -118,9 +114,9 @@
             this.panelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.panelSearch.Controls.Add(this.btnTags);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSearch.Location = new System.Drawing.Point(0, 764);
+            this.panelSearch.Location = new System.Drawing.Point(0, 525);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(229, 49);
+            this.panelSearch.Size = new System.Drawing.Size(250, 40);
             this.panelSearch.TabIndex = 10;
             // 
             // btnTags
@@ -134,7 +130,7 @@
             this.btnTags.Location = new System.Drawing.Point(0, 0);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTags.Size = new System.Drawing.Size(229, 40);
+            this.btnTags.Size = new System.Drawing.Size(250, 40);
             this.btnTags.TabIndex = 0;
             this.btnTags.Text = "Tags";
             this.btnTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,14 +140,15 @@
             // btnSearch
             // 
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSearch.Location = new System.Drawing.Point(0, 719);
+            this.btnSearch.Location = new System.Drawing.Point(0, 480);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(229, 45);
+            this.btnSearch.Size = new System.Drawing.Size(250, 45);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,9 +160,9 @@
             this.panelFiles.Controls.Add(this.btnCoverLetters);
             this.panelFiles.Controls.Add(this.btnResumes);
             this.panelFiles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiles.Location = new System.Drawing.Point(0, 620);
+            this.panelFiles.Location = new System.Drawing.Point(0, 400);
             this.panelFiles.Name = "panelFiles";
-            this.panelFiles.Size = new System.Drawing.Size(229, 99);
+            this.panelFiles.Size = new System.Drawing.Size(250, 80);
             this.panelFiles.TabIndex = 8;
             // 
             // btnCoverLetters
@@ -179,7 +176,7 @@
             this.btnCoverLetters.Location = new System.Drawing.Point(0, 40);
             this.btnCoverLetters.Name = "btnCoverLetters";
             this.btnCoverLetters.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCoverLetters.Size = new System.Drawing.Size(229, 40);
+            this.btnCoverLetters.Size = new System.Drawing.Size(250, 40);
             this.btnCoverLetters.TabIndex = 1;
             this.btnCoverLetters.Text = "Cover letters";
             this.btnCoverLetters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,7 +194,7 @@
             this.btnResumes.Location = new System.Drawing.Point(0, 0);
             this.btnResumes.Name = "btnResumes";
             this.btnResumes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnResumes.Size = new System.Drawing.Size(229, 40);
+            this.btnResumes.Size = new System.Drawing.Size(250, 40);
             this.btnResumes.TabIndex = 0;
             this.btnResumes.Text = "Resumes";
             this.btnResumes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,14 +204,15 @@
             // btnFiles
             // 
             this.btnFiles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFiles.Enabled = false;
             this.btnFiles.FlatAppearance.BorderSize = 0;
             this.btnFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiles.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnFiles.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFiles.Location = new System.Drawing.Point(0, 575);
+            this.btnFiles.Location = new System.Drawing.Point(0, 355);
             this.btnFiles.Name = "btnFiles";
             this.btnFiles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnFiles.Size = new System.Drawing.Size(229, 45);
+            this.btnFiles.Size = new System.Drawing.Size(250, 45);
             this.btnFiles.TabIndex = 7;
             this.btnFiles.Text = "Files";
             this.btnFiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,9 +224,9 @@
             this.panelExperience.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.panelExperience.Controls.Add(this.btnJobs);
             this.panelExperience.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelExperience.Location = new System.Drawing.Point(0, 519);
+            this.panelExperience.Location = new System.Drawing.Point(0, 315);
             this.panelExperience.Name = "panelExperience";
-            this.panelExperience.Size = new System.Drawing.Size(229, 56);
+            this.panelExperience.Size = new System.Drawing.Size(250, 40);
             this.panelExperience.TabIndex = 6;
             // 
             // btnJobs
@@ -242,7 +240,7 @@
             this.btnJobs.Location = new System.Drawing.Point(0, 0);
             this.btnJobs.Name = "btnJobs";
             this.btnJobs.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnJobs.Size = new System.Drawing.Size(229, 40);
+            this.btnJobs.Size = new System.Drawing.Size(250, 40);
             this.btnJobs.TabIndex = 0;
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,10 +254,10 @@
             this.btnExperience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExperience.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnExperience.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExperience.Location = new System.Drawing.Point(0, 474);
+            this.btnExperience.Location = new System.Drawing.Point(0, 270);
             this.btnExperience.Name = "btnExperience";
             this.btnExperience.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnExperience.Size = new System.Drawing.Size(229, 45);
+            this.btnExperience.Size = new System.Drawing.Size(250, 45);
             this.btnExperience.TabIndex = 5;
             this.btnExperience.Text = "Experience";
             this.btnExperience.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,31 +267,12 @@
             // panelEducation
             // 
             this.panelEducation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panelEducation.Controls.Add(this.btnAdditionalCourses);
             this.panelEducation.Controls.Add(this.btnUniversity);
             this.panelEducation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEducation.Location = new System.Drawing.Point(0, 375);
+            this.panelEducation.Location = new System.Drawing.Point(0, 230);
             this.panelEducation.Name = "panelEducation";
-            this.panelEducation.Size = new System.Drawing.Size(229, 99);
+            this.panelEducation.Size = new System.Drawing.Size(250, 40);
             this.panelEducation.TabIndex = 4;
-            // 
-            // btnAdditionalCourses
-            // 
-            this.btnAdditionalCourses.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdditionalCourses.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnAdditionalCourses.FlatAppearance.BorderSize = 0;
-            this.btnAdditionalCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdditionalCourses.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdditionalCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAdditionalCourses.Location = new System.Drawing.Point(0, 40);
-            this.btnAdditionalCourses.Name = "btnAdditionalCourses";
-            this.btnAdditionalCourses.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAdditionalCourses.Size = new System.Drawing.Size(229, 40);
-            this.btnAdditionalCourses.TabIndex = 1;
-            this.btnAdditionalCourses.Text = "Additional courses";
-            this.btnAdditionalCourses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdditionalCourses.UseVisualStyleBackColor = true;
-            this.btnAdditionalCourses.Click += new System.EventHandler(this.btnAdditionalCourses_Click);
             // 
             // btnUniversity
             // 
@@ -306,7 +285,7 @@
             this.btnUniversity.Location = new System.Drawing.Point(0, 0);
             this.btnUniversity.Name = "btnUniversity";
             this.btnUniversity.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUniversity.Size = new System.Drawing.Size(229, 40);
+            this.btnUniversity.Size = new System.Drawing.Size(250, 40);
             this.btnUniversity.TabIndex = 0;
             this.btnUniversity.Text = "University";
             this.btnUniversity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,10 +299,10 @@
             this.btnEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEducation.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnEducation.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEducation.Location = new System.Drawing.Point(0, 330);
+            this.btnEducation.Location = new System.Drawing.Point(0, 185);
             this.btnEducation.Name = "btnEducation";
             this.btnEducation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEducation.Size = new System.Drawing.Size(229, 45);
+            this.btnEducation.Size = new System.Drawing.Size(250, 45);
             this.btnEducation.TabIndex = 3;
             this.btnEducation.Text = "Education";
             this.btnEducation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,72 +312,16 @@
             // panelContacts
             // 
             this.panelContacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.panelContacts.Controls.Add(this.btnSocialLinks);
-            this.panelContacts.Controls.Add(this.btnAddress);
-            this.panelContacts.Controls.Add(this.btnPersonalData);
             this.panelContacts.Controls.Add(this.btnSummary);
             this.panelContacts.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContacts.Location = new System.Drawing.Point(0, 145);
             this.panelContacts.Name = "panelContacts";
-            this.panelContacts.Size = new System.Drawing.Size(229, 185);
+            this.panelContacts.Size = new System.Drawing.Size(250, 40);
             this.panelContacts.TabIndex = 2;
-            // 
-            // btnSocialLinks
-            // 
-            this.btnSocialLinks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSocialLinks.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnSocialLinks.FlatAppearance.BorderSize = 0;
-            this.btnSocialLinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSocialLinks.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSocialLinks.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSocialLinks.Location = new System.Drawing.Point(0, 120);
-            this.btnSocialLinks.Name = "btnSocialLinks";
-            this.btnSocialLinks.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSocialLinks.Size = new System.Drawing.Size(229, 40);
-            this.btnSocialLinks.TabIndex = 3;
-            this.btnSocialLinks.Text = "Social links";
-            this.btnSocialLinks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSocialLinks.UseVisualStyleBackColor = true;
-            this.btnSocialLinks.Click += new System.EventHandler(this.btnSocialLinks_Click);
-            // 
-            // btnAddress
-            // 
-            this.btnAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddress.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnAddress.FlatAppearance.BorderSize = 0;
-            this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddress.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddress.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAddress.Location = new System.Drawing.Point(0, 80);
-            this.btnAddress.Name = "btnAddress";
-            this.btnAddress.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddress.Size = new System.Drawing.Size(229, 40);
-            this.btnAddress.TabIndex = 2;
-            this.btnAddress.Text = "Address";
-            this.btnAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddress.UseVisualStyleBackColor = true;
-            this.btnAddress.Click += new System.EventHandler(this.btnAddress_Click);
-            // 
-            // btnPersonalData
-            // 
-            this.btnPersonalData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPersonalData.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnPersonalData.FlatAppearance.BorderSize = 0;
-            this.btnPersonalData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonalData.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPersonalData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPersonalData.Location = new System.Drawing.Point(0, 40);
-            this.btnPersonalData.Name = "btnPersonalData";
-            this.btnPersonalData.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPersonalData.Size = new System.Drawing.Size(229, 40);
-            this.btnPersonalData.TabIndex = 1;
-            this.btnPersonalData.Text = "Personal data";
-            this.btnPersonalData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalData.UseVisualStyleBackColor = true;
-            this.btnPersonalData.Click += new System.EventHandler(this.btnPersonalData_Click);
             // 
             // btnSummary
             // 
+            this.btnSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.btnSummary.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSummary.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.btnSummary.FlatAppearance.BorderSize = 0;
@@ -408,11 +331,11 @@
             this.btnSummary.Location = new System.Drawing.Point(0, 0);
             this.btnSummary.Name = "btnSummary";
             this.btnSummary.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSummary.Size = new System.Drawing.Size(229, 40);
+            this.btnSummary.Size = new System.Drawing.Size(250, 40);
             this.btnSummary.TabIndex = 0;
             this.btnSummary.Text = "Summary";
             this.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSummary.UseVisualStyleBackColor = true;
+            this.btnSummary.UseVisualStyleBackColor = false;
             this.btnSummary.Click += new System.EventHandler(this.btnSummary_Click);
             // 
             // btnContacts
@@ -425,7 +348,7 @@
             this.btnContacts.Location = new System.Drawing.Point(0, 100);
             this.btnContacts.Name = "btnContacts";
             this.btnContacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnContacts.Size = new System.Drawing.Size(229, 45);
+            this.btnContacts.Size = new System.Drawing.Size(250, 45);
             this.btnContacts.TabIndex = 1;
             this.btnContacts.Text = "Contacts";
             this.btnContacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -437,7 +360,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(229, 100);
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
             this.panelLogo.MouseLeave += new System.EventHandler(this.panelLogo_MouseLeave);
@@ -489,9 +412,6 @@
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelContacts;
-        private System.Windows.Forms.Button btnSocialLinks;
-        private System.Windows.Forms.Button btnAddress;
-        private System.Windows.Forms.Button btnPersonalData;
         private System.Windows.Forms.Button btnSummary;
         private System.Windows.Forms.Button btnContacts;
         private System.Windows.Forms.Panel panelFiles;
@@ -502,7 +422,6 @@
         private System.Windows.Forms.Button btnJobs;
         private System.Windows.Forms.Button btnExperience;
         private System.Windows.Forms.Panel panelEducation;
-        private System.Windows.Forms.Button btnAdditionalCourses;
         private System.Windows.Forms.Button btnUniversity;
         private System.Windows.Forms.Button btnEducation;
         private System.Windows.Forms.Panel panelSearch;

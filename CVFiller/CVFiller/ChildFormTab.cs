@@ -76,5 +76,15 @@ namespace CVFiller
             tagControl.Width = tag.Count() * 9 + 20;
             this.flowLayoutPanel1.Controls.Add(tagControl);
         }
+
+        private void btnCV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApplication_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

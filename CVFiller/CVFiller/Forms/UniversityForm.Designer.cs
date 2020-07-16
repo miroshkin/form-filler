@@ -28,111 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMajor = new System.Windows.Forms.Label();
-            this.lblEndDate = new System.Windows.Forms.Label();
-            this.lblSchoolName = new System.Windows.Forms.Label();
-            this.lblEducationStartDate = new System.Windows.Forms.Label();
-            this.lblDegree = new System.Windows.Forms.Label();
+            this.grpbxEducation = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.grpbxEducation.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblMajor
+            // grpbxEducation
             // 
-            this.lblMajor.AutoSize = true;
-            this.lblMajor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblMajor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblMajor.Location = new System.Drawing.Point(0, 38);
-            this.lblMajor.MaximumSize = new System.Drawing.Size(700, 0);
-            this.lblMajor.MinimumSize = new System.Drawing.Size(700, 0);
-            this.lblMajor.Name = "lblMajor";
-            this.lblMajor.Padding = new System.Windows.Forms.Padding(15, 7, 5, 7);
-            this.lblMajor.Size = new System.Drawing.Size(700, 38);
-            this.lblMajor.TabIndex = 21;
-            this.lblMajor.Text = "Electrical System And Networks";
+            this.grpbxEducation.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxEducation.Controls.Add(this.label1);
+            this.grpbxEducation.Controls.Add(this.label2);
+            this.grpbxEducation.Controls.Add(this.label3);
+            this.grpbxEducation.Controls.Add(this.label4);
+            this.grpbxEducation.Controls.Add(this.label5);
+            this.grpbxEducation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpbxEducation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpbxEducation.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.grpbxEducation.ForeColor = System.Drawing.Color.Gainsboro;
+            this.grpbxEducation.Location = new System.Drawing.Point(0, 0);
+            this.grpbxEducation.Name = "grpbxEducation";
+            this.grpbxEducation.Size = new System.Drawing.Size(682, 85);
+            this.grpbxEducation.TabIndex = 24;
+            this.grpbxEducation.TabStop = false;
+            this.grpbxEducation.Text = "Education";
             // 
-            // lblEndDate
+            // label1
             // 
-            this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEndDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEndDate.Location = new System.Drawing.Point(0, 152);
-            this.lblEndDate.MaximumSize = new System.Drawing.Size(700, 0);
-            this.lblEndDate.MinimumSize = new System.Drawing.Size(700, 0);
-            this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Padding = new System.Windows.Forms.Padding(15, 7, 5, 7);
-            this.lblEndDate.Size = new System.Drawing.Size(700, 38);
-            this.lblEndDate.TabIndex = 23;
-            this.lblEndDate.Text = "2009";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(391, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 21);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Electrical System And Networks";
             // 
-            // lblSchoolName
+            // label2
             // 
-            this.lblSchoolName.AutoSize = true;
-            this.lblSchoolName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSchoolName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSchoolName.Location = new System.Drawing.Point(0, 0);
-            this.lblSchoolName.MaximumSize = new System.Drawing.Size(700, 0);
-            this.lblSchoolName.MinimumSize = new System.Drawing.Size(700, 0);
-            this.lblSchoolName.Name = "lblSchoolName";
-            this.lblSchoolName.Padding = new System.Windows.Forms.Padding(15, 7, 5, 7);
-            this.lblSchoolName.Size = new System.Drawing.Size(700, 38);
-            this.lblSchoolName.TabIndex = 19;
-            this.lblSchoolName.Text = "Moscow Power Engineering Institute (Technical University)";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(575, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 21);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "2009";
             // 
-            // lblEducationStartDate
+            // label3
             // 
-            this.lblEducationStartDate.AutoSize = true;
-            this.lblEducationStartDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEducationStartDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEducationStartDate.Location = new System.Drawing.Point(0, 114);
-            this.lblEducationStartDate.MaximumSize = new System.Drawing.Size(700, 0);
-            this.lblEducationStartDate.MinimumSize = new System.Drawing.Size(700, 0);
-            this.lblEducationStartDate.Name = "lblEducationStartDate";
-            this.lblEducationStartDate.Padding = new System.Windows.Forms.Padding(15, 7, 5, 7);
-            this.lblEducationStartDate.Size = new System.Drawing.Size(700, 38);
-            this.lblEducationStartDate.TabIndex = 22;
-            this.lblEducationStartDate.Text = "2003";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(13, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(415, 21);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Moscow Power Engineering Institute (Technical University)";
             // 
-            // lblDegree
+            // label4
             // 
-            this.lblDegree.AutoSize = true;
-            this.lblDegree.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDegree.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDegree.Location = new System.Drawing.Point(0, 76);
-            this.lblDegree.MaximumSize = new System.Drawing.Size(700, 0);
-            this.lblDegree.MinimumSize = new System.Drawing.Size(700, 0);
-            this.lblDegree.Name = "lblDegree";
-            this.lblDegree.Padding = new System.Windows.Forms.Padding(15, 7, 5, 7);
-            this.lblDegree.Size = new System.Drawing.Size(700, 38);
-            this.lblDegree.TabIndex = 20;
-            this.lblDegree.Text = "Master Of Science In Engineering";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(513, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 21);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "2003";
             // 
-            // EducationForm
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(13, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(237, 21);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Master Of Science In Engineering";
+            // 
+            // UniversityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(682, 553);
-            this.Controls.Add(this.lblEndDate);
-            this.Controls.Add(this.lblEducationStartDate);
-            this.Controls.Add(this.lblDegree);
-            this.Controls.Add(this.lblMajor);
-            this.Controls.Add(this.lblSchoolName);
+            this.Controls.Add(this.grpbxEducation);
             this.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(700, 600);
-            this.Name = "EducationForm";
+            this.Name = "UniversityForm";
             this.Text = "EducationForm";
+            this.grpbxEducation.ResumeLayout(false);
+            this.grpbxEducation.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblMajor;
-        private System.Windows.Forms.Label lblEndDate;
-        private System.Windows.Forms.Label lblSchoolName;
-        private System.Windows.Forms.Label lblEducationStartDate;
-        private System.Windows.Forms.Label lblDegree;
+        private System.Windows.Forms.GroupBox grpbxEducation;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
