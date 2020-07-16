@@ -42,6 +42,7 @@ namespace FormFiller
             WinKey = 8
         }
 
+        private List<Button> _buttons;
 
         public CVForm()
         {
@@ -53,6 +54,13 @@ namespace FormFiller
             SetHandleClickMethodForControls();
 
             SetFormTransparency(this);
+
+            _buttons = new List<Button>();
+            _buttons.AddRange(panelContacts.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelEducation.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelExperience.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelFiles.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelSearch.Controls.OfType<Button>().ToList());
         }
 
         private void SetControlsVisibility()
@@ -442,60 +450,84 @@ namespace FormFiller
             if (panelSearch.Visible) panelSearch.Visible = false;
         }
 
+        private void HighlightMenuItem(Button button)
+        {
+            foreach (var item in _buttons)
+            {
+                if (item == button)
+                {
+                    item.FlatAppearance.BorderSize = 1;
+                }
+                else
+                {
+                    item.FlatAppearance.BorderSize = 0;
+                }
+            }
+            
+        }
+
         private void btnSummary_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SummaryForm());
-            HideSubMenu();
+            HighlightMenuItem (sender as Button);
         }
 
         private void btnPersonalData_Click(object sender, EventArgs e)
         {
             OpenChildForm(new PersonalDataForm());
-            HideSubMenu();
+            HighlightMenuItem(sender as Button);
+
+
         }
 
         private void btnAddress_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AddressForm());
-            HideSubMenu();
+            HighlightMenuItem(sender as Button);
+
         }
 
         private void btnSocialLinks_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SocialLinksForm());
-            HideSubMenu();
+            HighlightMenuItem(sender as Button);
+
         }
 
         private void btnUniversity_Click(object sender, EventArgs e)
         {
             OpenChildForm(new UniversityForm());
-            HideSubMenu();
+            HighlightMenuItem(sender as Button);
+
         }
 
         private void btnAdditionalCourses_Click(object sender, EventArgs e)
         {
             HideSubMenu();
+            HighlightMenuItem(sender as Button);
+
         }
 
         private void btnJobs_Click(object sender, EventArgs e)
         {
             OpenChildForm(new JobsForm());
-            HideSubMenu();
+            HighlightMenuItem(btnJobs);
         }
 
         private void btnResumes_Click(object sender, EventArgs e)
         {
             HideSubMenu();
+            HighlightMenuItem(btnResumes);
         }
 
         private void btnCoverLetters_Click(object sender, EventArgs e)
         {
-            HideSubMenu();
+            HighlightMenuItem(btnCoverLetters);
         }
 
         private void btnTags_Click(object sender, EventArgs e)
         {
-            HideSubMenu();
+            HighlightMenuItem(btnTags);
         }
 
         private Form _activeForm = null;
@@ -516,6 +548,16 @@ namespace FormFiller
             childForm.Show();
             SetHandleClickMethodForControls(childForm);
 
+        }
+
+        private void panelLogo_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.SizeAll;
+        }
+
+        private void panelLogo_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Arrow;
         }
     }
 }
