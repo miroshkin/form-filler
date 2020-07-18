@@ -82,11 +82,11 @@
     <Compile Include="ChildFormTab.Designer.cs">
       <DependentUpon>ChildFormTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="CVForm.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CVForm.Designer.cs">
-      <DependentUpon>CVForm.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Article.cs" />
     <Compile Include="Data\CurriculumVitae.cs" />
@@ -151,8 +151,8 @@
     <EmbeddedResource Include="ChildFormTab.resx">
       <DependentUpon>ChildFormTab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CVForm.resx">
-      <DependentUpon>CVForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TagControl.resx">
       <DependentUpon>TagControl.cs</DependentUpon>

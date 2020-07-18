@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FormFiller
 {
-    public partial class CVForm : Form
+    public partial class MainForm : Form
     {
         
 
@@ -44,7 +44,7 @@ namespace FormFiller
 
         private List<Button> _buttons;
 
-        public CVForm()
+        public MainForm()
         {
             InitializeComponent();
             SetControlsVisibility();
@@ -278,7 +278,7 @@ namespace FormFiller
             }
         }
 
-        private void CVForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             UnregisterHotKey(this.Handle, 0);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
@@ -346,7 +346,7 @@ namespace FormFiller
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CVForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void MainForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {

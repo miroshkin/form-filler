@@ -1,6 +1,6 @@
 ﻿namespace FormFiller
 {
-    partial class CVForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CVForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.lblChangeColorScheme = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
@@ -52,12 +52,15 @@
             this.btnContacts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelSearch.SuspendLayout();
             this.panelFiles.SuspendLayout();
             this.panelExperience.SuspendLayout();
             this.panelEducation.SuspendLayout();
             this.panelContacts.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -107,7 +110,7 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSideMenu.TabIndex = 33;
-            this.panelSideMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
+            this.panelSideMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             // 
             // panelSearch
             // 
@@ -357,12 +360,13 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
-            this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
+            this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.panelLogo.MouseLeave += new System.EventHandler(this.panelLogo_MouseLeave);
             this.panelLogo.MouseHover += new System.EventHandler(this.panelLogo_MouseHover);
             // 
@@ -375,7 +379,20 @@
             this.panelContainer.Size = new System.Drawing.Size(700, 600);
             this.panelContainer.TabIndex = 34;
             // 
-            // CVForm
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -387,18 +404,20 @@
             this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "CVForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.TopMost = true;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CVForm_FormClosing);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CVForm_MouseDown);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.panelSideMenu.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
             this.panelFiles.ResumeLayout(false);
             this.panelExperience.ResumeLayout(false);
             this.panelEducation.ResumeLayout(false);
             this.panelContacts.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,6 +447,7 @@
         private System.Windows.Forms.Button btnTags;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
