@@ -555,8 +555,6 @@ namespace FormFiller
             childForm.Show();
             SetHandleClickMethodForControls(childForm);
             ResumeLayout();
-
-
         }
 
         private void panelLogo_MouseHover(object sender, EventArgs e)
