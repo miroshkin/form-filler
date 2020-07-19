@@ -394,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(682, 553);
+            this.ClientSize = new System.Drawing.Size(682, 713);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpbxNTCExperience);
             this.Controls.Add(this.grpbxRZDExperience);
@@ -402,7 +402,6 @@
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(700, 600);
             this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "JobsForm";
             this.Text = "JobsForm";
