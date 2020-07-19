@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CVFiller
+namespace FormFiller
 {
     public partial class SummaryForm : Form
     {

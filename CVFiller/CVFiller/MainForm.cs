@@ -1,6 +1,6 @@
-﻿using CVFiller;
-using CVFiller.Data;
-using CVFiller.Forms;
+﻿using FormFiller;
+using FormFiller.Data;
+using FormFiller.Forms;
 using FormFiller.Data;
 using System;
 using System.Collections.Generic;
@@ -280,14 +280,14 @@ namespace FormFiller
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            notifyIcon.Icon.Dispose();
+            notifyIcon.Dispose();
             UnregisterHotKey(this.Handle, 0);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 2);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 3);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 4);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 5);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
-            notifyIcon.Icon.Dispose();
-            notifyIcon.Dispose();
         }
 
         /// <summary>
@@ -481,8 +481,6 @@ namespace FormFiller
         {
             OpenChildForm(new PersonalDataForm());
             HighlightMenuItem(sender as Button);
-
-
         }
 
         private void btnAddress_Click(object sender, EventArgs e)
@@ -539,6 +537,8 @@ namespace FormFiller
 
         private void OpenChildForm(Form childForm)
         {
+
+            SuspendLayout();
             if (_activeForm != null)
             {
                 _activeForm.Close();
@@ -554,6 +554,8 @@ namespace FormFiller
             childForm.BringToFront();
             childForm.Show();
             SetHandleClickMethodForControls(childForm);
+            ResumeLayout();
+
 
         }
 

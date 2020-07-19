@@ -1,4 +1,4 @@
-﻿namespace CVFiller
+﻿namespace FormFiller
 {
     partial class ChildFormTab
     {

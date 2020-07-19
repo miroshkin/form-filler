@@ -1,4 +1,4 @@
-﻿namespace CVFiller.Forms
+﻿namespace FormFiller.Forms
 {
     partial class AddressForm
     {
