@@ -545,7 +545,7 @@ namespace FormFiller
             }
             _activeForm = childForm;
             childForm.TopLevel = false;
-            childForm.Padding = new Padding(5, 3, 5, 3`);
+            childForm.Padding = new Padding(5, 3, 5, 3);
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(childForm);
