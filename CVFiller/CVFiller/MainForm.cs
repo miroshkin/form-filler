@@ -189,9 +189,10 @@ namespace FormFiller
             id = 5;
             RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.D4.GetHashCode());
 
-
+            id = 6;
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.MButton.GetHashCode());
         }
-
+        
         private void AddNotifyIconMenu()
         {
             this.notifyIcon.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
@@ -244,7 +245,7 @@ namespace FormFiller
                 //MessageBox.Show("Hotkey has been pressed!");
                 // do something
 
-                if (id == 0)
+                if (id == 0 || id == 6)
                 {
                     if (this.Visible)
                     {

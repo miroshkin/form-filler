@@ -94,6 +94,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panelSideMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSideMenu.Controls.Add(this.panelSearch);
             this.panelSideMenu.Controls.Add(this.btnSearch);
             this.panelSideMenu.Controls.Add(this.panelFiles);
@@ -119,7 +120,7 @@
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSearch.Location = new System.Drawing.Point(0, 525);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(250, 40);
+            this.panelSearch.Size = new System.Drawing.Size(248, 40);
             this.panelSearch.TabIndex = 10;
             // 
             // btnTags
@@ -133,7 +134,7 @@
             this.btnTags.Location = new System.Drawing.Point(0, 0);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTags.Size = new System.Drawing.Size(250, 40);
+            this.btnTags.Size = new System.Drawing.Size(248, 40);
             this.btnTags.TabIndex = 0;
             this.btnTags.Text = "Tags";
             this.btnTags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +152,7 @@
             this.btnSearch.Location = new System.Drawing.Point(0, 480);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSearch.Size = new System.Drawing.Size(250, 45);
+            this.btnSearch.Size = new System.Drawing.Size(248, 45);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,7 +166,7 @@
             this.panelFiles.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiles.Location = new System.Drawing.Point(0, 400);
             this.panelFiles.Name = "panelFiles";
-            this.panelFiles.Size = new System.Drawing.Size(250, 80);
+            this.panelFiles.Size = new System.Drawing.Size(248, 80);
             this.panelFiles.TabIndex = 8;
             // 
             // btnCoverLetters
@@ -179,7 +180,7 @@
             this.btnCoverLetters.Location = new System.Drawing.Point(0, 40);
             this.btnCoverLetters.Name = "btnCoverLetters";
             this.btnCoverLetters.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCoverLetters.Size = new System.Drawing.Size(250, 40);
+            this.btnCoverLetters.Size = new System.Drawing.Size(248, 40);
             this.btnCoverLetters.TabIndex = 1;
             this.btnCoverLetters.Text = "Cover letters";
             this.btnCoverLetters.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,7 +198,7 @@
             this.btnResumes.Location = new System.Drawing.Point(0, 0);
             this.btnResumes.Name = "btnResumes";
             this.btnResumes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnResumes.Size = new System.Drawing.Size(250, 40);
+            this.btnResumes.Size = new System.Drawing.Size(248, 40);
             this.btnResumes.TabIndex = 0;
             this.btnResumes.Text = "Resumes";
             this.btnResumes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,7 +216,7 @@
             this.btnFiles.Location = new System.Drawing.Point(0, 355);
             this.btnFiles.Name = "btnFiles";
             this.btnFiles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnFiles.Size = new System.Drawing.Size(250, 45);
+            this.btnFiles.Size = new System.Drawing.Size(248, 45);
             this.btnFiles.TabIndex = 7;
             this.btnFiles.Text = "Files";
             this.btnFiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +230,7 @@
             this.panelExperience.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelExperience.Location = new System.Drawing.Point(0, 315);
             this.panelExperience.Name = "panelExperience";
-            this.panelExperience.Size = new System.Drawing.Size(250, 40);
+            this.panelExperience.Size = new System.Drawing.Size(248, 40);
             this.panelExperience.TabIndex = 6;
             // 
             // btnJobs
@@ -243,7 +244,7 @@
             this.btnJobs.Location = new System.Drawing.Point(0, 0);
             this.btnJobs.Name = "btnJobs";
             this.btnJobs.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnJobs.Size = new System.Drawing.Size(250, 40);
+            this.btnJobs.Size = new System.Drawing.Size(248, 40);
             this.btnJobs.TabIndex = 0;
             this.btnJobs.Text = "Jobs";
             this.btnJobs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -260,7 +261,7 @@
             this.btnExperience.Location = new System.Drawing.Point(0, 270);
             this.btnExperience.Name = "btnExperience";
             this.btnExperience.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnExperience.Size = new System.Drawing.Size(250, 45);
+            this.btnExperience.Size = new System.Drawing.Size(248, 45);
             this.btnExperience.TabIndex = 5;
             this.btnExperience.Text = "Experience";
             this.btnExperience.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -274,7 +275,7 @@
             this.panelEducation.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEducation.Location = new System.Drawing.Point(0, 230);
             this.panelEducation.Name = "panelEducation";
-            this.panelEducation.Size = new System.Drawing.Size(250, 40);
+            this.panelEducation.Size = new System.Drawing.Size(248, 40);
             this.panelEducation.TabIndex = 4;
             // 
             // btnUniversity
@@ -288,7 +289,7 @@
             this.btnUniversity.Location = new System.Drawing.Point(0, 0);
             this.btnUniversity.Name = "btnUniversity";
             this.btnUniversity.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUniversity.Size = new System.Drawing.Size(250, 40);
+            this.btnUniversity.Size = new System.Drawing.Size(248, 40);
             this.btnUniversity.TabIndex = 0;
             this.btnUniversity.Text = "University";
             this.btnUniversity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,7 +306,7 @@
             this.btnEducation.Location = new System.Drawing.Point(0, 185);
             this.btnEducation.Name = "btnEducation";
             this.btnEducation.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEducation.Size = new System.Drawing.Size(250, 45);
+            this.btnEducation.Size = new System.Drawing.Size(248, 45);
             this.btnEducation.TabIndex = 3;
             this.btnEducation.Text = "Education";
             this.btnEducation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -319,7 +320,7 @@
             this.panelContacts.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelContacts.Location = new System.Drawing.Point(0, 145);
             this.panelContacts.Name = "panelContacts";
-            this.panelContacts.Size = new System.Drawing.Size(250, 40);
+            this.panelContacts.Size = new System.Drawing.Size(248, 40);
             this.panelContacts.TabIndex = 2;
             // 
             // btnSummary
@@ -334,7 +335,7 @@
             this.btnSummary.Location = new System.Drawing.Point(0, 0);
             this.btnSummary.Name = "btnSummary";
             this.btnSummary.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnSummary.Size = new System.Drawing.Size(250, 40);
+            this.btnSummary.Size = new System.Drawing.Size(248, 40);
             this.btnSummary.TabIndex = 0;
             this.btnSummary.Text = "Summary";
             this.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -351,7 +352,7 @@
             this.btnContacts.Location = new System.Drawing.Point(0, 100);
             this.btnContacts.Name = "btnContacts";
             this.btnContacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnContacts.Size = new System.Drawing.Size(250, 45);
+            this.btnContacts.Size = new System.Drawing.Size(248, 45);
             this.btnContacts.TabIndex = 1;
             this.btnContacts.Text = "Contacts";
             this.btnContacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,7 +365,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.Size = new System.Drawing.Size(248, 100);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.panelLogo.MouseLeave += new System.EventHandler(this.panelLogo_MouseLeave);
@@ -372,13 +373,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(248, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -387,6 +387,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(250, 0);
             this.panelContainer.Name = "panelContainer";
