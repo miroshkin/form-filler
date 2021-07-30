@@ -1,4 +1,6 @@
-﻿using CVFiller.Data;
+﻿using FormFiller;
+using FormFiller.Data;
+using FormFiller.Forms;
 using FormFiller.Data;
 using System;
 using System.Collections.Generic;
@@ -13,10 +15,9 @@ using System.Windows.Forms;
 
 namespace FormFiller
 {
-    public partial class CVForm : Form
+    public partial class MainForm : Form
     {
-        public List<Article> _data;
-        public List<string> _tags;
+        
 
         public const string Application = "Application.docx";
         public const string CV = "CV.docx";
@@ -41,17 +42,34 @@ namespace FormFiller
             WinKey = 8
         }
 
+        private List<Button> _buttons;
 
-        public CVForm()
+        public MainForm()
         {
             InitializeComponent();
+            SetControlsVisibility();
             AddNotifyIconMenu();
             SetShortCuts();
 
-            LoadData();
             SetHandleClickMethodForControls();
 
             SetFormTransparency(this);
+
+            _buttons = new List<Button>();
+            _buttons.AddRange(panelContacts.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelEducation.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelExperience.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelFiles.Controls.OfType<Button>().ToList());
+            _buttons.AddRange(panelSearch.Controls.OfType<Button>().ToList());
+        }
+
+        private void SetControlsVisibility()
+        {
+            panelContacts.Visible = false;
+            panelEducation.Visible = false;
+            panelExperience.Visible = false;
+            panelFiles.Visible = false;
+            panelSearch.Visible = false;
         }
 
         private void SetFormTransparency(Form form)
@@ -71,6 +89,16 @@ namespace FormFiller
                 SetHandleClickForControl(control);
             }
         }
+
+        private void SetHandleClickMethodForControls(Form form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                SetHandleClickForControl(control);
+            }
+        }
+
+
 
         private void SetHandleClickForControl(Control control)
         {
@@ -107,8 +135,10 @@ namespace FormFiller
             if (sender is Label)
             {
                 var label = sender as Label;
-                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Underline);
-                label.BackColor = Color.PaleTurquoise;
+                label.Font = new Font(label.Font.Name, label.Font.SizeInPoints);
+                label.ForeColor = Color.Black;
+                //label.BackColor = Color.FromArgb(88,88,88);
+                label.BackColor = Color.FromArgb(255, 215, 0);
             }
         }
 
@@ -118,6 +148,7 @@ namespace FormFiller
             {
                 var label = sender as Label;
                 label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Regular);
+                label.ForeColor = Color.Gainsboro;
                 label.BackColor = Color.Transparent;
 
             }
@@ -158,9 +189,10 @@ namespace FormFiller
             id = 5;
             RegisterHotKey(this.Handle, id, (int)KeyModifier.Alt, Keys.D4.GetHashCode());
 
-
+            id = 6;
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.None, Keys.MButton.GetHashCode());
         }
-
+        
         private void AddNotifyIconMenu()
         {
             this.notifyIcon.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
@@ -194,21 +226,7 @@ namespace FormFiller
             return list;
         }
 
-        private void LoadData()
-        {
-            _data = new List<Article>();
-            _tags = new List<string>();
-
-            CurriculumVitae cv = new CurriculumVitae();
-            cv.FirstName = "Anton";
-            cv.LastName = "Miroshkin";
-            cv.PhoneNumber = "+79161631867";
-            cv.Email = "anton.miroshkin@gmail.com";
-
-            _data.Add(new Article() { Value = cv.FirstName, Tags = new List<string>() { "contacts", "first", "name" } });
-            _data.Add(new Article() { Value = cv.Email, Tags = new List<string>() { "contacts", "email" } });
-            _data.Add(new Article() { Value = cv.PhoneNumber, Tags = new List<string>() { "contacts", "phone" } });
-        }
+        
 
         protected override void WndProc(ref Message m)
         {
@@ -227,7 +245,7 @@ namespace FormFiller
                 //MessageBox.Show("Hotkey has been pressed!");
                 // do something
 
-                if (id == 0)
+                if (id == 0 || id == 6)
                 {
                     if (this.Visible)
                     {
@@ -244,33 +262,33 @@ namespace FormFiller
                 }
                 else if (id == 2)
                 {
-                    tbctrlCV.SelectedIndex = 0;
+                    //tbctrlCV.SelectedIndex = 0;
                 }
                 else if (id == 3)
                 {
-                    tbctrlCV.SelectedIndex = 1;
+                    //tbctrlCV.SelectedIndex = 1;
                 }
                 else if (id == 4)
                 {
-                    tbctrlCV.SelectedIndex = 2;
+                    //tbctrlCV.SelectedIndex = 2;
                 }
                 else if (id == 5)
                 {
-                    tbctrlCV.SelectedIndex = 3;
+                    //tbctrlCV.SelectedIndex = 3;
                 }
             }
         }
 
-        private void CVForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            notifyIcon.Icon.Dispose();
+            notifyIcon.Dispose();
             UnregisterHotKey(this.Handle, 0);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 1);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 2);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 3);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 4);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
             UnregisterHotKey(this.Handle, 5);       // Unregister hotkey with id 0 before closing the form. You might want to call this more than once with different id values if you are planning to register more than one hotkey.
-            notifyIcon.Icon.Dispose();
-            notifyIcon.Dispose();
         }
 
         /// <summary>
@@ -316,40 +334,9 @@ namespace FormFiller
             }
         }
      
-        private void btnAddTag_Click(object sender, EventArgs e)
-        {
-            LinkLabel linkLabel = new LinkLabel();
-            linkLabel.BackColor = Color.White;
-            linkLabel.Text = $"#{txtbxTag.Text}";
-            linkLabel.Size = new Size(50, 25);
+       
 
-            this.Controls.Add(linkLabel);
-        }
-
-        private void btnAddTag_Click_1(object sender, EventArgs e)
-        {
-            string tag = txtbxTag.Text.ToLower();
-            _tags.Add(tag);
-            var tagControl = new TagControl(tag, _tags);
-            tagControl.Anchor = AnchorStyles.Left;
-            tagControl.Width = tag.Count() * 9 + 20;
-            this.flowLayoutPanel1.Controls.Add(tagControl);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var result = _data;
-
-            foreach (var tag in _tags)
-            {
-                result = result.Where(t => t.Tags.Contains(tag)).ToList();
-            }
-
-            string s = string.Empty;
-            result.ForEach(i => s += "\n" + i.Value);
-
-            MessageBox.Show(s);
-        }
+        
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -360,7 +347,7 @@ namespace FormFiller
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CVForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void MainForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -420,6 +407,165 @@ namespace FormFiller
         private void ShowForm()
         {
             this.Show();
+        }
+
+        private void btnContacts_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelContacts);
+        }
+
+        private void btnEducation_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelEducation);
+        }
+
+        private void btnExperience_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelExperience);
+        }
+
+        private void btnFiles_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelFiles);
+        }
+
+        private void ShowSubMenu (Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                HideSubMenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+        }
+
+        private void HideSubMenu()
+        {
+            if (panelContacts.Visible) panelContacts.Visible = false;
+            if (panelEducation.Visible) panelEducation.Visible = false;
+            if (panelExperience.Visible) panelExperience.Visible = false;
+            if (panelFiles.Visible) panelFiles.Visible = false;
+            if (panelSearch.Visible) panelSearch.Visible = false;
+        }
+
+        private void HighlightMenuItem(Button button)
+        {
+            foreach (var item in _buttons)
+            {
+                if (item == button)
+                {
+                    item.FlatAppearance.BorderSize = 1;
+                    item.BackColor = Color.FromArgb(66,66,66);
+                }
+                else
+                {
+                    item.FlatAppearance.BorderSize = 0;
+                    item.BackColor = Color.FromArgb(99, 99, 99);
+
+                }
+            }
+
+            
+            
+        }
+
+        private void btnSummary_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SummaryForm());
+            HighlightMenuItem (sender as Button);
+        }
+
+        private void btnPersonalData_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PersonalDataForm());
+            HighlightMenuItem(sender as Button);
+        }
+
+        private void btnAddress_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AddressForm());
+            HighlightMenuItem(sender as Button);
+
+        }
+
+        private void btnSocialLinks_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SocialLinksForm());
+            HighlightMenuItem(sender as Button);
+
+        }
+
+        private void btnUniversity_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UniversityForm());
+            HighlightMenuItem(sender as Button);
+
+        }
+
+        private void btnAdditionalCourses_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+            HighlightMenuItem(sender as Button);
+
+        }
+
+        private void btnJobs_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new JobsForm());
+            HighlightMenuItem(btnJobs);
+        }
+
+        private void btnResumes_Click(object sender, EventArgs e)
+        {
+            HideSubMenu();
+            HighlightMenuItem(btnResumes);
+        }
+
+        private void btnCoverLetters_Click(object sender, EventArgs e)
+        {
+            HighlightMenuItem(btnCoverLetters);
+        }
+
+        private void btnTags_Click(object sender, EventArgs e)
+        {
+            HighlightMenuItem(btnTags);
+        }
+
+        private Form _activeForm = null;
+
+        private void OpenChildForm(Form childForm)
+        {
+
+            SuspendLayout();
+            if (_activeForm != null)
+            {
+                _activeForm.Close();
+            }
+            _activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.Padding = new Padding(5, 3, 5, 3);
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(childForm);
+            panelContainer.Tag = childForm;
+            childForm.AutoScroll = true;
+            childForm.BringToFront();
+            childForm.Show();
+            SetHandleClickMethodForControls(childForm);
+            ResumeLayout();
+        }
+
+        private void panelLogo_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.SizeAll;
+        }
+
+        private void panelLogo_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Arrow;
         }
     }
 }

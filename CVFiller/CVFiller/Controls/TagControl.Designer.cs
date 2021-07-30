@@ -1,4 +1,4 @@
-﻿namespace CVFiller.Data
+﻿namespace FormFiller.Data
 {
     partial class TagControl
     {

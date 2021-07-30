@@ -38,7 +38,7 @@ namespace FormFiller
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new CVForm());
+                Application.Run(new MainForm());
             }
         }
 

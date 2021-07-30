@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CVFiller.Data
+namespace FormFiller.Data
 {
     public partial class TagControl : UserControl
     {
