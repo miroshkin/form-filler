@@ -16,7 +16,7 @@ namespace FormFiller
     {
 
         public List<string> _tags;
-        public List<Article> _data;
+        //public List<Article> _data;
 
 
         public ChildFormTab()
@@ -28,22 +28,22 @@ namespace FormFiller
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var result = _data;
+            //var result = _data;
 
-            foreach (var tag in _tags)
-            {
-                result = result.Where(t => t.Tags.Contains(tag)).ToList();
-            }
+            //foreach (var tag in _tags)
+            //{
+            //    result = result.Where(t => t.Tags.Contains(tag)).ToList();
+            //}
 
-            string s = string.Empty;
-            result.ForEach(i => s += "\n" + i.Value);
+            //string s = string.Empty;
+            //result.ForEach(i => s += "\n" + i.Value);
 
-            MessageBox.Show(s);
+            //MessageBox.Show(s);
         }
 
         private void LoadData()
         {
-            _data = new List<Article>();
+            //_data = new List<Article>();
             _tags = new List<string>();
 
             CurriculumVitae cv = new CurriculumVitae();
@@ -52,9 +52,9 @@ namespace FormFiller
             cv.PhoneNumber = "+79161631867";
             cv.Email = "anton.miroshkin@gmail.com";
 
-            _data.Add(new Article() { Value = cv.FirstName, Tags = new List<string>() { "contacts", "first", "name" } });
-            _data.Add(new Article() { Value = cv.Email, Tags = new List<string>() { "contacts", "email" } });
-            _data.Add(new Article() { Value = cv.PhoneNumber, Tags = new List<string>() { "contacts", "phone" } });
+            //_data.Add(new Article(nameof(cv.FirstName), cv.FirstName) { Value = cv.FirstName, HashTags = new List<string>() { "contacts", "first", "name" } });
+            //_data.Add(new Article() { Value = cv.Email, HashTags = new List<string>() { "contacts", "email" } });
+            //_data.Add(new Article() { Value = cv.PhoneNumber, HashTags = new List<string>() { "contacts", "phone" } });
         }
 
         private void btnAddTag_Click(object sender, EventArgs e)
