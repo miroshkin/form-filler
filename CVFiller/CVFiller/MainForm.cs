@@ -6,21 +6,78 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
+using FormFiller.Helpers;
 
 namespace FormFiller
 {
     public partial class MainForm : Form
     {
-        
+        private List<Article> _dictionary = new List<Article>()
+        {
+            new Article("last name", "Miroshkin", new List<string>(){"#name"}),
+            new Article("first name", "Anton", new List<string>(){"#name"}),
+            new Article("gmail email", "anton.miroshkin@gmail.com", new List<string>(){"#email", "#google", "#contacts"}),
+            new Article("mobile phone", "+79161631867", new List<string>(){"#mobile", "#phone", "#contacts"}),
+            new Article("summary", "developer summary", new List<string>(){"#summary", "#google"}),
+        };
 
-        public const string Application = "Application.docx";
-        public const string CV = "CV.docx";
+        // Class variable to keep track of which row is currently selected:
+        int hoveredIndex = -1;
+
+        private void listBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            // See which row is currently under the mouse:
+            int newHoveredIndex = listBox1.IndexFromPoint(e.Location);
+
+            // If the row has changed since last moving the mouse:
+            if (hoveredIndex != newHoveredIndex)
+            {
+                // Change the variable for the next time we move the mouse:
+                hoveredIndex = newHoveredIndex;
+
+                // If over a row showing data (rather than blank space):
+                if (hoveredIndex > -1)
+                {
+                    //Set tooltip text for the row now under the mouse:
+                    toolTip1.Active = false;
+                    toolTip1.SetToolTip(listBox1, listBox1.Items[hoveredIndex].ToString());
+                    toolTip1.Active = true;
+                }
+            }
+        }
+
+        private void txtbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            var text = txtbxSearch.Text;
+            var records = _dictionary.Where(c => c.Key.Contains(text)
+                                                 || c.Value.Contains(text)
+                                                 || c.HashTags.Any(i => i.Contains(text))
+                                                 || c.ShortenedKey.Contains(text));
+
+            //var listStr = new List<string>();
+
+            //foreach (var record in records)
+            //{
+            //    listStr.Add($"{record.Value}\t[{record.Key}  {String.Join(" ", record.HashTags.ToArray())}]");
+            //}
+            listBox1.DataSource = GetDataSource(records.ToList());
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            ClipboardHelper.Copy(sender);
+            this.Hide();
+            ClipboardHelper.Paste();
+        }
+
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
@@ -47,29 +104,27 @@ namespace FormFiller
         public MainForm()
         {
             InitializeComponent();
-            SetControlsVisibility();
             AddNotifyIconMenu();
             SetShortCuts();
-
             SetHandleClickMethodForControls();
-
             SetFormTransparency(this);
-
-            _buttons = new List<Button>();
-            _buttons.AddRange(panelContacts.Controls.OfType<Button>().ToList());
-            _buttons.AddRange(panelEducation.Controls.OfType<Button>().ToList());
-            _buttons.AddRange(panelExperience.Controls.OfType<Button>().ToList());
-            _buttons.AddRange(panelFiles.Controls.OfType<Button>().ToList());
-            _buttons.AddRange(panelSearch.Controls.OfType<Button>().ToList());
+            SetDictionary();
         }
 
-        private void SetControlsVisibility()
+        private void SetDictionary()
         {
-            panelContacts.Visible = false;
-            panelEducation.Visible = false;
-            panelExperience.Visible = false;
-            panelFiles.Visible = false;
-            panelSearch.Visible = false;
+            listBox1.DataSource = GetDataSource(_dictionary);
+        }
+
+        private object GetDataSource(List<Article> dictionary)
+        {
+            List<string> list = new List<string>();
+            foreach (var record in dictionary)
+            {
+                list.Add($"{record.Value} ({record.Key}) [{String.Join(" ", record.HashTags.ToArray())}]");
+            }
+
+            return list;
         }
 
         private void SetFormTransparency(Form form)
@@ -137,7 +192,6 @@ namespace FormFiller
                 var label = sender as Label;
                 label.Font = new Font(label.Font.Name, label.Font.SizeInPoints);
                 label.ForeColor = Color.Black;
-                //label.BackColor = Color.FromArgb(88,88,88);
                 label.BackColor = Color.FromArgb(255, 215, 0);
             }
         }
@@ -150,7 +204,6 @@ namespace FormFiller
                 label.Font = new Font(label.Font.Name, label.Font.SizeInPoints, FontStyle.Regular);
                 label.ForeColor = Color.Gainsboro;
                 label.BackColor = Color.Transparent;
-
             }
         }
 
@@ -356,13 +409,6 @@ namespace FormFiller
             }
         }
 
-        private void btnCV_Click(object sender, EventArgs e)
-        {
-            CopyFileToClipboard(CV);
-            HideForm();
-            PasteData();
-        }
-
         private static void CopyFileToClipboard(string fileName)
         {
             var paths = new StringCollection();
@@ -375,20 +421,6 @@ namespace FormFiller
             var paths = new StringCollection();
             fileNames.ForEach(fn => paths.Add(System.AppDomain.CurrentDomain.BaseDirectory + $"\\Resources\\{fn}"));
             Clipboard.SetFileDropList(paths);
-        }
-
-        private void btnApplication_Click(object sender, EventArgs e)
-        {
-            CopyFileToClipboard(Application);
-            HideForm();
-            PasteData();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CopyFileToClipboard(new List<string>() { Application, CV });
-            HideForm();
-            PasteData();
         }
 
         private void lblChangeColorScheme_Click(object sender, EventArgs e)
@@ -407,131 +439,6 @@ namespace FormFiller
         private void ShowForm()
         {
             this.Show();
-        }
-
-        private void btnContacts_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelContacts);
-        }
-
-        private void btnEducation_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelEducation);
-        }
-
-        private void btnExperience_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelExperience);
-        }
-
-        private void btnFiles_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelFiles);
-        }
-
-        private void ShowSubMenu (Panel submenu)
-        {
-            if (submenu.Visible == false)
-            {
-                HideSubMenu();
-                submenu.Visible = true;
-            }
-            else
-            {
-                submenu.Visible = false;
-            }
-        }
-
-        private void HideSubMenu()
-        {
-            if (panelContacts.Visible) panelContacts.Visible = false;
-            if (panelEducation.Visible) panelEducation.Visible = false;
-            if (panelExperience.Visible) panelExperience.Visible = false;
-            if (panelFiles.Visible) panelFiles.Visible = false;
-            if (panelSearch.Visible) panelSearch.Visible = false;
-        }
-
-        private void HighlightMenuItem(Button button)
-        {
-            foreach (var item in _buttons)
-            {
-                if (item == button)
-                {
-                    item.FlatAppearance.BorderSize = 1;
-                    item.BackColor = Color.FromArgb(66,66,66);
-                }
-                else
-                {
-                    item.FlatAppearance.BorderSize = 0;
-                    item.BackColor = Color.FromArgb(99, 99, 99);
-
-                }
-            }
-
-            
-            
-        }
-
-        private void btnSummary_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new SummaryForm());
-            HighlightMenuItem (sender as Button);
-        }
-
-        private void btnPersonalData_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new PersonalDataForm());
-            HighlightMenuItem(sender as Button);
-        }
-
-        private void btnAddress_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new AddressForm());
-            HighlightMenuItem(sender as Button);
-
-        }
-
-        private void btnSocialLinks_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new SocialLinksForm());
-            HighlightMenuItem(sender as Button);
-
-        }
-
-        private void btnUniversity_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new UniversityForm());
-            HighlightMenuItem(sender as Button);
-
-        }
-
-        private void btnAdditionalCourses_Click(object sender, EventArgs e)
-        {
-            HideSubMenu();
-            HighlightMenuItem(sender as Button);
-
-        }
-
-        private void btnJobs_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new JobsForm());
-            HighlightMenuItem(btnJobs);
-        }
-
-        private void btnResumes_Click(object sender, EventArgs e)
-        {
-            HideSubMenu();
-            HighlightMenuItem(btnResumes);
-        }
-
-        private void btnCoverLetters_Click(object sender, EventArgs e)
-        {
-            HighlightMenuItem(btnCoverLetters);
-        }
-
-        private void btnTags_Click(object sender, EventArgs e)
-        {
-            HighlightMenuItem(btnTags);
         }
 
         private Form _activeForm = null;
@@ -566,6 +473,14 @@ namespace FormFiller
         private void panelLogo_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Arrow;
+        }
+
+        private void txtbxSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter & listBox1.SelectedItem != null)
+            {
+                listBox1_DoubleClick(listBox1, EventArgs.Empty);
+            }
         }
     }
 }
