@@ -1,0 +1,32 @@
+[
+  {
+    "Key": "last name",
+    "Value": "Miroshkin",
+    "HashTags": [ "name", "last", "family" ]
+  },
+  {
+    "Key": "first name",
+    "Value": "Anton",
+    "HashTags": [ "name", "first" ]
+  },
+  {
+    "Key": "email",
+    "Value": "anton.miroshkin@gmail.com",
+    "HashTags": [ "email", "gmail" ]
+  },
+  {
+    "Key": "date of birth",
+    "Value": "26.02.1986",
+    "HashTags": [ "dateofbirth", "all" ]
+  },
+  {
+    "Key": "date of birth",
+    "Value": "26",
+    "HashTags": [ "dateofbirth", "day" ]
+  },
+  {
+    "Key": "date of birth",
+    "Value": "02",
+    "HashTags": [ "dateofbirth", "month" ]
+  }
+]

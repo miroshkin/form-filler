@@ -17,7 +17,7 @@ namespace FormFiller.Data
             ShortenedKey = GetShortenedKey(key);
         }
 
-        private string GetShortenedKey(string key)
+        public static string GetShortenedKey(string key)
         {
             key = Regex.Replace(key, @"\s+", " ");
             var items = key.Split(' ');

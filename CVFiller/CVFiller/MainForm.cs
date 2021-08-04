@@ -9,25 +9,27 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
 using FormFiller.Helpers;
+using Newtonsoft.Json;
 
 namespace FormFiller
 {
     public partial class MainForm : Form
     {
-        private List<Article> _dictionary = new List<Article>()
-        {
-            new Article("last name", "Miroshkin", new List<string>(){"#name"}),
-            new Article("first name", "Anton", new List<string>(){"#name"}),
-            new Article("gmail email", "anton.miroshkin@gmail.com", new List<string>(){"#email", "#google", "#contacts"}),
-            new Article("mobile phone", "+79161631867", new List<string>(){"#mobile", "#phone", "#contacts"}),
-            new Article("summary", "developer summary", new List<string>(){"#summary", "#google"}),
-        };
+        private List<Article> _dictionary = new List<Article>();
+        //{
+        //    new Article("last name", "Miroshkin", new List<string>(){"#name"}),
+        //    new Article("first name", "Anton", new List<string>(){"#name"}),
+        //    new Article("gmail email", "anton.miroshkin@gmail.com", new List<string>(){"#email", "#google", "#contacts"}),
+        //    new Article("mobile phone", "+79161631867", new List<string>(){"#mobile", "#phone", "#contacts"}),
+        //    new Article("summary", "developer summary", new List<string>(){"#summary", "#google"}),
+        //};
 
         // Class variable to keep track of which row is currently selected:
         int hoveredIndex = -1;
@@ -480,6 +482,29 @@ namespace FormFiller
             if (e.KeyCode == Keys.Enter & listBox1.SelectedItem != null)
             {
                 listBox1_DoubleClick(listBox1, EventArgs.Empty);
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            GetDataFromFile();
+        }
+
+        private void GetDataFromFile()
+        {
+            var articles = JsonConvert.DeserializeObject<List<Article>>(File.ReadAllText($"{Directory.GetCurrentDirectory()}/data.json"));
+            FillOutFields(articles);
+            _dictionary = articles;
+        }
+
+        private void FillOutFields(List<Article> articles)
+        {
+            foreach (var article in articles)
+            {
+                if (String.IsNullOrEmpty(article.ShortenedKey))
+                {
+                    article.ShortenedKey = Article.GetShortenedKey(article.Key);
+                } 
             }
         }
     }
