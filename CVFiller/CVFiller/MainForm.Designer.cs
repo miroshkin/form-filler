@@ -34,6 +34,8 @@
             this.lblChangeColorScheme = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -71,6 +73,8 @@
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.panelContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelContainer.Controls.Add(this.listBox2);
+            this.panelContainer.Controls.Add(this.textBox1);
             this.panelContainer.Controls.Add(this.listBox1);
             this.panelContainer.Controls.Add(this.txtbxSearch);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,15 +83,35 @@
             this.panelContainer.Size = new System.Drawing.Size(500, 300);
             this.panelContainer.TabIndex = 34;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 21;
+            this.listBox2.Location = new System.Drawing.Point(304, 87);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(183, 193);
+            this.listBox2.TabIndex = 38;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(304, 49);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(183, 28);
+            this.textBox1.TabIndex = 37;
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 21;
             this.listBox1.Location = new System.Drawing.Point(11, 45);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(476, 235);
+            this.listBox1.Size = new System.Drawing.Size(287, 235);
             this.listBox1.TabIndex = 36;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
+            this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
             this.listBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseMove);
             // 
             // txtbxSearch
@@ -134,6 +158,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox txtbxSearch;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

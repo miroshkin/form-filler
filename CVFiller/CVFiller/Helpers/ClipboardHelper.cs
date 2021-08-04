@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FormFiller.Data;
 
 namespace FormFiller.Helpers
 {
@@ -25,7 +26,7 @@ namespace FormFiller.Helpers
             }
             else if (sender is ListBox)
             {
-                Clipboard.SetText((sender as ListBox).SelectedItem.ToString().Split(' ')[0]);
+                Clipboard.SetText(((Article)((sender as ListBox).SelectedItem)).Value);
             }
         }
 

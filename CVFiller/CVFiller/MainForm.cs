@@ -70,7 +70,9 @@ namespace FormFiller
             //{
             //    listStr.Add($"{record.Value}\t[{record.Key}  {String.Join(" ", record.HashTags.ToArray())}]");
             //}
-            listBox1.DataSource = GetDataSource(records.ToList());
+            //listBox1.DataSource = GetDataSource(records.ToList());
+            listBox1.DataSource = records.ToList();
+            listBox1.DisplayMember = "Value";
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
@@ -440,6 +442,8 @@ namespace FormFiller
 
         private void ShowForm()
         {
+            this.txtbxSearch.Focus();
+            this.txtbxSearch.SelectAll();
             this.Show();
         }
 
@@ -483,6 +487,15 @@ namespace FormFiller
             {
                 listBox1_DoubleClick(listBox1, EventArgs.Empty);
             }
+            if (e.KeyCode == Keys.Down)
+            {
+                listBox1.Focus();
+                
+                if (listBox1.SelectedIndex < listBox1.Items.Count - 1)
+                {
+                    listBox1.SelectedIndex += 1;
+                }
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -505,6 +518,21 @@ namespace FormFiller
                 {
                     article.ShortenedKey = Article.GetShortenedKey(article.Key);
                 } 
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedArticle = (Article) listBox1.SelectedItem;
+            textBox1.Text = selectedArticle.Key;
+            listBox2.DataSource = selectedArticle.HashTags;
+        }
+
+        private void listBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter & listBox1.SelectedItem != null)
+            {
+                listBox1_DoubleClick(listBox1, EventArgs.Empty);
             }
         }
     }

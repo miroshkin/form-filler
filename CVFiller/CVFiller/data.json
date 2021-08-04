@@ -28,5 +28,52 @@
     "Key": "date of birth",
     "Value": "02",
     "HashTags": [ "dateofbirth", "month" ]
+  },
+  {
+    "Key": "country code russia",
+    "Value": "+7",
+    "HashTags": [ "russia", "country", "code", "contacts" ]
+  },
+  {
+    "Key": "mobile pnone number",
+    "Value": "+79161631867",
+    "HashTags": [ "phone", "number", "mobile", "contacts" ]
+  },
+  {
+    "Key": "linkedin profile link",
+    "Value": "https://www.linkedin.com/in/miroshkin-anton/",
+    "HashTags": [ "linkedin", "profile", "url", "contacts" ]
+  },
+  {
+    "Key": "website",
+    "Value": "https://miroshkin.github.io/",
+    "HashTags": [ "private", "website", "link", "contacts" ]
+  },
+  {
+    "Key": "postcode",
+    "Value": "140093",
+    "HashTags": [ "address", "contacts", "postcode" ]
+  },
+  {
+    "Key": "town",
+    "Value": "Dzerzhinskiy",
+    "HashTags": [ "address", "contacts", "town" ]
+  },
+  {
+    "Key": "street",
+    "Value": "Ugreshskaya 32-197",
+    "HashTags": [ "address", "contacts", "street" ]
+  },
+  {
+    "Key": "ntc job position one",
+    "Value": "Researcher",
+    "HashTags": [ "ntc", "job", "position" ]
+  },
+  {
+    "Key": "ntc full name",
+    "Value": "JSC R&D Center At FGC of UES",
+    "HashTags": [ "ntc", "job", "fullname" ]
   }
+
+
 ]
